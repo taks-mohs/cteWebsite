@@ -1,46 +1,35 @@
 import { StyleSheet, Image, Text, TextInput, Pressable, View, ImageBackground, ScrollView } from 'react-native'
+import TopBar from '../components/topBar'
 import Colors from '../components/colors'
+import { Link } from 'expo-router'
+import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 
 function HomePage() {
+  useFonts({
+    'oswaldlight': Oswald_300Light,
+    'oswaldmedium': Oswald_500Medium,
+    'oswaldsemibold': Oswald_600SemiBold
+  })
+
   return (
     <View style={styles.background}>
-      <View style={styles.topBar}>
-        <Image
-          style={styles.topImageStyle}
-          source={require('../assets/download.jpg')}
-        />
-        <Text style={styles.titleStyle}>Career & Technical Education</Text>
-        <Pressable>
-          <Text style={styles.topButtonStyle}>Departments</Text>
-        </Pressable>
-        <Pressable>
-          <Text style={styles.topButtonStyle}>Staff</Text>
-        </Pressable>
-        <Pressable>
-          <Text style={styles.topButtonStyle}>Contact Us</Text>
-        </Pressable>
-        <View style={styles.searchContainer}>
-          <Text style={styles.placeholder}>⌕</Text>
-          <TextInput
-            style={styles.searchStyle}
-            placeholder='Search'
-          />
-        </View>
-      </View>
+      <TopBar />
       <ImageBackground style={styles.bgImg} source={require('../assets/engineer.png')}>
         <ScrollView>
 
           <View style={styles.chunk1}>
             <Text style={styles.c1Title}>Find Your Pathway</Text>
-            <Pressable>
-              <Text style={styles.c1Button}>Searching Tool</Text>
-            </Pressable>
+            <Link href={'/searchingtool'}>
+              <Pressable>
+                <Text style={styles.c1Button}>Searching Tool</Text>
+              </Pressable>
+            </Link>
           </View>
 
           <View style={styles.chunk2}>
             <Text style={styles.c2title}>Testimonies</Text>
-            <ScrollView style={{height: 500}} showsVerticalScrollIndicator={false}>
-              <View style = {styles.break}></View>
+            <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+              <View style={styles.break}></View>
               <View style={styles.c2chunk}>
                 <Text style={styles.c2cHeader}>Student Name</Text>
                 <Image
@@ -110,7 +99,7 @@ function HomePage() {
 
 export default HomePage
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   background: {
     flex: 1,
     backgroundColor: Colors.primary,

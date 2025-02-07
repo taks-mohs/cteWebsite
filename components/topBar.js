@@ -2,6 +2,7 @@ import { View, Text, Image, Pressable, TextInput, StyleSheet } from 'react-nativ
 import { Link } from 'expo-router'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from './colors'
+import { Dropdown } from 'react-native-element-dropdown'
 
 export default function topBar() {
   useFonts({
@@ -20,18 +21,16 @@ export default function topBar() {
           />
         </Pressable>
       </Link>
-      
+
       <Link href={'/'}>
         <Pressable>
           <Text style={styles.titleStyle}>Career & Technical Education</Text>
         </Pressable>
       </Link>
 
-      <Link href={'/departments'}>
-        <Pressable>
-          <Text style={styles.topButtonStyle}>Departments</Text>
-        </Pressable>
-      </Link>
+      <Dropdown confirmSelectItem onChange={null} onConfirmSelectItem={item.href} labelField="label" valueField="value"data={
+        [{label:"Computer Science", value:"CS"}]
+      }/>
 
       <Link href={'/staff'}>
         <Pressable>

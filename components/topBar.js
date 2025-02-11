@@ -1,9 +1,42 @@
-import { View, Text, Image, Pressable, TextInput, StyleSheet } from 'react-native'
+import { View, Text, Image, Pressable, TextInput, StyleSheet, Animated } from 'react-native'
 import { Link } from 'expo-router'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from './colors'
 
+import React, { useRef, useState } from 'react';
+
 export default function topBar() {
+
+  const spinValue = useRef(new Animated.Value(0)).current;
+  const [hovered, setHovered] = useState(false);
+
+  const [value, setValue] = useState(null);
+  const [isFocus, setIsFocus] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+    Animated.timing(spinValue,
+      {
+        toValue: 1,
+        duration: 1000,
+        useNativeDriver: true,
+      }).start();
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+    Animated.timing(spinValue, {
+      toValue: 0,
+      duration: 1000,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const spin = spinValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '360deg'],
+  });
+
   useFonts({
     'oswaldlight': Oswald_300Light,
     'oswaldmedium': Oswald_500Medium,
@@ -12,15 +45,18 @@ export default function topBar() {
 
   return (
     <View style={styles.topBar}>
-      <Link href={'/'}>
-        <Pressable>
-          <Image
-            style={styles.topImageStyle}
-            source={require('../assets/download.jpg')}
-          />
-        </Pressable>
-      </Link>
-      
+      <View
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Link href={'/'}>
+          <Pressable>
+            <Animated.Image
+              source={require('../assets/download.jpg')}
+              style={[styles.topImageStyle, { transform: [{ rotate: spin }] }]} />
+          </Pressable>
+        </Link>
+      </View>
       <Link href={'/'}>
         <Pressable>
           <Text style={styles.titleStyle}>Career & Technical Education</Text>

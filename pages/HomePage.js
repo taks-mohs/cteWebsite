@@ -17,7 +17,7 @@ function HomePage() {
           <Text style={styles.topButtonStyle}>Staff</Text>
         </Pressable>
         <Pressable>
-          <Text style={styles.topButtonStyle}>Contact Us</Text>
+          <Text style={styles.topButtonStyle}>About</Text>
         </Pressable>
         <View style={styles.searchContainer}>
           <Text style={styles.placeholder}>⌕</Text>

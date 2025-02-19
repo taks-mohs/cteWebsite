@@ -58,8 +58,17 @@ export default function topBar() {
         </Pressable>
       </Link>
 
+      <Link href={'/about'}>
+        <Pressable>
+          <Text style={styles.topButtonStyle}>About</Text>
+        </Pressable>
+      </Link>
+
       <View style={styles.searchContainer}>
-        <Text style={styles.placeholder}>⌕</Text>
+        <Pressable>
+          <Text style={styles.placeholder}>⌕</Text>
+        </Pressable>
+        
         <TextInput
           style={styles.searchStyle}
           placeholder='Search'

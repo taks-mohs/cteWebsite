@@ -35,7 +35,7 @@ export default function topBar() {
         [ 
           {label:"Automotive", value: "Auto", href:"/Auto"},
           {label: "Building & Construction", value: "B&C", href:"/B_C"},
-          {label: 'Business', value: "Bus", href:"/Business"},
+          {label: 'Business', value: "Bus", href:"/Busi"},
           {label:"Computer Science", value:"CS", href:"/CS"},
           {label:"Culinary", value:"Culi", href:"/Culi"},
           {label:"Engineering", value:"Engi", href:"/Engi"},
@@ -74,7 +74,7 @@ export const styles = StyleSheet.create({
     padding: 10,
     alignItems: 'center',
     backgroundColor: Colors.secondary,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   topImageStyle: {
     marginLeft: 15,

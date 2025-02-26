@@ -1,28 +1,84 @@
 import React, { useState } from 'react';
-import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
+import { useFonts, 
+  Neuton_200ExtraLight,
+  Neuton_300Light,
+  Neuton_400Regular,
+  Neuton_400Regular_Italic,
+  Neuton_700Bold,
+  Neuton_800ExtraBold,
+} from '@expo-google-fonts/neuton';
 import { View, ScrollView, Text, Button, TouchableOpacity, StyleSheet } from 'react-native';
+import Colors from './colors'
 
 const Survey = () => {
+  useFonts ({
+    'neutonExtraLight': Neuton_200ExtraLight,
+    'neutonRegular': Neuton_400Regular,
+  })
+  
   const questions = [
     {
-      question: 'What Can You See Yourself Doing?',
-      options: 
-      ['Reading, Writing,Understanding Code', 
-        'Complete and Interpreting Construction Blueprints', 
-        'Graphic Design', 
-        'Creating and Making Video Films',
-        'Working with Marketing'
-      ],
+      id: '1',
+      question: 'What do you enjoy?',
+      options:
+        [
+          'Working out-doors',
+          'Working in-doors',
+          'Working with Technology',
+          'Experimenting',
+          'Tinkering'
+        ]
     },
     {
-      question: 'Which do you find enjoyable?',
-      options: ['Hands-on Activity', 'Computer Usage', 'Editing', 'Running a Business'],
+      id: '2',
+      question: 'What do you already find enjoyable?',
+      options:
+        [
+          'Learning and Working on Engines',
+          'Planning, Designing, Constructing',
+          'Working with and Understanding Code',
+          'Cooking',
+          'Styling',
+        ],
     },
     {
-      question: 'Do you have any '
+      question: 'How many years of experience do you have (if any)',
+      options:
+        [
+          'NONE',
+          'Around 6 Months',
+          'Around 1 Year',
+          '1 Years',
+          '2 Years',
+          '3+ Years',
+        ],
     }
     // Add more questions here
   ];
+
+  const SurveyComponent = () => {
+    const [selectedAnswers, setSelectedAnswers] = useState({});
+    const [result, setResult] = useState(null);
+
+    const handleSelect = (questionId, option) => {
+      setSelectedAnswers({
+        ...selectedAnswers,
+        [questionId]: option,
+      });
+    };
+
+    const calculateResult = () => {
+      // Example logic for calculating the result based on selected answers
+      if (selectedAnswers['1'] === 'Computer Science' && selectedAnswers['2'] === 'Advanced') {
+        setResult('You are ready for advanced computer science courses!');
+      } else if (selectedAnswers['1'] === 'Culinary' && selectedAnswers['2'] === 'Beginner') {
+        setResult('Start with beginner culinary classes!');
+      } else {
+        setResult('Please answer all questions to see your result.');
+      }
+    }
+  }
+
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
@@ -32,38 +88,73 @@ const Survey = () => {
     setCurrentQuestion(currentQuestion + 1);
   };
 
+  const handleBack = () => {
+    if (currentQuestion > 0) {
+      setCurrentQuestion(currentQuestion - 1);
+    }
+  };
+
   return (
-    <ScrollView>
-      <View>
-        {currentQuestion < questions.length ? (
-          <View>
-            <Text style={styles.questionText}>{questions[currentQuestion].question}</Text>
-            {questions[currentQuestion].options.map((option, index) => (
-              <TouchableOpacity
-                key={index}
-                onPress={() => setSelectedOption(option)}
-              >
-                <Text style={{  backgroundColor: selectedOption === option ? 'gray' : 'white' }}>
-                  {option}
-                </Text>
-              </TouchableOpacity>
-            ))}
-            <Button title="Next" onPress={handleNext} disabled={!selectedOption} />
+    <View>
+      {currentQuestion < questions.length ? (
+        <View>
+          <Text style={styles.questionText}>{questions[currentQuestion].question}</Text>
+          {questions[currentQuestion].options.map((option, index) => (
+            <View >
+
+            <TouchableOpacity
+              key={index}
+              onPress={() => setSelectedOption(option)}
+            >
+            <View>
+
+              <Text style={[styles.answerContainer, { backgroundColor: selectedOption === option ? 'lightgray' : 'white' }]}>
+                {option}
+              </Text>
+              </View>
+            </TouchableOpacity>
+            </View>
+          ))}
+          <View style={styles.buttonContainer}>
+            <Button title="<" onPress={handleBack} color= '#525252' disabled={!selectedOption} />
+            <Button title ="Next" color= '#525252' onPress={handleNext} disabled={!selectedOption} />
           </View>
-        ) : (
-          <Text>Thank you for completing the survey!</Text>
-        )}
-      </View>
-    </ScrollView>
+        </View>
+      ) : (
+        <Text style={styles.questionText}>Your Pathway Would Be..</Text>
+      )}
+    </View>
   );
 };
 
 export default Survey;
 
 const styles = StyleSheet.create({
+  surveyContainer: {
+    backgroundColor: 'black',
+  },
   questionText: {
-    fontSize: 20,
+    fontFamily: 'neutonRegular',
+    fontSize: 30,
     marginBottom: 10,
   },
-  
+  questionsFont: {
+    fontFamily: 'oswaldsemibold',
+    fontSize: 30,
+    marginBottom: 10,
+  },
+  answerContainer: {
+    fontSize: 15,
+    padding: 3,
+  },
+  buttonContainer: {
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+  },
+  button:{
+    color: Colors.secondary,
+  },
+  nextButton: {
+    backgroundColor: Colors.secondary,
+  }
 });

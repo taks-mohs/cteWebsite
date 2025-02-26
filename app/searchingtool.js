@@ -1,4 +1,4 @@
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
 import { Link } from 'expo-router'
 import TopBar from '../components/topBar'
 import Colors from '../components/colors'
@@ -8,36 +8,32 @@ export default function deptpage() {
   return (
     <View>
       <TopBar />
-      <Link href={'/'}>
-        <Pressable>
-          <Text style={styles.c1Button}>Go Home</Text>
-        </Pressable>
-      </Link>
-      <View style={styles.container}>
-        
-        <Text style={styles.kFonts}>Find Your Pathways</Text>
-        
-        <Survey />
-      </View>
+      <ScrollView>
+        <View style={styles.container}>
+          <Text style={styles.kFonts}>Find Your Pathways</Text>
+          <Survey />
+        </View>
+      </ScrollView>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  
   container: {
     marginTop: 0,
-    marginHorizontal: 100,
+    marginHorizontal: 300,
     flex: 1,
     padding: 20,
     backgroundColor: Colors.primary,
   },
   kFonts: {
     fontFamily: 'oswaldsemibold',
-    fontSize: 10,
+    fontSize: 50,
     alignSelf: 'center',
+    marginBottom: 20,
   },
   c1Button: {
-    color: 'blue',
+    backgroundColor: 'white',
+    color: 'gray',
   }
 })

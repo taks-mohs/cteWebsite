@@ -65,9 +65,9 @@ export default function topBar() {
       </Link>
 
       <View style={styles.searchContainer}>
-        <Pressable>
+        <Link href={'/results'}>
           <Text style={styles.placeholder}>⌕</Text>
-        </Pressable>
+        </Link>
         
         <TextInput
           style={styles.searchStyle}

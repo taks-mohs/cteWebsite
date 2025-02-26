@@ -24,7 +24,6 @@ export default function topBar() {
     const initialUrl = await Linking.getInitialURL();
     if (initialUrl) {
       setUrl(initialUrl);
-    } 
     }
   }
   useEffect(() => {

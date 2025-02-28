@@ -1,9 +1,12 @@
 import { Text, View, StyleSheet, ImageBackground, ScrollView, Image } from "react-native-web"
 import Colors from "../components/colors"
 import TopBar from "../components/topBar"
+import { VideoView, useVideoPlayer } from "expo-video";
 
 export default function B_C()
 {
+    const player = useVideoPlayer(require('../assets/videoplayback.mp4'), player => { player.play() });
+
     return(
         <View style={styles.background}>
                     <TopBar />
@@ -118,6 +121,10 @@ export default function B_C()
                                     </View>
                                 </ScrollView>
                             </View>
+                            <View style={styles.videoChunk}>
+                                        <Text style={styles.c1Title}>Informational Video</Text>
+                                        <VideoView player={player} nativeControls />
+                                      </View>
                         </ScrollView>
                     </ImageBackground>
                 </View>
@@ -190,5 +197,13 @@ export const styles = StyleSheet.create({
       fontSize: 40,
       color: Colors.secondary,
       fontFamily: 'oswaldmedium'
-    }
+    },
+    videoChunk: {
+        marginTop: 100,
+        marginBottom: 150,
+        height: 500,
+        backgroundColor: Colors.primary,
+        alignItems: 'center',
+        justifyContent: 'center'
+      },
   })

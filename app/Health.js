@@ -1,10 +1,13 @@
-import { ImageBackground, Text, View, StyleSheet, ScrollView, Pressable, Image } from "react-native-web"
+import { ImageBackground, Text, View, StyleSheet, ScrollView, Image } from "react-native-web"
 import TopBar from "../components/topBar"
 import { Link } from "expo-router"
 import Colors from "../components/colors"
+import { VideoView, useVideoPlayer } from "expo-video"
 
 
 export default function Health() {
+  const player = useVideoPlayer(require('../assets/videoplayback.mp4'), player => { player.play() });
+
   return (
     <View style={styles.background}>
       <TopBar />
@@ -53,7 +56,7 @@ export default function Health() {
             </ScrollView>
           </View>
           <View style={styles.chunk2}>
-          <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+            <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
               <View style={styles.break}></View>
               <View style={styles.c2chunk}>
                 <Text style={styles.c2cHeader}>Club Activity 1</Text>
@@ -92,8 +95,8 @@ export default function Health() {
             <Text style={styles.c3title}>Clubs</Text>
           </View>
           <View style={styles.chunk2}>
-          <Text style={styles.c2title}>Teachers</Text>
-          <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+            <Text style={styles.c2title}>Teachers</Text>
+            <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
               <View style={styles.break}></View>
               <View style={styles.c2chunk}>
                 <Text style={styles.c2cHeader}>Teacher 1</Text>
@@ -118,6 +121,10 @@ export default function Health() {
                 </Text>
               </View>
             </ScrollView>
+          </View>
+          <View style={styles.videoChunk}>
+            <Text style={styles.c1Title}>Informational Video</Text>
+            <VideoView player={player} nativeControls />
           </View>
         </ScrollView>
       </ImageBackground>
@@ -198,5 +205,13 @@ export const styles = StyleSheet.create({
     fontSize: 40,
     color: Colors.secondary,
     fontFamily: 'oswaldmedium'
-  }
+  },
+  videoChunk: {
+    marginTop: 100,
+    marginBottom: 150,
+    height: 500,
+    backgroundColor: Colors.primary,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
 })

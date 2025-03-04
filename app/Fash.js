@@ -6,7 +6,7 @@ export default function Fash() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/placeholder.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/Fashion/IMG_8419_2.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Fashion</Text>
@@ -18,7 +18,7 @@ export default function Fash() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Class 1</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Fashion/IMG_5437.jpeg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -29,7 +29,7 @@ export default function Fash() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Class 2</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Fashion/IMG_5440.jpeg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>

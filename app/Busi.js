@@ -16,7 +16,7 @@ export default function Busi() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Class 1</Text>
+                                <Text style={styles.c2cHeader}>Entrepreneurship</Text>
                                 <Image
                                     source={require('../assets/placeholder.jpg')}
                                     style={styles.studentImg}
@@ -27,7 +27,7 @@ export default function Busi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Class 2</Text>
+                                <Text style={styles.c2cHeader}>Accounting</Text>
                                 <Image
                                     source={require('../assets/placeholder.jpg')}
                                     style={styles.studentImg}
@@ -38,7 +38,20 @@ export default function Busi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Class 3</Text>
+                                <Text style={styles.c2cHeader}>Advertising and
+                                Public Relations</Text>
+                                <Image
+                                    source={require('../assets/placeholder.jpg')}
+                                    style={styles.studentImg}
+                                />
+                                <Text style={styles.c2cBody}>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
+                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Digital Marketing &
+                                Marketing Analytics</Text>
                                 <Image
                                     source={require('../assets/placeholder.jpg')}
                                     style={styles.studentImg}
@@ -87,16 +100,16 @@ export default function Busi() {
                                 </Text>
                             </View>
                         </ScrollView>
-                        <Text style={styles.c3title}>Clubs</Text>
+                        <Text style={styles.c3title}>DECA Business Club</Text>
                     </View>
                     <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Teachers</Text>
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Teacher 1</Text>
+                                <Text style={styles.c2cHeader}>Mrs. Kramer</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Business/MOANAHS1734488895639.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>

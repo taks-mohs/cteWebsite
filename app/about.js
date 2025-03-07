@@ -77,6 +77,10 @@ export default function about() {
                 source={require('../assets/placeholder.jpg')}
                 style={styles.img}
               />
+              <Image
+                source={require('../assets/placeholder.jpg')}
+                style={styles.img}
+              />
             </View>
 
           </Text>
@@ -100,10 +104,13 @@ const styles = StyleSheet.create({
 
 
   },
-  scrollContent: {
-    flexGrow: 1,
+  content: {
+    marginTop: 100,
+    marginHorizontal: 100,
     padding: 20,
-    height: 460,
+    // backgroundColor: Colors.primary,
+    backgroundColor: 'blue',
+
   },
   font: {
     fontFamily: 'oswaldlight',
@@ -128,7 +135,8 @@ const styles = StyleSheet.create({
   },
   collage: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
+    flexWrap: 'wrap',
   }
 })

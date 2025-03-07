@@ -70,7 +70,6 @@ export default function topBar() {
         </Pressable>
       </Link>
 
-
       <Link href={'/'}>
         <Pressable>
           <Text style={styles.titleStyle}>Career & Technical Education</Text>
@@ -114,7 +113,6 @@ export default function topBar() {
         <Link onPress={searchHandle} href={'/results'}>
           <Text style={styles.placeholder}>⌕</Text>
         </Link>
-
 
         <TextInput
           style={styles.searchStyle}

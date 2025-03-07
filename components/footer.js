@@ -1,5 +1,4 @@
-import { View, Text, Image, Pressable, TextInput, StyleSheet, useWindowDimensions } from 'react-native'
-import { Link } from 'expo-router'
+import { View, StyleSheet, useWindowDimensions } from 'react-native'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from './colors'
 
@@ -22,7 +21,6 @@ export default function footer() {
   return (
     <View style={styles.base}>
       <View>
-        
       </View>
     </View>
   )

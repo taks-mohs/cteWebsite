@@ -3,7 +3,7 @@ import TopBar from '../components/topBar'
 import Colors from '../components/colors'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 
-export default function deptpage() {
+export default function contactus() {
   useFonts({
       'oswaldlight': Oswald_300Light,
       'oswaldmedium': Oswald_500Medium,

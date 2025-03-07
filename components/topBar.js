@@ -2,17 +2,47 @@ import { View, Text, Image, Pressable, TextInput, StyleSheet } from 'react-nativ
 import { Link } from 'expo-router'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from './colors'
-import { Dropdown } from 'react-native-element-dropdown'
-import { useState } from 'react'
-import { router } from 'expo-router'
+import React, { useState } from 'react';
+import * as Linking from 'expo-linking';
+import { useEffect } from 'react';
+import { results } from '../app/results';
+
+
 export default function topBar() {
   useFonts({
     'oswaldlight': Oswald_300Light,
     'oswaldmedium': Oswald_500Medium,
     'oswaldsemibold': Oswald_600SemiBold
   })
+  const [query, setQuery] = useState('');
+  const [url, setUrl] = useState('');
+  let clicked = 0
+  const getInitialURL = async () => {
+    const initialUrl = await Linking.getInitialURL();
+    if (initialUrl) {
+      setUrl(initialUrl);
+    } 
+  }
+  useEffect(() => {
+    getInitialURL();
+  }, []);
 
-  const [value, setValue] = useState();
+  
+
+  function searchHandle() {
+    clicked = 1;
+    let myData ={
+      queryData: query,
+      urlData: url,
+      clickedData: clicked
+    }
+    let searchString = JSON.stringify(myData);
+    console.log(searchString);
+  
+  }
+
+
+
 
   return (
     <View style={styles.topBar}>
@@ -24,6 +54,7 @@ export default function topBar() {
           />
         </Pressable>
       </Link>
+
 
       <Link href={'/'}>
         <Pressable>
@@ -65,14 +96,18 @@ export default function topBar() {
       </Link>
 
       <View style={styles.searchContainer}>
-        <Link href={'/results'}>
+        <Link onPress={searchHandle} href={'/results'}>
           <Text style={styles.placeholder}>⌕</Text>
         </Link>
-        
+
         <TextInput
           style={styles.searchStyle}
           placeholder='Search'
+          onSubmitEditing={getInitialURL}
+          onChangeText={text => setQuery(text)}
+          value={query} 
         />
+        
       </View>
     </View>
   )

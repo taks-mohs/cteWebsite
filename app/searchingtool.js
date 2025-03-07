@@ -4,23 +4,9 @@ import TopBar from '../components/topBar'
 import Colors from '../components/colors'
 import Survey from '../components/survey'
 
-export default function deptpage() {
-  return (
-    <View>
-      <TopBar />
-      <ScrollView>
-        <View style={styles.container}>
-          <Text style={styles.kFonts}>Find Your Pathways</Text>
-          <Survey />
-        </View>
-      </ScrollView>
-    </View>
-  )
-}
-
 const styles = StyleSheet.create({
   container: {
-    marginTop: 0,
+    marginTop: 20,
     marginHorizontal: 300,
     flex: 1,
     padding: 20,
@@ -37,3 +23,17 @@ const styles = StyleSheet.create({
     color: 'gray',
   }
 })
+
+export default function deptpage() {
+  return (
+    <View>
+      <TopBar />
+      <ScrollView>
+        <View style={styles.container}>
+          <Text style={styles.kFonts}>Find Your Pathways</Text>
+          <Survey />
+        </View>
+      </ScrollView>
+    </View>
+  )
+}

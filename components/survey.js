@@ -68,6 +68,7 @@ const Survey = () => {
         ],
     },
     {
+      id: '3',
       question: 'How many years of experience do you have in',
       options:
         [
@@ -79,30 +80,6 @@ const Survey = () => {
     }
     // Add more questions here
   ];
-
-  const SurveyComponent = () => {
-    const [selectedAnswers, setSelectedAnswers] = useState({});
-    const [result, setResult] = useState(null);
-
-    const handleSelect = (questionId, option) => {
-      setSelectedAnswers({
-        ...selectedAnswers,
-        [questionId]: option,
-      });
-    };
-
-    const calculateResult = () => {
-      // Example logic for calculating the result based on selected answers
-      if (selectedAnswers['1'] === 'Computer Science' && selectedAnswers['2'] === 'Advanced') {
-        setResult('You are ready for advanced computer science courses!');
-      } else if (selectedAnswers['1'] === 'Culinary' && selectedAnswers['2'] === 'Beginner') {
-        setResult('Start with beginner culinary classes!');
-      } else {
-        setResult('Please answer all questions to see your result.');
-      }
-    }
-  }
-
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);

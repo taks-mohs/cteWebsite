@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     marginHorizontal: 300,
     flex: 1,
-    padding: 20,
+    padding: 40,
     backgroundColor: Colors.primary,
   },
   kFonts: {

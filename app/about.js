@@ -3,17 +3,17 @@ import TopBar from '../components/topBar'
 import Colors from '../components/colors'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 
-export default function deptpage() {
+export default function about() {
   useFonts({
     'oswaldlight': Oswald_300Light,
     'oswaldmedium': Oswald_500Medium,
     'oswaldsemibold': Oswald_600SemiBold
   })
   return (
-    <View>
+    <View style={styles.container}>
       <TopBar />
-      <ScrollView contentContainerStyle={styles.scrollContent}>
-        <View style={styles.container}>
+      <ScrollView style={styles.scrollContainer}>
+        <View style={styles.content}>
           <Text style={styles.font}>
             For Moanalua High School, Career and Technological Education (CTE) is all about empowering students with the knowledge and skills they need to thrive in the modern workforce. It bridges the gap between traditional academic education and the practical, hands-on experience required in various industries.
             CTE programs are designed to prepare students for a wide range of career paths, from healthcare and information technology to engineering, culinary arts, and beyond. By offering a blend of classroom instruction and real-world experience, CTE helps students develop critical thinking, problem-solving, and technical skills that are directly applicable to their chosen fields.
@@ -23,6 +23,10 @@ export default function deptpage() {
             Credits: Kelly, Gabe, Gabby, Christian, Jeremiah, Josh, Aiden
             <br />
             <View style={styles.collage}>
+              <Image
+                source={require('../assets/placeholder.jpg')}
+                style={styles.img}
+              />
               <Image
                 source={require('../assets/placeholder.jpg')}
                 style={styles.img}
@@ -51,17 +55,15 @@ export default function deptpage() {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
-    marginHorizontal: 100,
     flex: 1,
-    padding: 20,
-    backgroundColor: Colors.primary,
-
   },
-  scrollContent: {
-    flexGrow: 1,
+  content: {
+    marginTop: 100,
+    marginHorizontal: 100,
     padding: 20,
-    height: 460,
+    // backgroundColor: Colors.primary,
+    backgroundColor: 'blue',
+
   },
   font: {
     fontFamily: 'oswaldlight',
@@ -70,11 +72,13 @@ const styles = StyleSheet.create({
   img: {
     width: 250,
     height: 250,
-    
+    margin: 15,
+    marginTop: 20,
   },
   collage: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
+    flexWrap: 'wrap',
   }
 })

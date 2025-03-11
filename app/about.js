@@ -59,8 +59,9 @@ const styles = StyleSheet.create({
   },
   content: {
     marginTop: 100,
+    marginBottom: 100,
     marginHorizontal: 100,
-    padding: 20,
+    padding: 40,
     // backgroundColor: Colors.primary,
     backgroundColor: 'blue',
 

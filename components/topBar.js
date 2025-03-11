@@ -45,6 +45,12 @@ export default function topBar() {
         </Pressable>
       </Link>
 
+      <Link href={'/FAQ'}>
+        <Pressable>
+          <Text style={styles.topButtonStyle}>FAQ</Text>
+        </Pressable>
+      </Link>
+
       <View style={styles.searchContainer}>
         <Text style={styles.placeholder}>⌕</Text>
         <TextInput

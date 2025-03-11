@@ -13,10 +13,9 @@ function HomePage() {
 
   return (
     <View style={styles.background}>
-      <TopBar />
+      <TopBar/>
       <ImageBackground style={styles.bgImg} source={require('../assets/engineer.png')}>
         <ScrollView>
-
           <View style={styles.chunk1}>
             <Text style={styles.c1Title}>Find Your Pathway</Text>
             <Link href={'/searchingtool'}>

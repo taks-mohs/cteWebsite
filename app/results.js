@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, FlatList } from 'react-native'
 import TopBar from '../components/topBar'
 import Colors from '../components/colors'
 import React from 'react';
@@ -10,6 +10,8 @@ export default function results(props) {
         <View>
             <TopBar />
             <View style={styles.container}>
+                <FlatList>
+                </FlatList>
                 <Text style={styles.title}>Received Data</Text>
                 <Text>Title: {1}</Text>
                 <Text>URL: {props.url}</Text>

@@ -2,13 +2,17 @@ import { View, Text, Image, Pressable, TextInput, StyleSheet } from 'react-nativ
 import { Link } from 'expo-router'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from './colors'
-
+import { Dropdown } from 'react-native-element-dropdown'
+import { useState } from 'react'
+import { router } from 'expo-router'
 export default function topBar() {
   useFonts({
     'oswaldlight': Oswald_300Light,
     'oswaldmedium': Oswald_500Medium,
     'oswaldsemibold': Oswald_600SemiBold
   })
+
+  const [value, setValue] = useState();
 
   return (
     <View style={styles.topBar}>
@@ -20,18 +24,27 @@ export default function topBar() {
           />
         </Pressable>
       </Link>
-      
+
       <Link href={'/'}>
         <Pressable>
           <Text style={styles.titleStyle}>Career & Technical Education</Text>
         </Pressable>
       </Link>
 
-      <Link href={'/departments'}>
-        <Pressable>
-          <Text style={styles.topButtonStyle}>Departments</Text>
-        </Pressable>
-      </Link>
+      <Dropdown confirmSelectItem showsVerticalScrollIndicator={false} placeholderStyle={styles.topButtonStyle} placeholder={"Departments"} onChange={(item) => {setValue(item.value);}} onConfirmSelectItem={(item) => (router.navigate(item.href))} labelField="label" valueField="value" data={
+        [ 
+          {label:"Automotive", value: "Auto", href:"/Auto"},
+          {label: "Building & Construction", value: "B&C", href:"/B_C"},
+          {label: 'Business', value: "Bus", href:"/Busi"},
+          {label:"Computer Science", value:"CS", href:"/CS"},
+          {label:"Culinary", value:"Culi", href:"/Culi"},
+          {label:"Engineering", value:"Engi", href:"/Engi"},
+          {label:"Fashion", value:"Fash", href: "/Fash"},
+          {label:"Film", value: "Film", href:"/Film"},
+          {label:"Graphics", value: "Graph", href:"/Graph"},
+          {label:"Health Services", value:"Health", href:"/Health"}
+        ]
+      }/>
 
       <Link href={'/staff'}>
         <Pressable>
@@ -61,7 +74,7 @@ export const styles = StyleSheet.create({
     padding: 10,
     alignItems: 'center',
     backgroundColor: Colors.secondary,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   topImageStyle: {
     marginLeft: 15,

@@ -1,4 +1,4 @@
-import { View, Text, Pressable, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, Pressable, StyleSheet, ScrollView, ImageBackground } from 'react-native';
 import { Link } from 'expo-router'
 import TopBar from '../components/topBar'
 import Colors from '../components/colors'
@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 40,
     backgroundColor: Colors.primary,
+    opacity: '95%'
   },
   kFonts: {
     fontFamily: 'oswaldsemibold',
@@ -21,19 +22,34 @@ const styles = StyleSheet.create({
   c1Button: {
     backgroundColor: 'white',
     color: 'gray',
+  },
+  bgImg: {
+    height: '100%',
+    width: '100%',
+    resizeMode: 'cover'
+  },
+  chunk1: {
+    marginTop: 2,
+    marginHorizontal: 150,
+    padding: 75,
+    alignItems: 'center'
   }
 })
 
 export default function deptpage() {
   return (
-    <View>
-      <TopBar />
+    <ImageBackground style={styles.bgImg} source={require('../assets/engineer.png')}>
       <ScrollView>
-        <View style={styles.container}>
-          <Text style={styles.kFonts}>Find Your Pathways</Text>
-          <Survey />
+        <View>
+          <TopBar />
+          <View style={styles.chunk1} />
+          <View style={styles.container}>
+            <Text style={styles.kFonts}>Class Feedback</Text>
+            <Survey />
+          </View>
+          <View style={styles.chunk1} />
         </View>
       </ScrollView>
-    </View>
+    </ImageBackground>
   )
 }

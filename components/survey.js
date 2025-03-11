@@ -8,7 +8,7 @@ import {
   Neuton_700Bold,
   Neuton_800ExtraBold,
 } from '@expo-google-fonts/neuton';
-import { View, ScrollView, Text, Button, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, ScrollView, Text, Button, TouchableOpacity, StyleSheet,  } from 'react-native';
 import MainButton from './MainButton';
 
 const styles = StyleSheet.create({
@@ -45,31 +45,38 @@ const Survey = () => {
   const questions = [
     {
       id: '1',
-      question: 'What do you enjoy?',
+      question: 'What is the most appealing part of the CTE program to you?',
       options:
         [
-          'Hands-on learning',
-          'Owning a business',
-          'Technology',
-          'Health',
-          'Design'
+          'The Hands-on-Learning',
+          'More Digital Work than Physical Work',
+          'Allowing the Expression Creativity',
         ]
     },
     {
       id: '2',
-      question: 'What do you already find enjoyable?',
+      question: 'What is your end goal?',
+      options:
+        [
+          'Owning a Business',
+          'Working Under a Big Company',
+          'Working Inside a Lab',
+        ]
+    },
+    {
+      id: '3',
+      question: 'What do you find enjoyable?',
       options:
         [
           'Learning and Working on Engines',
           'Planning, Designing, Constructing',
           'Working with and Understanding Code',
-          'Cooking',
-          'Styling',
+          'Working and Helping Other People'
         ],
     },
     {
-      id: '3',
-      question: 'How many years of experience do you have in',
+      id: '4',
+      question: 'Do you have experience in what you want to pursue?',
       options:
         [
           'NONE',
@@ -83,10 +90,16 @@ const Survey = () => {
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOption, setSelectedOption] = useState(null);
+  const ans = [];
+  ans.length = 4;
 
   const handleNext = () => {
+
+    
+
     setSelectedOption(null);
     setCurrentQuestion(currentQuestion + 1);
+    console.log(ans);
   };
 
   const handleBack = () => {

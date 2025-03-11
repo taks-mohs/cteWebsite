@@ -3,6 +3,9 @@ import { Link } from 'expo-router'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from './colors'
 import React, { useState } from 'react';
+import { Dropdown } from 'react-native-element-dropdown'
+import { useState } from 'react'
+import { router } from 'expo-router'
 import * as Linking from 'expo-linking';
 import { useEffect } from 'react';
 import { results } from '../app/results';
@@ -22,6 +25,7 @@ export default function topBar() {
     if (initialUrl) {
       setUrl(initialUrl);
     } 
+    }
   }
   useEffect(() => {
     getInitialURL();
@@ -44,6 +48,18 @@ export default function topBar() {
 
 
 
+
+  function searchHandle() {
+    clicked = 1;
+    let myData = {
+      queryData: query,
+      urlData: url,
+      clickedData: clicked
+    }
+    let searchString = JSON.stringify(myData);
+    console.log(searchString);
+  }
+
   return (
     <View style={styles.topBar}>
       <Link href={'/'}>
@@ -62,20 +78,20 @@ export default function topBar() {
         </Pressable>
       </Link>
 
-      <Dropdown confirmSelectItem showsVerticalScrollIndicator={false} placeholderStyle={styles.topButtonStyle} placeholder={"Departments"} onChange={(item) => {setValue(item.value);}} onConfirmSelectItem={(item) => (router.navigate(item.href))} labelField="label" valueField="value" data={
-        [ 
-          {label:"Automotive", value: "Auto", href:"/Auto"},
-          {label: "Building & Construction", value: "B&C", href:"/B_C"},
-          {label: 'Business', value: "Bus", href:"/Busi"},
-          {label:"Computer Science", value:"CS", href:"/CS"},
-          {label:"Culinary", value:"Culi", href:"/Culi"},
-          {label:"Engineering", value:"Engi", href:"/Engi"},
-          {label:"Fashion", value:"Fash", href: "/Fash"},
-          {label:"Film", value: "Film", href:"/Film"},
-          {label:"Graphics", value: "Graph", href:"/Graph"},
-          {label:"Health Services", value:"Health", href:"/Health"}
+      <Dropdown confirmSelectItem showsVerticalScrollIndicator={false} placeholderStyle={styles.topButtonStyle} placeholder={"Departments"} onChange={(item) => { setValue(item.value); }} onConfirmSelectItem={(item) => (router.navigate(item.href))} labelField="label" valueField="value" data={
+        [
+          { label: "Automotive", value: "Auto", href: "/Auto" },
+          { label: "Building & Construction", value: "B&C", href: "/B_C" },
+          { label: 'Business', value: "Bus", href: "/Busi" },
+          { label: "Computer Science", value: "CS", href: "/CS" },
+          { label: "Culinary", value: "Culi", href: "/Culi" },
+          { label: "Engineering", value: "Engi", href: "/Engi" },
+          { label: "Fashion", value: "Fash", href: "/Fash" },
+          { label: "Film", value: "Film", href: "/Film" },
+          { label: "Graphics", value: "Graph", href: "/Graph" },
+          { label: "Health Services", value: "Health", href: "/Health" }
         ]
-      }/>
+      } />
 
       <Link href={'/staff'}>
         <Pressable>
@@ -100,15 +116,17 @@ export default function topBar() {
           <Text style={styles.placeholder}>⌕</Text>
         </Link>
 
+
         <TextInput
           style={styles.searchStyle}
           placeholder='Search'
           onSubmitEditing={getInitialURL}
           onChangeText={text => setQuery(text)}
-          value={query} 
+          value={query}
         />
-        
+
       </View>
+
     </View>
   )
 }

@@ -10,7 +10,6 @@ import * as Linking from 'expo-linking';
 import { useEffect } from 'react';
 import { results } from '../app/results';
 
-
 export default function topBar() {
   useFonts({
     'oswaldlight': Oswald_300Light,
@@ -113,6 +112,7 @@ export default function topBar() {
         <Link onPress={searchHandle} href={'/results'}>
           <Text style={styles.placeholder}>⌕</Text>
         </Link>
+
 
         <TextInput
           style={styles.searchStyle}

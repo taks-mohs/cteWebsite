@@ -16,36 +16,57 @@ export default function Engi() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Class 1</Text>
+                                <Text style={styles.c2cHeader}>Foundations of   Tech</Text>
                                 <Image
                                     source={require('../assets/placeholder.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    Foundations of Engineering Technology is an introductory course designed to inform students about careers in engineering. This
+                                    course serves as the foundation course for the Engineering program of study. Upon completion of this course, a proficient student
+                                    will have foundational knowledge of the engineering design process, sketching and technical drawing techniques, and foundational
+                                    elements to engineering and the role of math.                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Engineering Tech 1</Text>
+                                <Image
+                                    source={require('../assets/placeholder.jpg')}
+                                    style={styles.studentImg}
+                                />
+                                <Text style={styles.c2cBody}>
+                                    Engineering Technology I
+                                    course the second course in the Engineering program of study and is designed to provide students an in-depth study of a variety
+                                    of engineering fields via real world engineering design challenges. Students will apply their understanding of physics, chemistry,
+                                    biology, along with computer-integrated manufacturing technology to develop/design, test, and improve their design solutions.
+                                    Technical reading/writing/presentation and related mathematics and science knowledge and skills will be integrated and applied
+                                    throughout the course. Many of these skills will be carried out through the use of CAD programs to bring creations alive with 3D
+                                    printers.                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Engineering Tech 2</Text>
+                                <Image
+                                    source={require('../assets/placeholder.jpg')}
+                                    style={styles.studentImg}
+                                />
+                                <Text style={styles.c2cBody}>
+                                    Engineering 2 is the third course in the Engineering program of study designed to provide students with the opportunity to apply
+                                    skills learned in previous courses and continue to grow and strengthen their individual engineering design process. Upon
+                                    completion of the course, a proficient student will have additional concepts of engineering, such as kinematics and kinetics,
+                                    electrical, advanced drawings, and the opportunity to apply learned knowledge and skills across design projects.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Class 2</Text>
+                                <Text style={styles.c2cHeader}>Engineering Tech 3</Text>
                                 <Image
                                     source={require('../assets/placeholder.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Class 3</Text>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    Engineering 3 is the fourth course in the Engineering program of study that provides students the opportunity to apply academic
+                                    and technical skills learned in previous courses through individual and team projects. Upon completion of the course, a proficient
+                                    student will be able to apply advanced technical drawing and engineering design techniques to civil and mechanical engineering
+                                    challenges. As part of the student’s program of study progression, the student will maintain a digital program of study portfolio
+                                    providing evidence of mastery of the course standards and readiness to advance and complete the program of study.
                                 </Text>
                             </View>
                         </ScrollView>
@@ -125,76 +146,76 @@ export default function Engi() {
 
 export const styles = StyleSheet.create({
     background: {
-      flex: 1,
-      backgroundColor: Colors.primary,
+        flex: 1,
+        backgroundColor: Colors.primary,
     },
     bgImg: {
-      height: '100%',
-      width: '100%',
-      resizeMode: 'cover'
+        height: '100%',
+        width: '100%',
+        resizeMode: 'cover'
     },
     chunk1: {
-      marginTop: 200,
-      marginHorizontal: 150,
-      padding: 75,
-      backgroundColor: Colors.primary,
-      alignItems: 'center'
+        marginTop: 200,
+        marginHorizontal: 150,
+        padding: 75,
+        backgroundColor: Colors.primary,
+        alignItems: 'center'
     },
     c1Title: {
-      fontSize: 75,
-      color: Colors.secondary,
-      fontFamily: 'oswaldmedium',
-      marginBottom: 25
+        fontSize: 75,
+        color: Colors.secondary,
+        fontFamily: 'oswaldmedium',
+        marginBottom: 25
     },
     c1Button: {
-      fontSize: 25,
-      padding: 10,
-      color: Colors.primary,
-      backgroundColor: Colors.secondary,
-      fontFamily: 'oswaldsemibold'
+        fontSize: 25,
+        padding: 10,
+        color: Colors.primary,
+        backgroundColor: Colors.secondary,
+        fontFamily: 'oswaldsemibold'
     },
     chunk2: {
-      marginTop: 100,
-      padding: 100,
-      marginBottom: 150,
-      height: 500,
-      backgroundColor: Colors.primary,
-      alignItems: 'center',
-      flexDirection: 'row'
+        marginTop: 100,
+        padding: 100,
+        marginBottom: 150,
+        height: 500,
+        backgroundColor: Colors.primary,
+        alignItems: 'center',
+        flexDirection: 'row'
     },
     c2title: {
-      fontSize: 75,
-      marginRight: 250,
-      color: Colors.secondary,
-      fontFamily: 'oswaldsemibold'
+        fontSize: 75,
+        marginRight: 250,
+        color: Colors.secondary,
+        fontFamily: 'oswaldsemibold'
     },
     c3title: {
-      fontSize: 75,
-      marginLeft: 250,
-      color: Colors.secondary,
-      fontFamily: 'oswaldsemibold'
+        fontSize: 75,
+        marginLeft: 250,
+        color: Colors.secondary,
+        fontFamily: 'oswaldsemibold'
     },
     break: {
-      margin: 40
+        margin: 40
     },
     c2chunk: {
-      flex: 1,
-      flexDirection: 'column',
-      alignItems: 'center',
-      marginBottom: 75
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginBottom: 75
     },
     c2cBody: {
-      fontSize: 18,
-      fontFamily: 'oswaldlight',
-      textAlign: 'center'
+        fontSize: 18,
+        fontFamily: 'oswaldlight',
+        textAlign: 'center'
     },
     studentImg: {
-      height: 250,
-      width: 250
+        height: 250,
+        width: 250
     },
     c2cHeader: {
-      fontSize: 40,
-      color: Colors.secondary,
-      fontFamily: 'oswaldmedium'
+        fontSize: 40,
+        color: Colors.secondary,
+        fontFamily: 'oswaldmedium'
     }
-  })
+})

@@ -52,10 +52,9 @@ export default function CS() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    In May, students will be required to take the AP Computer Science A examination given by the College Board. On the basis of this
-                                    examination, the student’s college will determine how much advanced placement and/or credit the student will receive. There is a required
-                                    fee for the AP exam.
-                                    Required: Successful completion of AP Computer Science A
+                                    Programming 2: Mobile Applications Development is the third course in the Programming program of study designed to inform students on
+                                    the role of mobile applications technologies in society, what comprises a mobile application and the process used for designing one, as well
+                                    as to prepare students for mobile applications development through the use of a programming language
                                 </Text>
                             </View>
                         </ScrollView>
@@ -73,28 +72,6 @@ export default function CS() {
                                     Menedevs juggles between Website Development, Game Development, and Machine Learning. This year saw the club focus on Game Development, working within Game Engine, Unity.
                                     However, next year, Menedevs might switch over to Website Development.
                                     Website Development next year.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Club Activity 2</Text>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Club Activity 3</Text>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                                 </Text>
                             </View>
                         </ScrollView>

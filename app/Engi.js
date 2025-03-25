@@ -16,7 +16,7 @@ export default function Engi() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Foundations of   Tech</Text>
+                                <Text style={styles.c2cHeader}>Foundations of Engineering Tech</Text>
                                 <Image
                                     source={require('../assets/placeholder.jpg')}
                                     style={styles.studentImg}
@@ -75,29 +75,7 @@ export default function Engi() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Club Activity 1</Text>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Club Activity 2</Text>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Club Activity 3</Text>
+                                <Text style={styles.c2cHeader}>Robotics Club</Text>
                                 <Image
                                     source={require('../assets/placeholder.jpg')}
                                     style={styles.studentImg}
@@ -115,25 +93,33 @@ export default function Engi() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Teacher 1</Text>
+                                <Text style={styles.c2cHeader}>E. Hashizume</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/ENGRG/Hashizume.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    Mr.Hashizume teaches Engineering Tech II as well as Engineering Tech III.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Teacher 2</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/ENGRG/Komar.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    Mr.Komar teaches Engineering Tech I. He is also your teacher for AP Seminar and AP Research.
+                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Teacher 2</Text>
+                                <Image
+                                    source={require('../assets/ENGRG/Murray.jpg')}
+                                    style={styles.studentImg}
+                                />
+                                <Text style={styles.c2cBody}>
+                                    Mr.Murray teaches Foundations of Engineering Technology.
                                 </Text>
                             </View>
                         </ScrollView>

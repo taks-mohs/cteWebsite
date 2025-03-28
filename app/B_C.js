@@ -20,36 +20,63 @@ export default function B_C()
                                 <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                                     <View style={styles.break}></View>
                                     <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Class 1</Text>
+                                        <Text style={styles.c2cHeader}>Architecture and Engineering</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/architect and engineering logo.png')}
                                             style={styles.studentImg}
                                         />
                                         <Text style={styles.c2cBody}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                            Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                            Architecture and Engineering focuses on the design and planning of buildings, integrating both artistic and technical aspects. 
                                         </Text>
                                     </View>
                                     <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Class 2</Text>
+                                        <Text style={styles.c2cHeader}>Business Management</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/business logo.png')}
                                             style={styles.studentImg}
                                         />
                                         <Text style={styles.c2cBody}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                            Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                            Business Management covers the principles of managing a business, including finance, marketing, and operations.
                                         </Text>
                                     </View>
                                     <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Class 3</Text>
+                                        <Text style={styles.c2cHeader}>Cultural Arts</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/cultural arts logo.png')}
                                             style={styles.studentImg}
                                         />
                                         <Text style={styles.c2cBody}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                            Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                            Cultural Arts explores the intersection of culture and art, focusing on various artistic expressions and their cultural significance. 
+                                        </Text>
+                                    </View>
+                                    <View style={styles.c2chunk}>
+                                        <Text style={styles.c2cHeader}>Health Services Pathway</Text>
+                                        <Image
+                                            source={require('../assets/health services logo.png')}
+                                            style={styles.studentImg}
+                                        />
+                                        <Text style={styles.c2cBody}>
+                                            Health Services Pathway provides students with knowledge and skills in healthcare, preparing them for careers in the medical field.
+                                        </Text>
+                                    </View>
+                                    <View style={styles.c2chunk}>
+                                        <Text style={styles.c2cHeader}>Hospitality</Text>
+                                        <Image
+                                            source={require('../assets/hospitality logo.png')}
+                                            style={styles.studentImg}
+                                        />
+                                        <Text style={styles.c2cBody}>
+                                            Hospitality focuses on the service industry, including hotel management, event planning, and customer service.
+                                        </Text>
+                                    </View>
+                                    <View style={styles.c2chunk}>
+                                        <Text style={styles.c2cHeader}>Transportation Services</Text>
+                                        <Image
+                                            source={require('../assets/transportation logo.png')}
+                                            style={styles.studentImg}
+                                        />
+                                        <Text style={styles.c2cBody}>
+                                            Transportation Services covers the logistics and management of transportation systems, including vehicles and infrastructure.
                                         </Text>
                                     </View>
                                 </ScrollView>
@@ -98,14 +125,13 @@ export default function B_C()
                                 <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                                     <View style={styles.break}></View>
                                     <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Teacher 1</Text>
+                                        <Text style={styles.c2cHeader}>J. Murray</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/murray.jpg')}
                                             style={styles.studentImg}
                                         />
                                         <Text style={styles.c2cBody}>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                            Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                            Teaches Building & Construction. 
                                         </Text>
                                     </View>
                                     <View style={styles.c2chunk}>

@@ -16,7 +16,6 @@ export default function results(props) {
                 <Text>Title: {1}</Text>
                 <Text>URL: {props.url}</Text>
                 <Text>Clicked: {props.clicked}</Text>
-                {/* <Text>Score: {myData.score && myData.score.join(', ')}</Text> */}
             </View>
         </View>
     )

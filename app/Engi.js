@@ -75,14 +75,14 @@ export default function Engi() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Robotics Club</Text>
+                                <Text style={styles.c2cHeader}>Mechahunes (Robotics Club)</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/ENGRG/Mechahunes.png')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    The robotics club teaches it's club memebers how to use assemble and program to robots. The robotics club participates in the
+                                    VEX Robotics Tournament and FIRST Robotics Competition within a year. 
                                 </Text>
                             </View>
                         </ScrollView>

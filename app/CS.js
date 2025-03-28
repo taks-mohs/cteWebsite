@@ -63,7 +63,7 @@ export default function CS() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Menedevs</Text>
+                                <Text style={styles.c2cHeader}>Menedevs (Computer Science Club)</Text>
                                 <Image
                                     source={require('../assets/placeholder.jpg')}
                                     style={styles.studentImg}

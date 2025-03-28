@@ -66,7 +66,10 @@ const styles = StyleSheet.create({
               <Text style={styles.question}>Q: What is CTE?</Text>
             </Pressable>
             {openQuestionIndex === 0 && (
-              <Text style={styles.answer}>A: Career Technical Education (CTE) helps teach students about various careers in there classes. It opens gateways to their post high school careers. </Text>
+              <>
+                <Image source={require('../assets/engineer.png')} style={{ width: 100, height: 100, marginTop: 10 }} />
+                <Text style={styles.answer}>A: Career Technical Education (CTE) helps teach students about various careers in there classes. It opens gateways to their post high school careers. </Text>
+              </>
             )}
           </View>
           <View style={styles.faqItem}>
@@ -74,8 +77,10 @@ const styles = StyleSheet.create({
               <Text style={styles.question}>Q: What CTE Classes are Offered?</Text>
             </Pressable>
             {openQuestionIndex === 1 && (
-              <Text style={styles.answer}>A: Automotive, Business, Computer Science, Construction, Culinary, Engineering, Fassion, Graphics, Health Services, Media</Text>
-
+              <>
+                <Image source={require('../assets/engineer.png')} style={{ width: 100, height: 100, marginTop: 10 }} />
+                <Text style={styles.answer}>A: Automotive, Business, Computer Science, Construction, Culinary, Engineering, Fassion, Graphics, Health Services, Media</Text>
+              </>
             )}
           </View>
           <View style={styles.faqItem}>
@@ -83,7 +88,10 @@ const styles = StyleSheet.create({
               <Text style={styles.question}>Q: Are the Classes Only One Year?</Text>
             </Pressable>
             {openQuestionIndex === 2 && (
-              <Text style={styles.answer}>A: All of our CTE Classes offer 3-4 years of the course, starting from our introduction course of the class, to a third or fourth year of the class.</Text>
+              <>
+                <Image source={require('../assets/engineer.png')} style={{ width: 100, height: 100, marginTop: 10 }} />
+                <Text style={styles.answer}>A: All of our CTE Classes offer 3-4 years of the course, starting from our introduction course of the class, to a third or fourth year of the class.</Text>
+              </>
             )}
           </View>
           <View style={styles.faqItem}>
@@ -91,13 +99,14 @@ const styles = StyleSheet.create({
               <Text style={styles.question}>Q: How Do I Get CTE?</Text>
             </Pressable>
             {openQuestionIndex === 3 && (
-              <Text style={styles.answer}>A: Take at least 2 years of the same CTE course and complete the senior project assigned by the instructor near the end of the year.</Text>
-
+              <>
+                <Image source={require('../assets/engineer.png')} style={{ width: 100, height: 100, marginTop: 10 }} />
+                <Text style={styles.answer}>A: Take at least 2 years of the same CTE course and complete the senior project assigned by the instructor near the end of the year.</Text>
+              </>
             )}
           </View>
         </ScrollView>
       </ImageBackground>
     </View>
-  );
+  )
 }
-

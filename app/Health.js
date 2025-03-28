@@ -6,12 +6,13 @@ import { VideoView, useVideoPlayer } from "expo-video"
 
 
 export default function Health() {
-  const player = useVideoPlayer(require('../assets/videoplayback.mp4'), player => { player.play() });
+  const player = useVideoPlayer(require('../assets/videoplayback.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
 
+  
   return (
     <View style={styles.background}>
       <TopBar />
-      <ImageBackground style={styles.bgImg} source={require('../assets/Health.jpeg')}>
+      <ImageBackground style={styles.bgImg} source={require('../assets/50_SECOND_TIMER.gif')}>
         <ScrollView>
           <View style={styles.chunk1}>
             <Text style={styles.c1Title}>Health Services</Text>
@@ -124,7 +125,7 @@ export default function Health() {
           </View>
           <View style={styles.videoChunk}>
             <Text style={styles.c1Title}>Informational Video</Text>
-            <VideoView player={player} nativeControls />
+            <VideoView style = {styles.video }player={player} nativeControls/>
           </View>
         </ScrollView>
       </ImageBackground>
@@ -209,9 +210,12 @@ export const styles = StyleSheet.create({
   videoChunk: {
     marginTop: 100,
     marginBottom: 150,
-    height: 500,
+    height: 600,
     backgroundColor: Colors.primary,
     alignItems: 'center',
     justifyContent: 'center'
   },
+  video: {
+    marginBottom: 50
+  }
 })

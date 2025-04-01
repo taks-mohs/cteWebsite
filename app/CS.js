@@ -71,7 +71,6 @@ export default function CS() {
                                 <Text style={styles.c2cBody}>
                                     Menedevs juggles between Website Development, Game Development, and Machine Learning. This year saw the club focus on Game Development, working within Game Engine, Unity.
                                     However, next year, Menedevs might switch over to Website Development.
-                                    Website Development next year.
                                 </Text>
                             </View>
                         </ScrollView>

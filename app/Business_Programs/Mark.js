@@ -11,8 +11,17 @@ export default function Entre() {
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Marketing</Text>
                     </View>
+                    <View style={styles.chunk1}>
+                        <Text style={styles.c2cHeader}>About Marketing</Text>
+                        <View style={styles.break}></View>
+                        <Text style={styles.c2cBody}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
+                        Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</Text>
+                    </View>
                     <View style={styles.chunk2}>
-
+                        <Text style={styles.c2cHeader}>About Marketing</Text>
+                        <View style={styles.break}></View>
+                        <Text style={styles.c2cBody}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
+                        Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</Text>
                     </View>
                 </ScrollView>
             </ImageBackground>
@@ -45,11 +54,25 @@ export const styles = StyleSheet.create({
     },
     chunk2: {
         marginTop: 100,
-        padding: 100,
+        padding: 50,
         marginBottom: 150,
         height: 500,
         backgroundColor: Colors.primary,
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'column'
+    },
+    c2cBody: {
+        fontSize: 18,
+        fontFamily: 'oswaldlight',
+        textAlign: 'center',
+        marginBottom: 20
+    },
+    c2cHeader: {
+        fontSize: 40,
+        color: Colors.secondary,
+        fontFamily: 'oswaldmedium'
+      },
+      break: {
+        margin: 40
     },
 })

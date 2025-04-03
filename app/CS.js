@@ -1,4 +1,5 @@
-import { Text, View, StyleSheet, ImageBackground, ScrollView, Image } from "react-native-web"
+import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, Pressable } from "react-native-web"
+import { Link } from 'expo-router'
 import Colors from "../components/colors"
 import TopBar from "../components/topBar"
 
@@ -6,7 +7,7 @@ export default function CS() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/placeholder.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/CS/MiscImages/CSbackground.jpeg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Computer Science</Text>
@@ -18,7 +19,7 @@ export default function CS() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Found. Comp. Sys & Tech</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/CS/MiscImages/codeOrg.webp')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -31,7 +32,7 @@ export default function CS() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>AP Computer Science</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/CS/MiscImages/Java.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -48,7 +49,7 @@ export default function CS() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Programming 2: Mobile App Development</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/CS/MiscImages/Javascript.png')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -77,6 +78,57 @@ export default function CS() {
                         <Text style={styles.c3title}>Clubs</Text>
                     </View>
                     <View style={styles.chunk2}>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                            <View style={styles.break}></View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Intro. to CS games</Text>
+                                <Link href={'https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/CS/ICTSGames/game1.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                <Link href={'https://studio.code.org/projects/gamelab/kjZSLL7eHi-LWqZh4--K74fxlet4QjHh5wmMjPcKCow/embed?nosource'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/CS/ICTSGames/game2.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                <Link href={'https://studio.code.org/projects/gamelab/g4xP-ldq_iOm6VtjaeZ3bqMVgP7psoCysakpxR2c9-w/embed?nosource'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/CS/ICTSGames/game3.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                <Link href={'https://studio.code.org/projects/gamelab/M5ZmmjLWTLaBkXfrp3JXzvHmnGg88yp3SI05Ks4tDJR/embed?nosource'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/CS/ICTSGames/game4.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                <Link href={'https://studio.code.org/projects/gamelab/dAcGneC5y2WhTM7gQdvJjOZwnb_TNA6jFVvaDmAO1E9/embed?nosource'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/CS/ICTSGames/game5.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                <Text style={styles.c2cBody}>
+                                </Text>
+                            </View>
+                        </ScrollView>
+                        <Text style={styles.c3title}>Highlighted Games</Text>
+                    </View>
+                    <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Teachers</Text>
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
@@ -88,7 +140,7 @@ export default function CS() {
                                 />
                                 <Text style={styles.c2cBody}>
                                     Both a math teacher and computer science teacher. Mr.Takashi teaches Introduction to Computer Science, AP Computer Science A, and Programming 2: Mobile Apps Development
-                                    He might also teach other computer science classes.
+                                    He might also teach other computer science classes in the future, like Game development.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
@@ -133,12 +185,12 @@ export const styles = StyleSheet.create({
         marginTop: 200,
         marginHorizontal: 150,
         padding: 75,
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.secondary,
         alignItems: 'center'
     },
     c1Title: {
         fontSize: 75,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldmedium',
         marginBottom: 25
     },
@@ -147,20 +199,20 @@ export const styles = StyleSheet.create({
         padding: 100,
         marginBottom: 150,
         height: 500,
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.secondary,
         alignItems: 'center',
         flexDirection: 'row'
     },
     c2title: {
         fontSize: 75,
         marginRight: 250,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldsemibold'
     },
     c3title: {
         fontSize: 75,
         marginLeft: 250,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldsemibold'
     },
     break: {
@@ -175,7 +227,8 @@ export const styles = StyleSheet.create({
     c2cBody: {
         fontSize: 18,
         fontFamily: 'oswaldlight',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: Colors.primary
     },
     studentImg: {
         height: 250,
@@ -183,7 +236,7 @@ export const styles = StyleSheet.create({
     },
     c2cHeader: {
         fontSize: 40,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldmedium'
     }
 })

@@ -1,5 +1,4 @@
 import { Text, View, StyleSheet, Image, ScrollView } from 'react-native'
-import { Text, View, StyleSheet, Image, ScrollView } from 'react-native'
 import TopBar from '../components/topBar'
 import Colors from '../components/colors'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'

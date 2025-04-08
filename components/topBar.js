@@ -4,11 +4,9 @@ import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from 
 import Colors from './colors'
 import React, { useState } from 'react';
 import { Dropdown } from 'react-native-element-dropdown'
-import { useState } from 'react'
 import { router } from 'expo-router'
 import * as Linking from 'expo-linking';
 import { useEffect } from 'react';
-import { results } from '../app/results';
 
 export default function topBar() {
   useFonts({
@@ -23,25 +21,14 @@ export default function topBar() {
     const initialUrl = await Linking.getInitialURL();
     if (initialUrl) {
       setUrl(initialUrl);
+    } 
     }
-  }
+  
   useEffect(() => {
     getInitialURL();
   }, []);
 
   
-
-  function searchHandle() {
-    clicked = 1;
-    let myData ={
-      queryData: query,
-      urlData: url,
-      clickedData: clicked
-    }
-    let searchString = JSON.stringify(myData);
-    console.log(searchString);
-  
-  }
 
 
 
@@ -68,6 +55,7 @@ export default function topBar() {
           />
         </Pressable>
       </Link>
+
 
       <Link href={'/'}>
         <Pressable>

@@ -66,7 +66,7 @@ export default function CS() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Menedevs (Computer Science Club)</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/CS/MiscImages/GameDevelopment.png')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -135,7 +135,7 @@ export default function CS() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>S. Takahashi</Text>
                                 <Image
-                                    source={require('../assets/CS/GOAT.jpg')}
+                                    source={require('../assets/CS/TeacherIMGS/GOAT.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -146,7 +146,7 @@ export default function CS() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>B. Park</Text>
                                 <Image
-                                    source={require('../assets/CS/Park.jpg')}
+                                    source={require('../assets/CS/TeacherIMGS/Park.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -156,7 +156,7 @@ export default function CS() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>H. Ishikawa</Text>
                                 <Image
-                                    source={require('../assets/CS/Ishikawa.jpg')}
+                                    source={require('../assets/CS/TeacherIMGS/Ishikawa.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>

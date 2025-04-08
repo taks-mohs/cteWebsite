@@ -6,7 +6,7 @@ export default function Engi() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/placeholder.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/ENGRG/MiscImages/ENGRGbackground.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Engineering</Text>
@@ -18,7 +18,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Foundations of Engineering Tech</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/ENGRG/MiscImages/Catapults.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -30,7 +30,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Engineering Tech 1</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/ENGRG/MiscImages/FloorSketech.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -45,7 +45,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Engineering Tech 2</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/ENGRG/MiscImages/InverseKinematics.png')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -58,7 +58,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Engineering Tech 3</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/ENGRG/MiscImages/MechENGRG.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -77,7 +77,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Mechahunes (Robotics Club)</Text>
                                 <Image
-                                    source={require('../assets/ENGRG/Mechahunes.png')}
+                                    source={require('../assets/ENGRG//MiscImages/Mechahunes.png')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -95,7 +95,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>E. Hashizume</Text>
                                 <Image
-                                    source={require('../assets/ENGRG/Hashizume.jpg')}
+                                    source={require('../assets/ENGRG/TeacherIMGS/Hashizume.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -105,7 +105,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Teacher 2</Text>
                                 <Image
-                                    source={require('../assets/ENGRG/Komar.jpg')}
+                                    source={require('../assets/ENGRG/TeacherIMGS/Komar.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -115,7 +115,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Teacher 2</Text>
                                 <Image
-                                    source={require('../assets/ENGRG/Murray.jpg')}
+                                    source={require('../assets/ENGRG/TeacherIMGS/Murray.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -133,7 +133,7 @@ export default function Engi() {
 export const styles = StyleSheet.create({
     background: {
         flex: 1,
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.secondary,
     },
     bgImg: {
         height: '100%',
@@ -144,19 +144,19 @@ export const styles = StyleSheet.create({
         marginTop: 200,
         marginHorizontal: 150,
         padding: 75,
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.secondary,
         alignItems: 'center'
     },
     c1Title: {
         fontSize: 75,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldmedium',
         marginBottom: 25
     },
     c1Button: {
         fontSize: 25,
         padding: 10,
-        color: Colors.primary,
+        color: Colors.secondary,
         backgroundColor: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
@@ -165,20 +165,20 @@ export const styles = StyleSheet.create({
         padding: 100,
         marginBottom: 150,
         height: 500,
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.secondary,
         alignItems: 'center',
         flexDirection: 'row'
     },
     c2title: {
         fontSize: 75,
         marginRight: 250,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldsemibold'
     },
     c3title: {
         fontSize: 75,
         marginLeft: 250,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldsemibold'
     },
     break: {
@@ -193,7 +193,8 @@ export const styles = StyleSheet.create({
     c2cBody: {
         fontSize: 18,
         fontFamily: 'oswaldlight',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: Colors.primary
     },
     studentImg: {
         height: 250,
@@ -201,7 +202,7 @@ export const styles = StyleSheet.create({
     },
     c2cHeader: {
         fontSize: 40,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldmedium'
     }
 })

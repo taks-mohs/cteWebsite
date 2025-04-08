@@ -148,7 +148,7 @@ export const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 40,
     marginLeft: 15,
-    marginRight: 250,
+    marginRight: 200,
     fontFamily: 'oswaldsemibold'
   },
   topButtonStyle: {

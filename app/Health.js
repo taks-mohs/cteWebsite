@@ -1,8 +1,8 @@
 import { ImageBackground, Text, View, StyleSheet, ScrollView, Image } from "react-native-web"
 import TopBar from "../components/topBar"
-import { Link } from "expo-router"
 import Colors from "../components/colors"
 import { VideoView, useVideoPlayer } from "expo-video"
+import Footer from "../components/footer"
 
 
 export default function Health() {
@@ -96,23 +96,12 @@ export default function Health() {
           </View>
           <View style={styles.chunk2}>
             <Text style={styles.c2title}>Teachers</Text>
-            <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+            <ScrollView showsVerticalScrollIndicator={false}>
               <View style={styles.break}></View>
               <View style={styles.c2chunk}>
-                <Text style={styles.c2cHeader}>Teacher 1</Text>
+                <Text style={styles.c2cHeader}>L. Hashizume</Text>
                 <Image
-                  source={require('../assets/placeholder.jpg')}
-                  style={styles.studentImg}
-                />
-                <Text style={styles.c2cBody}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                  Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </Text>
-              </View>
-              <View style={styles.c2chunk}>
-                <Text style={styles.c2cHeader}>Teacher 2</Text>
-                <Image
-                  source={require('../assets/placeholder.jpg')}
+                  source={require('../assets/l_hashizume.jpg')}
                   style={styles.studentImg}
                 />
                 <Text style={styles.c2cBody}>
@@ -126,6 +115,7 @@ export default function Health() {
             <Text style={styles.c1Title}>Informational Video</Text>
             <VideoView player={player} nativeControls />
           </View>
+          <Footer/>
         </ScrollView>
       </ImageBackground>
     </View>

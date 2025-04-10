@@ -5,8 +5,9 @@ import Colors from './colors'
 import { Dropdown } from 'react-native-element-dropdown'
 import { useState } from 'react'
 import { router } from 'expo-router'
+
 export default function topBar() {
-  const { width, height } = useWindowDimensions()
+  const { width } = useWindowDimensions()
   useFonts({
     'oswaldlight': Oswald_300Light,
     'oswaldmedium': Oswald_500Medium,
@@ -38,6 +39,16 @@ export default function topBar() {
       fontSize: width * 0.0175,
       marginRight: width * 0.02,
       fontFamily: 'oswaldmedium'
+    },
+    dropdownButtonStyle: {
+      color: Colors.secondary,
+      fontSize: width * 0.015,
+      fontFamily: 'oswaldmedium'
+    },
+    dropdownContainer: {
+      backgroundColor: Colors.primary,
+      height: width * 0.25,
+      width: width * 0.1,
     },
     searchContainer: {
       borderWidth: 1,
@@ -78,20 +89,28 @@ export default function topBar() {
         </Pressable>
       </Link>
 
-      <Dropdown confirmSelectItem showsVerticalScrollIndicator={false} placeholderStyle={styles.topButtonStyle} placeholder={"Departments"} onChange={(item) => {setValue(item.value);}} onConfirmSelectItem={(item) => (router.navigate(item.href))} labelField="label" valueField="value" data={
-        [ 
-          {label:"Automotive", value: "Auto", href:"/Auto"},
-          {label: "Building & Construction", value: "B&C", href:"/B_C"},
-          {label: 'Business', value: "Bus", href:"/Busi"},
-          {label:"Computer Science", value:"CS", href:"/CS"},
-          {label:"Culinary", value:"Culi", href:"/Culi"},
-          {label:"Engineering", value:"Engi", href:"/Engi"},
-          {label:"Fashion", value:"Fash", href: "/Fash"},
-          {label:"Film", value: "Film", href:"/Film"},
-          {label:"Graphics", value: "Graph", href:"/Graph"},
-          {label:"Health Services", value:"Health", href:"/Health"}
-        ]
-      }/>
+      <Pressable>
+        <Dropdown
+          confirmSelectItem showsVerticalScrollIndicator={false}
+          placeholder={"Departments"} placeholderStyle={{ color: Colors.primary, fontSize: width * 0.0175, fontFamily: 'oswaldmedium' }}
+          itemTextStyle={styles.dropdownButtonStyle} containerStyle={styles.dropdownContainer}
+          iconStyle={{ height: width * 0.015, width: width * 0.015, marginRight: width * 0.01 }} onChange={(item) => { setValue(item.value); }} onConfirmSelectItem={(item) => (router.navigate(item.href))}
+          labelField="label" valueField="value"
+          data={
+            [
+              { label: "Automotive", value: "Auto", href: "/Auto" },
+              { label: "Building & Construction", value: "B&C", href: "/B_C" },
+              { label: 'Business', value: "Bus", href: "/Busi" },
+              { label: "Computer Science", value: "CS", href: "/CS" },
+              { label: "Culinary", value: "Culi", href: "/Culi" },
+              { label: "Engineering", value: "Engi", href: "/Engi" },
+              { label: "Fashion", value: "Fash", href: "/Fash" },
+              { label: "Film", value: "Film", href: "/Film" },
+              { label: "Graphics", value: "Graph", href: "/Graph" },
+              { label: "Health Services", value: "Health", href: "/Health" }
+            ]
+          } />
+      </Pressable>
 
       <Link href={'/staff'}>
         <Pressable>
@@ -114,3 +133,4 @@ export default function topBar() {
       </View>
     </View>
   )
+}

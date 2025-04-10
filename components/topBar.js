@@ -5,6 +5,8 @@ import Colors from './colors'
 import { Dropdown } from 'react-native-element-dropdown'
 import { useState } from 'react'
 import { router } from 'expo-router'
+
+
 export default function topBar() {
   useFonts({
     'oswaldlight': Oswald_300Light,

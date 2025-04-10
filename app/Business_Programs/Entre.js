@@ -1,72 +1,54 @@
-import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, FlatList } from "react-native-web"
-import Colors from "../components/colors"
-import TopBar from "../components/topBar"
-import Fina_Mana from "./Business_Programs/Fina_Mana"
-import { Link } from "expo-router"
+import { ImageBackground, Text, View, StyleSheet, ScrollView, Image } from "react-native-web";
+import TopBar from "../../components/topBar";
+import Colors from "../../components/colors";
 
-export default function Busi() {
+export default function Entre() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/placeholder.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../../assets/placeholder.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
-                        <Text style={styles.c1Title}>Business</Text>
+                        <Text style={styles.c1Title}>Entrepreneurship</Text>
                     </View>
-                    <View style={styles.chunk2}>
-                        <Text style={styles.c2title}>Related Classes</Text>
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-                            <View style={styles.break}></View>
-                            <View style={styles.c2chunk}>
-                                <Link href={"../Business_Programs/Entre"}>
-                                <Text style={styles.c2cHeader}>Entrepreneurship</Text>
-                                </Link>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                            <Link href={"../Business_Programs/Mark"}>
-                                <Text style={styles.c2cHeader}>Marketing</Text>
-                                </Link>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Link href={"/Business_Programs/Fina_Mana"}>
-                                <Text style={styles.c2cHeader}>Financial Management</Text>
-                                </Link>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                </Text>
-                            </View>
-                        </ScrollView>
+                    <View style={styles.chunk3}>
+                        <Text style={styles.c2cHeader}>About Entrepreneurship</Text>
+                        <View style={styles.break}></View>
+                        <Text style={styles.c2cBody}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
+                            Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</Text>
                     </View>
                     <View style={styles.chunk2}>
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Link href={"../Business_Programs/DECA"}>
-                                <Text style={styles.c2cHeader}>About the Club</Text>
-                                </Link>
+                                    <Text style={styles.c2cHeader}>Foundations of Business &
+                                    Marketing</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../../assets/placeholder.jpg')}
+                                    style={styles.studentImg}
+                                />
+                                <Text style={styles.c2cBody}>
+                                    Moanalua’s DECA Club has been the dominant program in the state for several years. Moanalua
+                                    students have won top places in state competitions and have been the majority representatives to
+                                    the national competitions in such cities as Atlanta, Anaheim and Orlando
+                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                    <Text style={styles.c2cHeader}>Class 2</Text>
+                                <Image
+                                    source={require('../../assets/placeholder.jpg')}
+                                    style={styles.studentImg}
+                                />
+                                <Text style={styles.c2cBody}>
+                                    Moanalua’s DECA Club has been the dominant program in the state for several years. Moanalua
+                                    students have won top places in state competitions and have been the majority representatives to
+                                    the national competitions in such cities as Atlanta, Anaheim and Orlando
+                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                    <Text style={styles.c2cHeader}>Class 3</Text>
+                                <Image
+                                    source={require('../../assets/placeholder.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -76,16 +58,16 @@ export default function Busi() {
                                 </Text>
                             </View>
                         </ScrollView>
-                        <Text style={styles.c3title}>DECA Business Club</Text>
+                        <Text style={styles.c3title}>Related Classes</Text>
                     </View>
                     <View style={styles.chunk2}>
-                        <Text style={styles.c2title}>Teachers</Text>
+                        <Text style={styles.c2title}>Projects</Text>
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Mrs. Kramer</Text>
+                                <Text style={styles.c2cHeader}>Project 1</Text>
                                 <Image
-                                    source={require('../assets/Business/MOANAHS1734488895639.jpg')}
+                                    source={require('../../assets/placeholder.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -94,9 +76,9 @@ export default function Busi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Ms. Yonaine</Text>
+                                <Text style={styles.c2cHeader}>Project 2</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../../assets/placeholder.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -105,9 +87,9 @@ export default function Busi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Mrs. Pate</Text>
+                                <Text style={styles.c2cHeader}>Project 3</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../../assets/placeholder.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -155,20 +137,39 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row'
     },
+    c2cBody: {
+        fontSize: 18,
+        fontFamily: 'oswaldlight',
+        textAlign: 'center',
+        marginBottom: 20
+    },
+    c2cHeader: {
+        fontSize: 40,
+        color: Colors.secondary,
+        fontFamily: 'oswaldmedium'
+    },
+    break: {
+        margin: 40
+    },
+    chunk3: {
+        marginTop: 100,
+        padding: 100,
+        marginBottom: 150,
+        height: 500,
+        backgroundColor: Colors.primary,
+        alignItems: 'center',
+        flexDirection: 'column'
+    },
     c2title: {
         fontSize: 75,
         marginRight: 250,
         color: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
-    c3title: {
-        fontSize: 75,
-        marginLeft: 250,
-        color: Colors.secondary,
-        fontFamily: 'oswaldsemibold'
-    },
-    break: {
-        margin: 40
+    studentImg: {
+        height: 250,
+        width: 250,
+        margin: 20
     },
     c2chunk: {
         flex: 1,
@@ -176,20 +177,10 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 75
     },
-    c2cBody: {
-        fontSize: 18,
-        fontFamily: 'oswaldlight',
-        textAlign: 'center',
-        marginBottom: 20
-    },
-    studentImg: {
-        height: 250,
-        width: 250,
-        margin: 20
-    },
-    c2cHeader: {
-        fontSize: 40,
+    c3title: {
+        fontSize: 75,
+        marginLeft: 250,
         color: Colors.secondary,
-        fontFamily: 'oswaldmedium'
-    }
+        fontFamily: 'oswaldsemibold'
+    },
 })

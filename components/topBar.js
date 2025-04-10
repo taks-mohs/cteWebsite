@@ -1,4 +1,4 @@
-import { View, Text, Image, Pressable, TextInput, StyleSheet } from 'react-native'
+import { View, Text, Image, Pressable, TextInput, StyleSheet, useWindowDimensions } from 'react-native'
 import { Link } from 'expo-router'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from './colors'
@@ -9,6 +9,7 @@ import * as Linking from 'expo-linking';
 import { useEffect } from 'react';
 
 export default function topBar() {
+  const { width } = useWindowDimensions()
   useFonts({
     'oswaldlight': Oswald_300Light,
     'oswaldmedium': Oswald_500Medium,
@@ -32,8 +33,6 @@ export default function topBar() {
 
 
 
-
-
   function searchHandle() {
     clicked = 1;
     let myData = {
@@ -44,6 +43,64 @@ export default function topBar() {
     let searchString = JSON.stringify(myData);
     console.log(searchString);
   }
+  
+  const styles = StyleSheet.create({
+    topBar: {
+      padding: width * 0.010,
+      alignItems: 'center',
+      backgroundColor: Colors.secondary,
+      flexDirection: 'row'
+    },
+    topImageStyle: {
+      marginLeft: width * 0.005,
+      height: width * 0.05,
+      width: width * 0.05
+    },
+    titleStyle: {
+      color: Colors.primary,
+      fontWeight: 'bold',
+      fontSize: width * 0.03,
+      marginLeft: width * 0.01,
+      marginRight: width * 0.1,
+      fontFamily: 'oswaldsemibold'
+    },
+    topButtonStyle: {
+      color: Colors.primary,
+      fontSize: width * 0.0175,
+      marginRight: width * 0.02,
+      fontFamily: 'oswaldmedium'
+    },
+    dropdownButtonStyle: {
+      color: Colors.secondary,
+      fontSize: width * 0.015,
+      fontFamily: 'oswaldmedium'
+    },
+    dropdownContainer: {
+      backgroundColor: Colors.primary,
+      height: width * 0.25,
+      width: width * 0.1,
+    },
+    searchContainer: {
+      borderWidth: 1,
+      borderColor: Colors.primary,
+      alignItems: 'center',
+      flexDirection: 'row'
+    },
+    searchStyle: {
+      color: Colors.primary,
+      fontSize: width * 0.0175,
+      fontFamily: 'oswaldmedium',
+      opacity: 0.5,
+      marginLeft: width * 0.01
+    },
+    placeholder: {
+      color: Colors.primary,
+      fontSize: width * 0.0175,
+      marginLeft: width * 0.01
+    }
+  })
+
+  const [value, setValue] = useState();
 
   return (
     <View style={styles.topBar}>
@@ -63,20 +120,28 @@ export default function topBar() {
         </Pressable>
       </Link>
 
-      <Dropdown confirmSelectItem showsVerticalScrollIndicator={false} placeholderStyle={styles.topButtonStyle} placeholder={"Departments"} onChange={(item) => { setValue(item.value); }} onConfirmSelectItem={(item) => (router.navigate(item.href))} labelField="label" valueField="value" data={
-        [
-          { label: "Automotive", value: "Auto", href: "/Auto" },
-          { label: "Building & Construction", value: "B&C", href: "/B_C" },
-          { label: 'Business', value: "Bus", href: "/Busi" },
-          { label: "Computer Science", value: "CS", href: "/CS" },
-          { label: "Culinary", value: "Culi", href: "/Culi" },
-          { label: "Engineering", value: "Engi", href: "/Engi" },
-          { label: "Fashion", value: "Fash", href: "/Fash" },
-          { label: "Film", value: "Film", href: "/Film" },
-          { label: "Graphics", value: "Graph", href: "/Graph" },
-          { label: "Health Services", value: "Health", href: "/Health" }
-        ]
-      } />
+      <Pressable>
+        <Dropdown
+          confirmSelectItem showsVerticalScrollIndicator={false}
+          placeholder={"Departments"} placeholderStyle={{ color: Colors.primary, fontSize: width * 0.0175, fontFamily: 'oswaldmedium' }}
+          itemTextStyle={styles.dropdownButtonStyle} containerStyle={styles.dropdownContainer}
+          iconStyle={{ height: width * 0.015, width: width * 0.015, marginRight: width * 0.01 }} onChange={(item) => { setValue(item.value); }} onConfirmSelectItem={(item) => (router.navigate(item.href))}
+          labelField="label" valueField="value"
+          data={
+            [
+              { label: "Automotive", value: "Auto", href: "/Auto" },
+              { label: "Building & Construction", value: "B&C", href: "/B_C" },
+              { label: 'Business', value: "Bus", href: "/Busi" },
+              { label: "Computer Science", value: "CS", href: "/CS" },
+              { label: "Culinary", value: "Culi", href: "/Culi" },
+              { label: "Engineering", value: "Engi", href: "/Engi" },
+              { label: "Fashion", value: "Fash", href: "/Fash" },
+              { label: "Film", value: "Film", href: "/Film" },
+              { label: "Graphics", value: "Graph", href: "/Graph" },
+              { label: "Health Services", value: "Health", href: "/Health" }
+            ]
+          } />
+      </Pressable>
 
       <Link href={'/staff'}>
         <Pressable>
@@ -114,50 +179,3 @@ export default function topBar() {
 
     </View>
   )
-}
-
-export const styles = StyleSheet.create({
-  topBar: {
-    padding: 10,
-    alignItems: 'center',
-    backgroundColor: Colors.secondary,
-    flexDirection: 'row',
-  },
-  topImageStyle: {
-    marginLeft: 15,
-    height: 75,
-    width: 75
-  },
-  titleStyle: {
-    color: Colors.primary,
-    fontWeight: 'bold',
-    fontSize: 40,
-    marginLeft: 15,
-    marginRight: 200,
-    fontFamily: 'oswaldsemibold'
-  },
-  topButtonStyle: {
-    color: Colors.primary,
-    fontSize: 25,
-    marginRight: 25,
-    fontFamily: 'oswaldmedium'
-  },
-  searchContainer: {
-    borderWidth: 1,
-    borderColor: Colors.primary,
-    alignItems: 'center',
-    flexDirection: 'row'
-  },
-  searchStyle: {
-    color: Colors.primary,
-    fontSize: 25,
-    fontFamily: 'oswaldmedium',
-    opacity: 0.5,
-    marginLeft: 10
-  },
-  placeholder: {
-    color: Colors.primary,
-    fontSize: 25,
-    marginLeft: 10
-  }
-})

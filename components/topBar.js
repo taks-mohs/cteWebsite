@@ -59,7 +59,7 @@ export default function topBar() {
     titleStyle: {
       color: Colors.primary,
       fontWeight: 'bold',
-      fontSize: width * 0.03,
+      fontSize: width * 0.025,
       marginLeft: width * 0.01,
       marginRight: width * 0.1,
       fontFamily: 'oswaldsemibold'

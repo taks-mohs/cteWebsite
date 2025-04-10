@@ -18,7 +18,7 @@ export default function Auto() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Foundations of Auto Maintenance and Light Repair (9, 10, 11, 12)</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/foundation.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -28,7 +28,7 @@ export default function Auto() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Auto Maintenance and Light Repair 1 (10, 11, 12)</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/automain.jpeg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -38,7 +38,7 @@ export default function Auto() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Auto Maintenance and Light Repair 2 (11, 12)</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/autotech.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -47,45 +47,8 @@ export default function Auto() {
                             </View>
                         </ScrollView>
                     </View>
-                    <View style={styles.chunk2}>
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-                            <View style={styles.break}></View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Club Activity 1</Text>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Club Activity 2</Text>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Club Activity 3</Text>
-                                <Image
-                                    source={require('../assets/placeholder.jpg')}
-                                    style={styles.studentImg}
-                                />
-                                <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                                </Text>
-                            </View>
-                        </ScrollView>
-                        <Text style={styles.c3title}>Clubs</Text>
-                    </View>
+                   
+                            
                     <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Teachers</Text>
                         <ScrollView showsVerticalScrollIndicator={false}>

@@ -5,7 +5,7 @@ export default function deptpage() {
   return (
     <View>
       <TopBar/>
-      <Text>Departments</Text>
+      <Text>About</Text>
     </View>
   )
 }

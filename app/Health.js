@@ -12,7 +12,7 @@ export default function Health() {
   return (
     <View style={styles.background}>
       <TopBar />
-      <ImageBackground style={styles.bgImg} source={require('../assets/50_SECOND_TIMER.gif')}>
+      <ImageBackground style={styles.bgImg} source={require('../assets/Health.jpeg')}>
         <ScrollView>
           <View style={styles.chunk1}>
             <Text style={styles.c1Title}>Health Services</Text>

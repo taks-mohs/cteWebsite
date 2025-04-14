@@ -72,7 +72,7 @@ export default function Fash() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Sewing</Text>
                                 <Image
-                                    source={require('../assets/Fashion/vid_03 (1).gif')}
+                                    source={require('../assets/Fashion/vid_03 (3).gif')}
                                     style={{ width: 400, height: 250 }}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -84,7 +84,7 @@ export default function Fash() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Window Displays</Text>
                                 <Image
-                                    source={require('../assets/Fashion/vid04.gif')}
+                                    source={require('../assets/Fashion/vid04 (1).gif')}
                                     style={{ width: 400, height: 250 }}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -95,7 +95,7 @@ export default function Fash() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Fashion Illustrations</Text>
                                 <Image
-                                    source={require('../assets/Fashion/vid05.gif')}
+                                    source={require('../assets/Fashion/vid05 (1).gif')}
                                     style={{ width: 400, height: 250 }}
                                 />
                                 <Text style={styles.c2cBody}>

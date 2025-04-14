@@ -7,7 +7,7 @@ export default function CS() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/CS/MiscImages/CSbackground.jpeg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/CS/MiscImages/CSbackground.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Computer Science</Text>
@@ -133,7 +133,7 @@ export default function CS() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>S. Takahashi</Text>
+                                <Text style={styles.c2cHeader}>Sean Takahashi</Text>
                                 <Image
                                     source={require('../assets/CS/TeacherIMGS/GOAT.jpg')}
                                     style={styles.studentImg}
@@ -144,7 +144,7 @@ export default function CS() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>B. Park</Text>
+                                <Text style={styles.c2cHeader}>Brian Park</Text>
                                 <Image
                                     source={require('../assets/CS/TeacherIMGS/Park.jpg')}
                                     style={styles.studentImg}
@@ -185,12 +185,12 @@ export const styles = StyleSheet.create({
         marginTop: 200,
         marginHorizontal: 150,
         padding: 75,
-        backgroundColor: Colors.secondary,
+        backgroundColor: 'white',
         alignItems: 'center'
     },
     c1Title: {
         fontSize: 75,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldmedium',
         marginBottom: 25
     },
@@ -199,20 +199,20 @@ export const styles = StyleSheet.create({
         padding: 100,
         marginBottom: 150,
         height: 500,
-        backgroundColor: Colors.secondary,
+        backgroundColor: 'white',
         alignItems: 'center',
         flexDirection: 'row'
     },
     c2title: {
         fontSize: 75,
         marginRight: 250,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
     c3title: {
         fontSize: 75,
         marginLeft: 250,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
     break: {
@@ -228,7 +228,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'oswaldlight',
         textAlign: 'center',
-        color: Colors.primary
+        color: Colors.secondary
     },
     studentImg: {
         height: 250,
@@ -236,7 +236,7 @@ export const styles = StyleSheet.create({
     },
     c2cHeader: {
         fontSize: 40,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldmedium'
     }
 })

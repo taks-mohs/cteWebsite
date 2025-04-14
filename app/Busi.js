@@ -40,7 +40,7 @@ export default function Busi() {
                                     <Text style={styles.c2cHeader}>Marketing</Text>
                                 </Link>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Business/7-Reasons-Why-Product-Marketing-Matters-blog-banner-scaled.webp')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -53,7 +53,7 @@ export default function Busi() {
                                     <Text style={styles.c2cHeader}>Financial Management</Text>
                                 </Link>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Business/functions-of-financial-management.webp')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -71,7 +71,7 @@ export default function Busi() {
                                     <Text style={styles.c2cHeader}>About the Club</Text>
                                 </Link>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Business/IMG_7028.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>

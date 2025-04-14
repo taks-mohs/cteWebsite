@@ -27,7 +27,7 @@ export default function Busi() {
                                     <Text style={styles.c2cHeader}>Entrepreneurship</Text>
                                 </Link>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Business/entrepreneurship.webp')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>

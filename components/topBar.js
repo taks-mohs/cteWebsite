@@ -12,7 +12,6 @@ import { useNavigation } from '@react-navigation/native';
 
 export default function topBar() {
   const { width } = useWindowDimensions()
-  const navigation = useNavigation()
   useFonts({
     'oswaldlight': Oswald_300Light,
     'oswaldmedium': Oswald_500Medium,

@@ -58,7 +58,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Engineering Tech 3</Text>
                                 <Image
-                                    source={require('../assets/ENGRG/MiscImages/MechENGRG.jpg')}
+                                    source={require('../assets/ENGRG/MiscImages/MechENGRG.png')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -133,7 +133,7 @@ export default function Engi() {
 export const styles = StyleSheet.create({
     background: {
         flex: 1,
-        backgroundColor: Colors.secondary,
+        backgroundColor: Colors.primary,
     },
     bgImg: {
         height: '100%',
@@ -144,19 +144,19 @@ export const styles = StyleSheet.create({
         marginTop: 200,
         marginHorizontal: 150,
         padding: 75,
-        backgroundColor: Colors.secondary,
+        backgroundColor: Colors.primary,
         alignItems: 'center'
     },
     c1Title: {
         fontSize: 75,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldmedium',
         marginBottom: 25
     },
     c1Button: {
         fontSize: 25,
         padding: 10,
-        color: Colors.secondary,
+        color: Colors.primary,
         backgroundColor: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
@@ -165,20 +165,20 @@ export const styles = StyleSheet.create({
         padding: 100,
         marginBottom: 150,
         height: 500,
-        backgroundColor: Colors.secondary,
+        backgroundColor: Colors.primary,
         alignItems: 'center',
         flexDirection: 'row'
     },
     c2title: {
         fontSize: 75,
         marginRight: 250,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
     c3title: {
         fontSize: 75,
         marginLeft: 250,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
     break: {
@@ -194,7 +194,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'oswaldlight',
         textAlign: 'center',
-        color: Colors.primary
+        color: Colors.secondary
     },
     studentImg: {
         height: 250,
@@ -202,7 +202,7 @@ export const styles = StyleSheet.create({
     },
     c2cHeader: {
         fontSize: 40,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldmedium'
     }
 })

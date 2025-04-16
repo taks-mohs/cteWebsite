@@ -1,12 +1,13 @@
 import { ImageBackground, Text, View, StyleSheet, ScrollView, Image } from "react-native-web";
 import TopBar from "../../components/topBar";
 import Colors from "../../components/colors";
+import Footer from "../../components/footer";
 
 export default function Entre() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../../assets/placeholder.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../../assets/Business/entrepreneurship.webp')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Entrepreneurship</Text>
@@ -34,7 +35,7 @@ export default function Entre() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                    <Text style={styles.c2cHeader}>Class 2</Text>
+                                    <Text style={styles.c2cHeader}>Entrepreneurship 1</Text>
                                 <Image
                                     source={require('../../assets/placeholder.jpg')}
                                     style={styles.studentImg}
@@ -46,7 +47,7 @@ export default function Entre() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                    <Text style={styles.c2cHeader}>Class 3</Text>
+                                    <Text style={styles.c2cHeader}>Entrepreneurship 2</Text>
                                 <Image
                                     source={require('../../assets/placeholder.jpg')}
                                     style={styles.studentImg}

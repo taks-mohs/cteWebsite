@@ -45,7 +45,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Engineering Tech 2</Text>
                                 <Image
-                                    source={require('../assets/ENGRG/MiscImages/InverseKinematics.png')}
+                                    source={require('../assets/ENGRG/MiscImages/InverseKinematics.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>

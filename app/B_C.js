@@ -9,7 +9,7 @@ export default function B_C() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/placeholder.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/constructionBG.png')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Building & Construction</Text>

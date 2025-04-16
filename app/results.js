@@ -2,20 +2,23 @@ import { Text, View, StyleSheet, FlatList } from 'react-native'
 import TopBar from '../components/topBar'
 import Colors from '../components/colors'
 import React from 'react';
+import search from '../modules/search'
+import { useSearchParams } from 'expo-router/build/hooks';
 
-
-export default function results(props) {
-    
+export default function results({route}) {
+    const myData = useSearchParams()
+    console.log(myData)
     return (
         <View>
             <TopBar />
             <View style={styles.container}>
+                
                 <FlatList>
                 </FlatList>
-                <Text style={styles.title}>Received Data</Text>
-                <Text>Title: {1}</Text>
-                <Text>URL: {props.url}</Text>
-                <Text>Clicked: {props.clicked}</Text>
+                <Text>Query: {myData.queryData}</Text>
+                <Text>URL: {myData.urlData}</Text>
+                <Text>Clicked: {myData.clickedData}</Text>
+
             </View>
         </View>
     )

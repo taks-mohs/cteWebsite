@@ -7,6 +7,8 @@ import { Dropdown } from 'react-native-element-dropdown'
 import { router } from 'expo-router'
 import * as Linking from 'expo-linking';
 import { useEffect } from 'react';
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function topBar() {
   const { width } = useWindowDimensions()
@@ -41,7 +43,8 @@ export default function topBar() {
       clickedData: clicked
     }
     let searchString = JSON.stringify(myData);
-    console.log(searchString);
+    router.navigate({"pathname":"./results", "params":{'data':searchString}}); // Pass myData as a parameter
+    // console.log(searchString);
   }
   
   const styles = StyleSheet.create({
@@ -100,7 +103,7 @@ export default function topBar() {
     }
   })
 
-  const [value, setValue] = useState();
+  
 
   return (
     <View style={styles.topBar}>

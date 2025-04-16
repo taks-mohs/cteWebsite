@@ -1,12 +1,13 @@
 import { ImageBackground, Text, View, StyleSheet, ScrollView } from "react-native-web";
 import TopBar from "../../components/topBar";
 import Colors from "../../components/colors";
+import Footer from "../../components/footer";
 
 export default function Entre() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../../assets/placeholder.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../../assets/Business/7-Reasons-Why-Product-Marketing-Matters-blog-banner-scaled.webp')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Marketing</Text>

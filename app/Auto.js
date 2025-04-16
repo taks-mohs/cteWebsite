@@ -50,7 +50,11 @@ export default function Auto() {
                    
                             
                     <View style={styles.chunk2}>
+<<<<<<< HEAD
                         <Text style={styles.c2title}>Teachers</Text>
+=======
+                        <Text style={styles.c2title}>Teacher(s)</Text>
+>>>>>>> main
                         <ScrollView showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>

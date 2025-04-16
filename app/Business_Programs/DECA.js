@@ -1,12 +1,13 @@
 import { ImageBackground, Text, View, StyleSheet, ScrollView } from "react-native-web";
 import TopBar from "../../components/topBar";
 import Colors from "../../components/colors";
+import Footer from "../../components/footer";
 
 export default function Entre() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../../assets/placeholder.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../../assets/Business/IMG_7028.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>DECA</Text>
@@ -17,6 +18,7 @@ export default function Entre() {
                         <Text style={styles.c2cBody}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
                             Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</Text>
                     </View>
+                    <Footer/>
                 </ScrollView>
             </ImageBackground>
         </View>

@@ -90,7 +90,7 @@ export default function Busi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Mrs. Kramer</Text>
                                 <Image
-                                    source={require('../assets/Business/MOANAHS1734488895639.jpg')}
+                                    source={require('../assets/Business/Kramer.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -99,9 +99,9 @@ export default function Busi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Ms. Yonaine</Text>
+                                <Text style={styles.c2cHeader}>Ms. Yonamine</Text>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Business/Yonamine.png')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>

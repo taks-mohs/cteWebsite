@@ -6,7 +6,7 @@ export default function Engi() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/ENGRG/MiscImages/ENGRGbackground.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/ENGRG/MiscImages/engineeringbackground.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Engineering</Text>

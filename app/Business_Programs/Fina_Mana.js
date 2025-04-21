@@ -18,7 +18,51 @@ export default function Entre() {
                         <Text style={styles.c2cBody}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
                             Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</Text>
                     </View>
+                    <View style={styles.chunk2}>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                            <View style={styles.break}></View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Foundations of Business &
+                                    Marketing</Text>
+                                <Image
+                                    source={require('../../assets/placeholder.jpg')}
+                                    style={styles.studentImg}
+                                />
+                                <Text style={styles.c2cBody}>
+                                    Moanalua’s DECA Club has been the dominant program in the state for several years. Moanalua
+                                    students have won top places in state competitions and have been the majority representatives to
+                                    the national competitions in such cities as Atlanta, Anaheim and Orlando
+                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Entrepreneurship 1</Text>
+                                <Image
+                                    source={require('../../assets/placeholder.jpg')}
+                                    style={styles.studentImg}
+                                />
+                                <Text style={styles.c2cBody}>
+                                    Moanalua’s DECA Club has been the dominant program in the state for several years. Moanalua
+                                    students have won top places in state competitions and have been the majority representatives to
+                                    the national competitions in such cities as Atlanta, Anaheim and Orlando
+                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Entrepreneurship 2</Text>
+                                <Image
+                                    source={require('../../assets/placeholder.jpg')}
+                                    style={styles.studentImg}
+                                />
+                                <Text style={styles.c2cBody}>
+                                    Moanalua’s DECA Club has been the dominant program in the state for several years. Moanalua
+                                    students have won top places in state competitions and have been the majority representatives to
+                                    the national competitions in such cities as Atlanta, Anaheim and Orlando
+                                </Text>
+                            </View>
+                        </ScrollView>
+                        <Text style={styles.c3title}>Related Classes</Text>
+                    </View>
                 </ScrollView>
+                <Footer />
             </ImageBackground>
         </View>
     )
@@ -66,8 +110,8 @@ export const styles = StyleSheet.create({
         fontSize: 40,
         color: Colors.secondary,
         fontFamily: 'oswaldmedium'
-      },
-      break: {
+    },
+    break: {
         margin: 40
     },
 })

@@ -7,7 +7,7 @@ import { Dropdown } from 'react-native-element-dropdown'
 import { router } from 'expo-router'
 import * as Linking from 'expo-linking';
 import { useEffect } from 'react';
-import { useNavigation } from '@react-navigation/native';
+
 
 
 export default function topBar() {
@@ -36,14 +36,15 @@ export default function topBar() {
 
 
   function searchHandle() {
+    getInitialURL();
     clicked = 1;
     let myData = {
       queryData: query,
       urlData: url,
       clickedData: clicked
     }
-    let searchString = JSON.stringify(myData);
-    router.navigate({"pathname":"./results", "params":{'data':searchString}}); // Pass myData as a parameter
+    
+    router.replace({"pathname":"./results", params: { queryData: query}}); // Pass myData as a parameter
     // console.log(searchString);
   }
   
@@ -165,15 +166,15 @@ export default function topBar() {
       </Link>
 
       <View style={styles.searchContainer}>
-        <Link onPress={searchHandle} href={'/results'}>
+        <Pressable onPress={searchHandle}>
           <Text style={styles.placeholder}>⌕</Text>
-        </Link>
+        </Pressable>
 
 
         <TextInput
           style={styles.searchStyle}
           placeholder='Search'
-          onSubmitEditing={getInitialURL}
+          onSubmitEditing={searchHandle}
           onChangeText={text => setQuery(text)}
           value={query}
         />

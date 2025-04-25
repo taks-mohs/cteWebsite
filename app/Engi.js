@@ -82,7 +82,7 @@ export default function Engi() {
                                 />
                                 <Text style={styles.c2cBody}>
                                     The robotics club teaches it's club memebers how to use assemble and program to robots. The robotics club participates in the
-                                    VEX Robotics Tournament and FIRST Robotics Competition within a year. 
+                                    VEX Robotics Tournament and FIRST Robotics Competition within a year.
                                 </Text>
                             </View>
                         </ScrollView>
@@ -103,7 +103,7 @@ export default function Engi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Teacher 2</Text>
+                                <Text style={styles.c2cHeader}>V. Komar</Text>
                                 <Image
                                     source={require('../assets/ENGRG/TeacherIMGS/Komar.jpg')}
                                     style={styles.studentImg}
@@ -113,7 +113,7 @@ export default function Engi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Teacher 2</Text>
+                                <Text style={styles.c2cHeader}>J. Murray</Text>
                                 <Image
                                     source={require('../assets/ENGRG/TeacherIMGS/Murray.jpg')}
                                     style={styles.studentImg}
@@ -123,6 +123,25 @@ export default function Engi() {
                                 </Text>
                             </View>
                         </ScrollView>
+                    </View>
+                    <View style={styles.chunk2}>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                            <View style={styles.break}></View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>4 Years of Math</Text>
+                                <Text style={styles.c2cBody}>
+                                    Depending on what core classes you receive, your fourth year of math might be 
+                                    Trigonometry/Precalculus, Calculus, AP Calculus A/B and AP Calculus B/C.
+                                    It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics
+                                </Text>
+                                <Text style={styles.c2cHeader}>4 Years of Science</Text> 
+                                <Text style={styles.c2cBody}>
+                                    Your fourth year of science might be AP Physics.
+                                    It's recommended to move onto AP Physics rather than AP Chemistry, AP Biology, or AP Environmental Science
+                                </Text>
+                            </View>
+                        </ScrollView>
+                        <Text style={styles.c3title}>Suggested Courses</Text>
                     </View>
                 </ScrollView>
             </ImageBackground>

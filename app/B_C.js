@@ -16,7 +16,7 @@ export default function B_C() {
                     </View>
                     <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Information</Text>
-                        <ScrollView style={{ height: 550 }} showsVerticalScrollIndicator={true}>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Possible Careers</Text>
@@ -36,7 +36,7 @@ export default function B_C() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    In this class you will learn how to use hammers, screwdrivers, measuring tapes,</Text>
+                                    In this class you will learn how to use hammers, screwdrivers, measuring tapes, </Text>
                             </View>
                         </ScrollView>
                     </View>

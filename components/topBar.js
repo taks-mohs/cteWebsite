@@ -38,12 +38,6 @@ export default function topBar() {
   function searchHandle() {
     getInitialURL();
     clicked = 1;
-    let myData = {
-      queryData: query,
-      urlData: url,
-      clickedData: clicked
-    }
-    
     router.replace({"pathname":"./results", params: { queryData: query}}); // Pass myData as a parameter
     // console.log(searchString);
   }

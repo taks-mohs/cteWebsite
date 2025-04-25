@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import search from '../modules/search'
 import { useSearchParams } from 'expo-router/build/hooks';
 import ResultObjectReturn from '../components/ResultObjectReturn';
+import { ScrollView } from 'react-native-web';
 
 export default function results() {
     const [list, setList] = useState(null)
@@ -16,27 +17,27 @@ export default function results() {
     return (
         <View>
             <TopBar />
-            <View style={styles.container}>
-                <FlatList
-                    data={list}
-                    renderItem={({ item }) => {
-                        console.log("I am rendering")
-                        return (
-                            <ResultObjectReturn title={item.title} content={item.content} URL={item.url} />
-                        );
-                    }}
-                    keyExtractor={(item, index) => index.toString()}
-                />
-
-
-            </View>
+            <ScrollView style={{ height: 500 }}>
+                <View style={styles.container}>
+                    <FlatList
+                        data={list}
+                        renderItem={({ item }) => {
+                            console.log("I am rendering")
+                            return (
+                                <ResultObjectReturn title={item.title} content={item.content} URL={item.url} />
+                            );
+                        }}
+                        keyExtractor={(item, index) => index.toString()}
+                    />
+                </View>
+            </ScrollView>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: 250,
+        marginTop: 0,
         marginHorizontal: 100,
         flex: 1,
         padding: 20,

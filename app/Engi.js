@@ -93,33 +93,33 @@ export default function Engi() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>E. Hashizume</Text>
+                                <Text style={styles.c2cHeader}>Mr. Hashizume</Text>
                                 <Image
                                     source={require('../assets/ENGRG/TeacherIMGS/Hashizume.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Mr.Hashizume teaches Engineering Tech II as well as Engineering Tech III.
+                                    Teaches Engineering Tech II as well as Engineering Tech III.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Teacher 2</Text>
+                                <Text style={styles.c2cHeader}>Mr. Komar</Text>
                                 <Image
                                     source={require('../assets/ENGRG/TeacherIMGS/Komar.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Mr.Komar teaches Engineering Tech I. He is also your teacher for AP Seminar and AP Research.
+                                    Teaches Engineering Tech I. He is also your teacher for AP Seminar and AP Research.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Teacher 2</Text>
+                                <Text style={styles.c2cHeader}>Mr. Murray</Text>
                                 <Image
                                     source={require('../assets/ENGRG/TeacherIMGS/Murray.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Mr.Murray teaches Foundations of Engineering Technology.
+                                    Teaches Foundations of Engineering Technology.
                                 </Text>
                             </View>
                         </ScrollView>

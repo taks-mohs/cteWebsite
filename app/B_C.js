@@ -36,7 +36,7 @@ export default function B_C() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    In this class you will learn how to use hammers, screwdrivers, measuring tapes, </Text>
+                                    In this class you will learn how to use hammers, screwdrivers, measuring tapes, and various other power tools. </Text>
                             </View>
                         </ScrollView>
                     </View>

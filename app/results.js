@@ -11,12 +11,6 @@ export default function results() {
     const queryData = useSearchParams().get('queryData')
     if (list === null) {
         setList(search(queryData));
-    } else {
-        if (list.length === 0) {
-            return (<View><Text>you have nothing</Text></View>)
-        } else {
-            console.log(list)
-        }
     }
 
     return (

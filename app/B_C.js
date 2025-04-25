@@ -4,7 +4,7 @@ import TopBar from "../components/topBar"
 import { VideoView, useVideoPlayer } from "expo-video";
 
 export default function B_C() {
-    const player = useVideoPlayer(require('../assets/videoplayback.mp4'), player => { player.play() });
+    const player = useVideoPlayer(require('../assets/B_CVideo.mp4'), player => { player.play() });
 
     return (
         <View style={styles.background}>
@@ -28,6 +28,15 @@ export default function B_C() {
                                     • Architect • Carpenter • Civil Engineer • Drafter • Electrical Engineer<br />• Electrician • 
                                     Fuel Cell Technician • Materials Engineer • Mechanical Engineer<br />• Mechatronic Technician
                                     • Painter• Plumber • Roofer • Surveyor• Welder</Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Tools used</Text>
+                                <Image
+                                    source={require('../assets/architect and engineering logo.png')}
+                                    style={styles.studentImg}
+                                />
+                                <Text style={styles.c2cBody}>
+                                    In this class you will learn how to use hammers, screwdrivers, measuring tapes,</Text>
                             </View>
                         </ScrollView>
                     </View>
@@ -144,11 +153,11 @@ export default function B_C() {
                                 </Text>
                             </View>
                         </ScrollView>
-                        <Text style={styles.c3title}>Suggested Classes</Text>
+                        <Text style={styles.c3title}>Classes to Consider</Text>
                     </View>
                     <View style={styles.videoChunk}>
-                        <Text style={styles.c1Title}>Informational Video</Text>
-                        <VideoView player={player} nativeControls />
+                        <Text style={styles.c1Title}>Related video</Text>
+                        <VideoView style={styles.video} player={player} nativeControls />
                     </View>
                 </ScrollView>
             </ImageBackground>
@@ -231,4 +240,8 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
+    video: {
+      marginBottom: 50,
+      width: 640
+    }
 })

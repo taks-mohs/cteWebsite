@@ -7,7 +7,6 @@ export default function searchingTool() {
     <View>
       <TopBar />
       <View style={styles.container}>
-
       </View>
     </View>
   )

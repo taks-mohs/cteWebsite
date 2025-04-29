@@ -5,9 +5,7 @@ import Colors from './colors'
 import React, { useState } from 'react';
 import { Dropdown } from 'react-native-element-dropdown'
 import { router } from 'expo-router'
-import * as Linking from 'expo-linking';
-import { useEffect } from 'react';
-
+import FontAwesome from '@expo/vector-icons/FontAwesome';
 
 
 export default function topBar() {
@@ -18,30 +16,13 @@ export default function topBar() {
     'oswaldsemibold': Oswald_600SemiBold
   })
   const [query, setQuery] = useState('');
-  const [url, setUrl] = useState('');
-  let clicked = 0
-  const getInitialURL = async () => {
-    const initialUrl = await Linking.getInitialURL();
-    if (initialUrl) {
-      setUrl(initialUrl);
-    } 
-    }
-  
-  useEffect(() => {
-    getInitialURL();
-  }, []);
-
-  
-
-
 
   function searchHandle() {
-    getInitialURL();
-    clicked = 1;
-    router.replace({"pathname":"./results", params: { queryData: query}}); // Pass myData as a parameter
-    // console.log(searchString);
+    if (query.trim() !== '') {
+      router.replace({ "pathname": "./results", params: { queryData: query } }); // Pass myData as a parameter
+    }
   }
-  
+
   const styles = StyleSheet.create({
     topBar: {
       padding: width * 0.010,
@@ -79,7 +60,7 @@ export default function topBar() {
       width: width * 0.1,
     },
     searchContainer: {
-      borderWidth: 1,
+      borderWidth: 2,
       borderColor: Colors.primary,
       alignItems: 'center',
       flexDirection: 'row'
@@ -98,7 +79,7 @@ export default function topBar() {
     }
   })
 
-  
+
 
   return (
     <View style={styles.topBar}>
@@ -161,9 +142,8 @@ export default function topBar() {
 
       <View style={styles.searchContainer}>
         <Pressable onPress={searchHandle}>
-          <Text style={styles.placeholder}>⌕</Text>
+          <FontAwesome style={styles.placeholder} name="search" size={20} color="white" />
         </Pressable>
-
 
         <TextInput
           style={styles.searchStyle}
@@ -172,9 +152,7 @@ export default function topBar() {
           onChangeText={text => setQuery(text)}
           value={query}
         />
-
       </View>
-
     </View>
   )
 }

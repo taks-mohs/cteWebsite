@@ -148,7 +148,7 @@ export default function Engi() {
                                 <Text style={styles.c2cBody}>
                                     You might want to take Weight Training or Team Sports as a second elective as to
                                     build the strength typically found within the field. Of course, not all engineering roles involve heavy lifting,
-                                    making it optional.
+                                    making it optional based on what branch of engineering you're going into.
                                 </Text>
                                 <Text>
                                     <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726'}>

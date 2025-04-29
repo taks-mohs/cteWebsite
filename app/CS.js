@@ -191,10 +191,10 @@ export default function CS() {
                                 <Text style={styles.c2cHeader}>For More Information</Text>
                                 <Text style={styles.c2cBody}>
                                     Refer to the Moanalua High School Course Catalog:
-                                    Page 25
+                                    Page 25 (The Icon Below is Pressable)
                                 </Text>
                                 <Text>
-                                    <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726'}>
+                                    <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=25'}>
                                     <Pressable>
                                         <Image
                                             source={require('../assets/mohslogo.png')}

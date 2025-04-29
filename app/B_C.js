@@ -9,7 +9,7 @@ export default function B_C() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/constructionBG.png')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/B_Cbg.png')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Building & Construction</Text>
@@ -19,24 +19,22 @@ export default function B_C() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Description</Text>
+                                <Text style={styles.c2cBody}>
+                                Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields.</Text>
+                            </View>
+                            <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Possible Careers</Text>
-                                <Image
-                                    source={require('../assets/architect and engineering logo.png')}
-                                    style={styles.studentImg}
-                                />
                                 <Text style={styles.c2cBody}>
                                     • Architect • Carpenter • Civil Engineer • Drafter • Electrical Engineer<br />• Electrician • 
                                     Fuel Cell Technician • Materials Engineer • Mechanical Engineer<br />• Mechatronic Technician
                                     • Painter• Plumber • Roofer • Surveyor• Welder</Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Tools used</Text>
-                                <Image
-                                    source={require('../assets/architect and engineering logo.png')}
-                                    style={styles.studentImg}
-                                />
+                                <Text style={styles.c2cHeader}>Inventory</Text>
+                                
                                 <Text style={styles.c2cBody}>
-                                    In this class you will learn how to use hammers, screwdrivers, measuring tapes, and various other power tools. </Text>
+                                    In this class you will learn how to use hammers, screwdrivers, measuring tapes, and various other power tools. Students will also work with materials such as wood and metals.</Text>
                             </View>
                         </ScrollView>
                     </View>
@@ -87,11 +85,11 @@ export default function B_C() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Open to grade: 12. Residential & Commercial Construction: WBL is the capstone course in the program, offering a work-based learning experience to enhance professional and technical skills. Students explore career pathways, prepare for postsecondary programs or jobs, and gain hands-on experience through internships or apprenticeships.
+                                    Open to grade 12. Residential & Commercial Construction: WBL is the capstone course in the program, offering a work-based learning experience to enhance professional and technical skills. Students explore career pathways, prepare for postsecondary programs or jobs, and gain hands-on experience through internships or apprenticeships.
                                 </Text>
                             </View>
                         </ScrollView>
-                        <Text style={styles.c3title}>Classes</Text>
+                        <Text style={styles.c3title}>Electives</Text>
                     </View>
                     <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Teachers</Text>
@@ -113,23 +111,23 @@ export default function B_C() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Calculus/AP Calculus</Text>
+                                <Text style={styles.c2cHeader}>4th Year of Math</Text>
                                 <Image
                                     source={require('../assets/calculus.png')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Calculus is essential for construction as it helps in understanding structural integrity, load distribution, and material optimization, ensuring safe and efficient designs. It also aids in solving complex problems related to measurements, curves, and rates of change in construction projects.
+                                Math helps in building and construction by enabling accurate measurements, structural calculations, and material estimations, ensuring safe and efficient designs.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>AP Physics</Text>
+                                <Text style={styles.c2cHeader}>4th Year of Science</Text>
                                 <Image
                                     source={require('../assets/physics.png')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    AP Physics is beneficial for construction as it provides a strong understanding of forces, motion, and energy, which are critical for designing and analyzing structures. It also helps students apply principles like torque, equilibrium, and material strength to ensure safe and efficient construction projects.
+                                Science helps in building and construction by providing knowledge of forces, motion, and energy, which are essential for designing and analyzing structures. It ensures safe and efficient construction by applying principles like torque, equilibrium, and material strength.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
@@ -179,12 +177,12 @@ export const styles = StyleSheet.create({
         marginTop: 200,
         marginHorizontal: 150,
         padding: 75,
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.secondary,
         alignItems: 'center'
     },
     c1Title: {
         fontSize: 60,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldmedium',
         marginBottom: 25
     },
@@ -193,21 +191,23 @@ export const styles = StyleSheet.create({
         padding: 100,
         marginBottom: 150,
         height: 500,
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.secondary,
         alignItems: 'center',
         flexDirection: 'row'
     },
     c2title: {
         fontSize: 75,
         marginRight: 250,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldsemibold'
     },
     c3title: {
         fontSize: 75,
         marginLeft: 250,
-        color: Colors.secondary,
-        fontFamily: 'oswaldsemibold'
+        color: Colors.primary,
+        fontFamily: 'oswaldsemibold',
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     break: {
         margin: 40
@@ -221,6 +221,7 @@ export const styles = StyleSheet.create({
     c2cBody: {
         fontSize: 18,
         fontFamily: 'oswaldlight',
+        color: Colors.primary,
         textAlign: 'center',
     },
     studentImg: {
@@ -229,14 +230,14 @@ export const styles = StyleSheet.create({
     },
     c2cHeader: {
         fontSize: 40,
-        color: Colors.secondary,
+        color: Colors.primary,
         fontFamily: 'oswaldmedium'
     },
     videoChunk: {
         marginTop: 100,
         marginBottom: 150,
         height: 500,
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.secondary,
         alignItems: 'center',
         justifyContent: 'center'
     },

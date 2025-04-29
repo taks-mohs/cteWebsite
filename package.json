@@ -29,7 +29,8 @@
     "react-native-screens": "~4.4.0",
     "react-native-video": "^6.10.2",
     "react-native-video-player": "^0.16.2",
-    "react-native-web": "~0.19.13"
+    "react-native-web": "~0.19.13",
+    "expo-linear-gradient": "~14.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

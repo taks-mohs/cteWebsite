@@ -20,7 +20,7 @@ export default function testimonyChunk(props) {
     },
     title: {
       fontSize: width * 0.05,
-      marginRight: width * 0.15,
+      marginRight: width * 0.1,
       marginLeft: width * 0.1,
       color: Colors.secondary,
       fontFamily: 'oswaldsemibold'

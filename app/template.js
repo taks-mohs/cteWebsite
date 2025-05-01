@@ -28,13 +28,13 @@ export default function template() {
         <ScrollView>
           <View style ={{marginTop: width * 0.25}}></View>
           <Chunk1
-            header="Chunk 1 Example"
+            header="Chunk 1"
             buttonlabel="Button"
             link="/"
           />
           <View style={{marginTop: width* 0.05}}></View>
           <Chunk2L 
-            header="Chunk 2L Example"
+            header="Chunk 2L"
             info={[
                 <Chunk2Info
                   infoHeader="Info 1"
@@ -55,7 +55,7 @@ export default function template() {
           />
           <View style={{marginTop: width* 0.05}}></View>
           <Chunk2R
-            header="Chunk 2R Example"
+            header="Chunk 2R"
             info={[
                 <Chunk2Info
                   infoHeader="Info 1"

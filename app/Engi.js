@@ -1,4 +1,5 @@
-import { Text, View, StyleSheet, ImageBackground, ScrollView, Image } from "react-native-web"
+import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, Pressable } from "react-native-web"
+import { Link } from 'expo-router'
 import Colors from "../components/colors"
 import TopBar from "../components/topBar"
 
@@ -6,7 +7,7 @@ export default function Engi() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/ENGRG/MiscImages/ENGRGbackground.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/ENGRG/MiscImages/engineeringbackground.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Engineering</Text>
@@ -82,7 +83,7 @@ export default function Engi() {
                                 />
                                 <Text style={styles.c2cBody}>
                                     The robotics club teaches it's club memebers how to use assemble and program to robots. The robotics club participates in the
-                                    VEX Robotics Tournament and FIRST Robotics Competition within a year. 
+                                    VEX Robotics Tournament and FIRST Robotics Competition within a year.
                                 </Text>
                             </View>
                         </ScrollView>
@@ -124,9 +125,48 @@ export default function Engi() {
                             </View>
                         </ScrollView>
                     </View>
-                </ScrollView>
-            </ImageBackground>
-        </View>
+                    <View style={styles.chunk2}>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                            <View style={styles.break}></View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>4 Years of Math</Text>
+                                <Text style={styles.c2cBody}>
+                                    Depending on what core classes you receive, your fourth year of math might be
+                                    Trigonometry/Precalculus, Calculus, AP Calculus A/B and AP Calculus B/C.
+                                    It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics
+                                </Text>
+                                <Text style={styles.c2cHeader}>4 Years of Science</Text>
+                                <Text style={styles.c2cBody}>
+                                    Your fourth year of science might be AP Physics.
+                                    It's recommended to move onto AP Physics rather than AP Chemistry, AP Biology, or AP Environmental Science
+                                </Text>
+                                <Text style={styles.c2cHeader}>Foundations of Business</Text>
+                                <Text style={styles.c2cBody}>
+                                    Refer to the Business page for more information on the classes.
+                                </Text>
+                                <Text style={styles.c2cHeader}>Weight Training or Team Sports</Text>
+                                <Text style={styles.c2cBody}>
+                                    You might want to take Weight Training or Team Sports as a second elective as to
+                                    build the strength typically found within the field. Of course, not all engineering roles involve heavy lifting,
+                                    making it optional based on what branch of engineering you're going into.
+                                </Text>
+                                <Text>
+                                    <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726'}>
+                                        <Pressable>
+                                            <Image
+                                                source={require('../assets/mohslogo.png')}
+                                                style={styles.studentImg}
+                                            />
+                                        </Pressable>
+                                    </Link>
+                                </Text>
+                            </View>
+                        </ScrollView>
+                        <Text style={styles.c3title}>Suggested Courses</Text>
+                    </View>
+                </ScrollView >
+            </ImageBackground >
+        </View >
     )
 }
 

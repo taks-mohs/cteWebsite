@@ -75,7 +75,7 @@ export default function Busi() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Moanalua’s DECA Club has been the dominant program in the state for several years. Moanalua
+                                    Moanalua's DECA Club has been the dominant program in the state for several years. Moanalua
                                     students have won top places in state competitions and have been the majority representatives to
                                     the national competitions in such cities as Atlanta, Anaheim and Orlando
                                 </Text>
@@ -90,7 +90,7 @@ export default function Busi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Mrs. Kramer</Text>
                                 <Image
-                                    source={require('../assets/Business/MOANAHS1734488895639.jpg')}
+                                    source={require('../assets/Business/Kramer.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -99,7 +99,7 @@ export default function Busi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Ms. Yonaine</Text>
+                                <Text style={styles.c2cHeader}>Ms. Yonamine</Text>
                                 <Image
                                     source={require('../assets/placeholder.jpg')}
                                     style={styles.studentImg}

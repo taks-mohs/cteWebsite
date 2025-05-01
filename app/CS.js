@@ -7,7 +7,7 @@ export default function CS() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/CS/MiscImages/CSbackground.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/CS/MiscImages/CSbackground.jpeg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Computer Science</Text>
@@ -165,6 +165,48 @@ export default function CS() {
                             </View>
                         </ScrollView>
                     </View>
+                    <View style={styles.chunk2}>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                            <View style={styles.break}></View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>4 Years of Math</Text>
+                                <Text style={styles.c2cBody}>
+                                    Depending on what core classes you receive, your fourth year of math might be
+                                    Trigonometry/Precalculus, Calculus, AP Calculus A/B and AP Calculus B/C.
+                                    It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics
+                                </Text>
+                                <Text style={styles.c2cHeader}>4 Years of Science</Text>
+                                <Text style={styles.c2cBody}>
+                                    Your fourth year of science might be AP Physics.
+                                    It's recommended to move onto AP Physics rather than AP Chemistry, AP Biology, or AP Environmental Science
+                                </Text>
+                                <Text style={styles.c2cHeader}>Engineering Technology</Text>
+                                <Text style={styles.c2cBody}>
+                                    Refer to the Engineering page for more information on the classes.
+                                </Text>
+                                <Text style={styles.c2cHeader}>Creative Media</Text>
+                                <Text style={styles.c2cBody}>
+                                    Refer to the Creative Media: Graphics Page
+                                </Text>
+                                <Text style={styles.c2cHeader}>For More Information</Text>
+                                <Text style={styles.c2cBody}>
+                                    Refer to the Moanalua High School Course Catalog:
+                                    Page 25
+                                </Text>
+                                <Text>
+                                    <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/mohslogo.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                </Text>
+                            </View>
+                        </ScrollView>
+                        <Text style={styles.c3title}>Suggested Courses</Text>
+                    </View>
                 </ScrollView>
             </ImageBackground>
         </View>
@@ -185,7 +227,7 @@ export const styles = StyleSheet.create({
         marginTop: 200,
         marginHorizontal: 150,
         padding: 75,
-        backgroundColor: 'white',
+        backgroundColor: Colors.primary,
         alignItems: 'center'
     },
     c1Title: {
@@ -199,7 +241,7 @@ export const styles = StyleSheet.create({
         padding: 100,
         marginBottom: 150,
         height: 500,
-        backgroundColor: 'white',
+        backgroundColor: Colors.primary,
         alignItems: 'center',
         flexDirection: 'row'
     },

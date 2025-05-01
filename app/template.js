@@ -1,6 +1,7 @@
 import { StyleSheet, View, ImageBackground, ScrollView, useWindowDimensions } from 'react-native'
 import Colors from '../components/colors'
 import TopBar from '../components/topBar'
+import HeaderChunk from '../components/Templates/HeaderChunk.js'
 import Chunk1 from '../components/Templates/Chunk1'
 import Chunk2L from '../components/Templates/Chunk2L'
 import Chunk2R from '../components/Templates/Chunk2R'
@@ -26,7 +27,11 @@ export default function template() {
       <TopBar />
       <ImageBackground style={styles.bgImg} source={require('../assets/placeholder.jpg')}>
         <ScrollView>
-          <View style ={{marginTop: width * 0.25}}></View>
+          <View style={{marginTop: width * 0.05}}></View>
+          <HeaderChunk
+          header="HeaderChunk"
+          />
+          <View style ={{marginTop: width * 0.05}}></View>
           <Chunk1
             header="Chunk 1"
             buttonlabel="Button"

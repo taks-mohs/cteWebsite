@@ -78,10 +78,9 @@ export default function CS() {
                         <Text style={styles.c3title}>Clubs</Text>
                     </View>
                     <View style={styles.chunk2}>
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false} horizontal={true}>
                             <View style={styles.break}></View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Intro. to CS games</Text>
+                            <View style={styles.c3chunk}>
                                 <Link href={'https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'}>
                                     <Pressable>
                                         <Image
@@ -126,7 +125,7 @@ export default function CS() {
                                 </Text>
                             </View>
                         </ScrollView>
-                        <Text style={styles.c3title}>Highlighted Games</Text>
+                        <Text style={styles.c3title}>Intro to CS Games</Text>
                     </View>
                     <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Teachers</Text>
@@ -280,5 +279,11 @@ export const styles = StyleSheet.create({
         fontSize: 40,
         color: Colors.secondary,
         fontFamily: 'oswaldmedium'
+    },
+    c3chunk: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 75
     }
 })

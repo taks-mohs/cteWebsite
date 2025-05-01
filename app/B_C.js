@@ -151,7 +151,7 @@ export default function B_C() {
                                 </Text>
                             </View>
                         </ScrollView>
-                        <Text style={styles.c3title}>Classes to Consider</Text>
+                        <Text style={styles.c3title}>Suggested Courses</Text>
                     </View>
                     <View style={styles.videoChunk}>
                         <Text style={styles.c1Title}>Related video</Text>

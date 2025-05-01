@@ -10,7 +10,7 @@ export default function Culi() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/Culinary/article-culinary-careers-ease-into-culinary-education.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/Culinary/elle-cosgrave-bEwJDtPGuKU-unsplash.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Culinary</Text>
@@ -98,14 +98,13 @@ export default function Culi() {
                         <Text style={styles.c3title}>Suggested Classes</Text>
                     </View>
                     <View style={styles.chunk2}>
-                        <Text style={styles.c2title}>Clubs</Text>
                         <LinearGradient style={{ height: 500, width: 700 }} locations={[0, 0.6, 1]} colors={["#C7C7C7", "white", "#C7C7C7"]}>
                             <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                                 <View style={styles.break}>
                                     <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Foundations of Culinary (lvl 1)</Text>
+                                        <Text style={styles.c2cHeader}>Mr. Mitsuda</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/Culinary/Mitsuda.jpg')}
                                             style={styles.studentImg}
                                         />
                                         <Text style={styles.c2cBody}>
@@ -114,10 +113,9 @@ export default function Culi() {
                                         </Text>
                                     </View>
                                     <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Culinary Arts: Food
-                                            Preparation (lvl 2)</Text>
+                                        <Text style={styles.c2cHeader}>Mrs. Perkins</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/Culinary/Perkins.jpg')}
                                             style={styles.studentImg}
                                         />
                                         <Text style={styles.c2cBody}>
@@ -126,71 +124,7 @@ export default function Culi() {
                                         </Text>
                                     </View>
                                     <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Advanced Culinary Arts: Pastry/Savory (lvl 3)</Text>
-                                        <Image
-                                            source={require('../assets/placeholder.jpg')}
-                                            style={styles.studentImg}
-                                        />
-                                        <Text style={styles.c2cBody}>
-                                            Advanced Culinary Arts: Pastry and Savory is the <Text style={{ fontWeight: "bold" }}>third course</Text> in the Culinary Arts program of study designed to further students’ practice with food preparation in
-                                            the culinary industry
-                                        </Text>
-                                    </View>
-                                    <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Kitchen Restaurant Operations (lvl 4)</Text>
-                                        <Image
-                                            source={require('../assets/placeholder.jpg')}
-                                            style={styles.studentImg}
-                                        />
-                                        <Text style={styles.c2cBody}>
-                                            Kitchen Restaurant Operations is the <Text style={{ fontWeight: "bold" }}>fourth course</Text> in the Culinary Arts program of study and designed to prepare students for entry
-                                            into the field of foodservice and culinary cuisine.
-                                        </Text>
-                                    </View>
-                                    <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>{"Culinary Arts Work-Based Learning \n(lvl 4)"}</Text>
-                                        <Image
-                                            source={require('../assets/placeholder.jpg')}
-                                            style={styles.studentImg}
-                                        />
-                                        <Text style={styles.c2cBody}>
-                                            Culinary Arts: WBL is the <Text style={{ fontWeight: "bold" }}>capstone course</Text> in the Culinary Arts program of study. It is intended to provide a work-based learning
-                                            experience for students to develop further understanding of professional issues, utilize employability skills, and demonstrate mastery
-                                            of academic and technical skills learned through the program of study.
-                                        </Text>
-                                    </View>
-                                </View>
-                            </ScrollView>
-                        </LinearGradient>
-                    </View>
-                    <View style={styles.chunk2}>
-                        <LinearGradient style={{ height: 500, width: 700 }} locations={[0, 0.6, 1]} colors={["#C7C7C7", "white", "#C7C7C7"]}>
-                            <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-                                <View style={styles.break}>
-                                    <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Teacher 1</Text>
-                                        <Image
-                                            source={require('../assets/placeholder.jpg')}
-                                            style={styles.studentImg}
-                                        />
-                                        <Text style={styles.c2cBody}>
-                                            Foundations of Culinary Arts is an <Text style={{ fontWeight: "bold" }}>introductory course</Text> designed to inform students about careers in the food prep and service industries or related fields, basic
-                                            nutritional and cooking concepts, and the history and influence of culture on food.
-                                        </Text>
-                                    </View>
-                                    <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Teacher 2</Text>
-                                        <Image
-                                            source={require('../assets/placeholder.jpg')}
-                                            style={styles.studentImg}
-                                        />
-                                        <Text style={styles.c2cBody}>
-                                            Culinary Arts: Food Preparation is the <Text style={{ fontWeight: "bold" }}>second course</Text> in the Culinary Arts program of study designed to inform and expose students to various basic food
-                                            preparation methods and considerations found in commercial kitchens and restaurants.
-                                        </Text>
-                                    </View>
-                                    <View style={styles.c2chunk}>
-                                        <Text style={styles.c2cHeader}>Teacher 3</Text>
+                                        <Text style={styles.c2cHeader}>Mrs. Harada</Text>
                                         <Image
                                             source={require('../assets/placeholder.jpg')}
                                             style={styles.studentImg}
@@ -206,10 +140,12 @@ export default function Culi() {
                         <Text style={styles.c3title}>Teachers</Text>
                     </View>
                     <View style={styles.videoChunk}>
-                        <Text style={styles.c1Title}>CTE Video</Text>
-                        <VideoView style={styles.video} player={player} nativeControls />
+                        <LinearGradient style={{ paddingHorizontal: 50, height: 600, width: 900, alignContent: "center" }} locations={[0, 0.6, 1]} colors={["#C7C7C7", "white", "#C7C7C7"]}>
+                            <Text style={[styles.c1Title, { textAlign: "center" }]}>CTE Video</Text>
+                            <VideoView style={styles.video} player={player} nativeControls />
+                        </LinearGradient>
                     </View>
-                <Footer />
+                    <Footer />
                 </ScrollView >
             </ImageBackground >
         </View >
@@ -292,15 +228,14 @@ export const styles = StyleSheet.create({
         textAlign: 'center'
     },
     videoChunk: {
-      marginTop: 100,
-      marginBottom: 150,
-      height: 600,
-      backgroundColor: "#C7C7C7",
-      alignItems: 'center',
-      justifyContent: 'center'
+        marginTop: 100,
+        marginBottom: 150,
+        height: 600,
+        backgroundColor: "#C7C7C7",
+        alignItems: 'center',
+        justifyContent: 'center'
     },
     video: {
-      marginBottom: 50,
-      width: 640
+        marginHorizontal: 100
     }
 })

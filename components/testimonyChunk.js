@@ -3,7 +3,7 @@ import Colors from './colors'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 
 export default function testimonyChunk() {
-  const { width, height } = useWindowDimensions()
+  const { width } = useWindowDimensions()
   useFonts({
     'oswaldlight': Oswald_300Light,
     'oswaldmedium': Oswald_500Medium,

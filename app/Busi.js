@@ -68,12 +68,11 @@ export default function Busi() {
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
                                 <Link href={"../Business_Programs/DECA"}>
-                                    <Text style={styles.c2cHeader}>About the Club</Text>
-                                </Link>
-                                <Image
+                                    <Image
                                     source={require('../assets/Business/IMG_7028.jpg')}
                                     style={styles.studentImg}
                                 />
+                                </Link>
                                 <Text style={styles.c2cBody}>
                                     Moanalua's DECA Club has been the dominant program in the state for several years. Moanalua
                                     students have won top places in state competitions and have been the majority representatives to
@@ -81,7 +80,7 @@ export default function Busi() {
                                 </Text>
                             </View>
                         </ScrollView>
-                        <Text style={styles.c3title}>DECA Business Club</Text>
+                        <Text style={styles.c3title}>DECA</Text>
                     </View>
                     <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Teachers</Text>

@@ -156,7 +156,7 @@ export default function B_C() {
                     <View style={styles.videoChunk}>
                         <Text style={styles.c1Title}>Related video</Text>
                         <VideoView style={styles.video} player={player} nativeControls />
-                    </View>
+                    </View>   
                 </ScrollView>
             </ImageBackground>
         </View>

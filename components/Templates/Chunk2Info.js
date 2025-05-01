@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Text, View, ScrollView, useWindowDimensions } from 'react-native'
+import { StyleSheet, Image, Text, View, useWindowDimensions } from 'react-native'
 import Colors from '../colors'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 
@@ -19,13 +19,14 @@ export default function infoChunk(props) {
     },
     infoHeader: {
       fontSize: width * 0.03,
-      color: Colors.secondary,
-      fontFamily: 'oswaldmedium'
+      fontFamily: 'oswaldmedium',
+      color: props.textColor || Colors.secondary
     },
     infoBody: {
       fontSize: width * 0.015,
       fontFamily: 'oswaldlight',
-      textAlign: 'center'
+      textAlign: 'center',
+      color: props.textColor || Colors.secondary
     },
     infoImage: {
       height: width * 0.175,

@@ -15,20 +15,20 @@ export default function searchingToolChunk(props) {
     container: {
       marginHorizontal: width * 0.1,
       padding: width * 0.05,
-      backgroundColor: Colors.primary,
+      backgroundColor: props.backgroundColor || Colors.primary,
       alignItems: 'center'
     },
     header: {
       fontSize: width * 0.05,
-      color: Colors.secondary,
+      color: props.textColor || Colors.secondary,
       fontFamily: 'oswaldmedium',
       marginBottom: width * 0.02
     },
     button: {
       fontSize: width * 0.025,
       padding: width * 0.01,
-      color: Colors.primary,
-      backgroundColor: Colors.secondary,
+      color: props.backgroundColor || Colors.primary,
+      backgroundColor: props.textColor || Colors.secondary,
       fontFamily: 'oswaldsemibold'
     }
   })

@@ -14,7 +14,7 @@ export default function testimonyChunk(props) {
     mainChunk: {
       padding: width * 0.075,
       height: width * 0.35,
-      backgroundColor: Colors.primary,
+      backgroundColor: props.backgroundColor || Colors.primary,
       alignItems: 'center',
       flexDirection: 'row'
     },
@@ -22,7 +22,7 @@ export default function testimonyChunk(props) {
       fontSize: width * 0.05,
       marginRight: width * 0.1,
       marginLeft: width * 0.1,
-      color: Colors.secondary,
+      color: props.textColor || Colors.secondary,
       fontFamily: 'oswaldsemibold'
     }
   })

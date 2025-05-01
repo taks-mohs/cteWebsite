@@ -2,11 +2,8 @@ import { StyleSheet, View, ImageBackground, ScrollView, useWindowDimensions } fr
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from '../components/colors'
 import TopBar from '../components/topBar'
-import SearchingToolChunk from '../components/searchingToolChunk'
-import TestimonyChunk from '../components/testimonyChunk'
 import Chunk1 from '../components/Templates/Chunk1'
 import Chunk2L from '../components/Templates/Chunk2L'
-import Chunk2R from '../components/Templates/Chunk2R'
 import Chunk2Info from '../components/Templates/Chunk2Info'
 import Footer from '../components/footer'
 

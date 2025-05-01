@@ -1,4 +1,5 @@
-import { Text, View, StyleSheet, ImageBackground, ScrollView, Image } from "react-native-web"
+import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, Pressable } from "react-native-web"
+import { Link } from 'expo-router'
 import Colors from "../components/colors"
 import TopBar from "../components/topBar"
 
@@ -6,7 +7,7 @@ export default function Engi() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/ENGRG/MiscImages/ENGRGbackground.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/ENGRG/MiscImages/engineeringbackground.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Engineering</Text>
@@ -45,7 +46,7 @@ export default function Engi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Engineering Tech 2</Text>
                                 <Image
-                                    source={require('../assets/ENGRG/MiscImages/InverseKinematics.png')}
+                                    source={require('../assets/ENGRG/MiscImages/InverseKinematics.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -82,7 +83,7 @@ export default function Engi() {
                                 />
                                 <Text style={styles.c2cBody}>
                                     The robotics club teaches it's club memebers how to use assemble and program to robots. The robotics club participates in the
-                                    VEX Robotics Tournament and FIRST Robotics Competition within a year. 
+                                    VEX Robotics Tournament and FIRST Robotics Competition within a year.
                                 </Text>
                             </View>
                         </ScrollView>
@@ -103,7 +104,7 @@ export default function Engi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Teacher 2</Text>
+                                <Text style={styles.c2cHeader}>V. Komar</Text>
                                 <Image
                                     source={require('../assets/ENGRG/TeacherIMGS/Komar.jpg')}
                                     style={styles.studentImg}
@@ -113,7 +114,7 @@ export default function Engi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Teacher 2</Text>
+                                <Text style={styles.c2cHeader}>J. Murray</Text>
                                 <Image
                                     source={require('../assets/ENGRG/TeacherIMGS/Murray.jpg')}
                                     style={styles.studentImg}
@@ -124,16 +125,60 @@ export default function Engi() {
                             </View>
                         </ScrollView>
                     </View>
-                </ScrollView>
-            </ImageBackground>
-        </View>
+                    <View style={styles.chunk2}>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                            <View style={styles.break}></View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>4 Years of Math</Text>
+                                <Text style={styles.c2cBody}>
+                                    Depending on what core classes you receive, your fourth year of math might be
+                                    Trigonometry/Precalculus, Calculus, AP Calculus A/B and AP Calculus B/C.
+                                    It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics
+                                </Text>
+                                <Text style={styles.c2cHeader}>4 Years of Science</Text>
+                                <Text style={styles.c2cBody}>
+                                    Your fourth year of science might be AP Physics.
+                                    It's recommended to move onto AP Physics rather than AP Chemistry, AP Biology, or AP Environmental Science
+                                </Text>
+                                <Text style={styles.c2cHeader}>Foundations of Business</Text>
+                                <Text style={styles.c2cBody}>
+                                    Refer to the Business page for more information on the classes.
+                                </Text>
+                                <Text style={styles.c2cHeader}>Weight Training or Team Sports</Text>
+                                <Text style={styles.c2cBody}>
+                                    You might want to take Weight Training or Team Sports as a second elective as to
+                                    build the strength typically found within the field. Of course, not all engineering roles involve heavy lifting,
+                                    making it optional based on what branch of engineering you're going into.
+                                </Text>
+                                <Text style={styles.c2cHeader}>For More Information</Text>
+                                <Text style={styles.c2cBody}>
+                                    Refer to the Moanalua High School Course Catalog:
+                                    Page 34 (The Icon Below is Pressable)
+                                </Text>
+                                <Text>
+                                    <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=34'}>
+                                        <Pressable>
+                                            <Image
+                                                source={require('../assets/mohslogo.png')}
+                                                style={styles.studentImg}
+                                            />
+                                        </Pressable>
+                                    </Link>
+                                </Text>
+                            </View>
+                        </ScrollView>
+                        <Text style={styles.c3title}>Suggested Courses</Text>
+                    </View>
+                </ScrollView >
+            </ImageBackground >
+        </View >
     )
 }
 
 export const styles = StyleSheet.create({
     background: {
         flex: 1,
-        backgroundColor: Colors.secondary,
+        backgroundColor: Colors.primary,
     },
     bgImg: {
         height: '100%',
@@ -144,19 +189,19 @@ export const styles = StyleSheet.create({
         marginTop: 200,
         marginHorizontal: 150,
         padding: 75,
-        backgroundColor: Colors.secondary,
+        backgroundColor: Colors.primary,
         alignItems: 'center'
     },
     c1Title: {
         fontSize: 75,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldmedium',
         marginBottom: 25
     },
     c1Button: {
         fontSize: 25,
         padding: 10,
-        color: Colors.secondary,
+        color: Colors.primary,
         backgroundColor: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
@@ -165,20 +210,20 @@ export const styles = StyleSheet.create({
         padding: 100,
         marginBottom: 150,
         height: 500,
-        backgroundColor: Colors.secondary,
+        backgroundColor: Colors.primary,
         alignItems: 'center',
         flexDirection: 'row'
     },
     c2title: {
         fontSize: 75,
         marginRight: 250,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
     c3title: {
         fontSize: 75,
         marginLeft: 250,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
     break: {
@@ -194,7 +239,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'oswaldlight',
         textAlign: 'center',
-        color: Colors.primary
+        color: Colors.secondary
     },
     studentImg: {
         height: 250,
@@ -202,7 +247,7 @@ export const styles = StyleSheet.create({
     },
     c2cHeader: {
         fontSize: 40,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldmedium'
     }
 })

@@ -3,12 +3,17 @@ import Colors from "../components/colors"
 import TopBar from "../components/topBar"
 import Fina_Mana from "./Business_Programs/Fina_Mana"
 import { Link } from "expo-router"
+import { VideoView, useVideoPlayer } from "expo-video"
+import Footer from "../components/footer"
 
 export default function Busi() {
+    const player = useVideoPlayer(require('../assets/Business/BusinessCTE.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
+
+
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/placeholder.jpg')}>
+            <ImageBackground style={styles.bgImg} source={require('../assets/Business/PXL_20230202_191653716.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Business</Text>
@@ -19,58 +24,58 @@ export default function Busi() {
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
                                 <Link href={"../Business_Programs/Entre"}>
-                                <Text style={styles.c2cHeader}>Entrepreneurship</Text>
+                                    <Text style={styles.c2cHeader}>Entrepreneurship</Text>
                                 </Link>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Business/entrepreneurship.webp')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
+                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                            <Link href={"../Business_Programs/Mark"}>
-                                <Text style={styles.c2cHeader}>Marketing</Text>
+                                <Link href={"../Business_Programs/Mark"}>
+                                    <Text style={styles.c2cHeader}>Marketing</Text>
                                 </Link>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Business/7-Reasons-Why-Product-Marketing-Matters-blog-banner-scaled.webp')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
+                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
                                 <Link href={"/Business_Programs/Fina_Mana"}>
-                                <Text style={styles.c2cHeader}>Financial Management</Text>
+                                    <Text style={styles.c2cHeader}>Financial Management</Text>
                                 </Link>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Business/functions-of-financial-management.webp')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
+                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                                 </Text>
                             </View>
                         </ScrollView>
                     </View>
                     <View style={styles.chunk2}>
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                        <ScrollView showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
                                 <Link href={"../Business_Programs/DECA"}>
-                                <Text style={styles.c2cHeader}>About the Club</Text>
+                                    <Text style={styles.c2cHeader}>About the Club</Text>
                                 </Link>
                                 <Image
-                                    source={require('../assets/placeholder.jpg')}
+                                    source={require('../assets/Business/IMG_7028.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Moanalua’s DECA Club has been the dominant program in the state for several years. Moanalua
+                                    Moanalua's DECA Club has been the dominant program in the state for several years. Moanalua
                                     students have won top places in state competitions and have been the majority representatives to
                                     the national competitions in such cities as Atlanta, Anaheim and Orlando
                                 </Text>
@@ -85,7 +90,7 @@ export default function Busi() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Mrs. Kramer</Text>
                                 <Image
-                                    source={require('../assets/Business/MOANAHS1734488895639.jpg')}
+                                    source={require('../assets/Business/Kramer.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -94,7 +99,7 @@ export default function Busi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Ms. Yonaine</Text>
+                                <Text style={styles.c2cHeader}>Ms. Yonamine</Text>
                                 <Image
                                     source={require('../assets/placeholder.jpg')}
                                     style={styles.studentImg}
@@ -117,6 +122,11 @@ export default function Busi() {
                             </View>
                         </ScrollView>
                     </View>
+                    <View style={styles.videoChunk}>
+                        <Text style={styles.c1Title}>Informational Video</Text>
+                        <VideoView style={styles.video} player={player} nativeControls />
+                    </View>
+                    <Footer />
                 </ScrollView>
             </ImageBackground>
         </View>
@@ -191,5 +201,17 @@ export const styles = StyleSheet.create({
         fontSize: 40,
         color: Colors.secondary,
         fontFamily: 'oswaldmedium'
+    },
+    videoChunk: {
+      marginTop: 100,
+      marginBottom: 150,
+      height: 600,
+      backgroundColor: Colors.primary,
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    video: {
+      marginBottom: 50,
+      width: 640
     }
 })

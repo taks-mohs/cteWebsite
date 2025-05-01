@@ -78,10 +78,9 @@ export default function CS() {
                         <Text style={styles.c3title}>Clubs</Text>
                     </View>
                     <View style={styles.chunk2}>
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false} horizontal={true}>
                             <View style={styles.break}></View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Intro. to CS games</Text>
+                            <View style={styles.c3chunk}>
                                 <Link href={'https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'}>
                                     <Pressable>
                                         <Image
@@ -126,14 +125,14 @@ export default function CS() {
                                 </Text>
                             </View>
                         </ScrollView>
-                        <Text style={styles.c3title}>Highlighted Games</Text>
+                        <Text style={styles.c3title}>Intro to CS Games</Text>
                     </View>
                     <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Teachers</Text>
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>S. Takahashi</Text>
+                                <Text style={styles.c2cHeader}>Sean Takahashi</Text>
                                 <Image
                                     source={require('../assets/CS/TeacherIMGS/GOAT.jpg')}
                                     style={styles.studentImg}
@@ -144,7 +143,7 @@ export default function CS() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>B. Park</Text>
+                                <Text style={styles.c2cHeader}>Brian Park</Text>
                                 <Image
                                     source={require('../assets/CS/TeacherIMGS/Park.jpg')}
                                     style={styles.studentImg}
@@ -164,6 +163,48 @@ export default function CS() {
                                 </Text>
                             </View>
                         </ScrollView>
+                    </View>
+                    <View style={styles.chunk2}>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                            <View style={styles.break}></View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>4 Years of Math</Text>
+                                <Text style={styles.c2cBody}>
+                                    Depending on what core classes you receive, your fourth year of math might be
+                                    Trigonometry/Precalculus, Calculus, AP Calculus A/B and AP Calculus B/C.
+                                    It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics
+                                </Text>
+                                <Text style={styles.c2cHeader}>4 Years of Science</Text>
+                                <Text style={styles.c2cBody}>
+                                    Your fourth year of science might be AP Physics.
+                                    It's recommended to move onto AP Physics rather than AP Chemistry, AP Biology, or AP Environmental Science
+                                </Text>
+                                <Text style={styles.c2cHeader}>Engineering Technology</Text>
+                                <Text style={styles.c2cBody}>
+                                    Refer to the Engineering page for more information on the classes.
+                                </Text>
+                                <Text style={styles.c2cHeader}>Creative Media</Text>
+                                <Text style={styles.c2cBody}>
+                                    Refer to the Creative Media: Graphics Page
+                                </Text>
+                                <Text style={styles.c2cHeader}>For More Information</Text>
+                                <Text style={styles.c2cBody}>
+                                    Refer to the Moanalua High School Course Catalog:
+                                    Page 25 (The Icon Below is Pressable)
+                                </Text>
+                                <Text>
+                                    <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=25'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/mohslogo.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                </Text>
+                            </View>
+                        </ScrollView>
+                        <Text style={styles.c3title}>Suggested Courses</Text>
                     </View>
                 </ScrollView>
             </ImageBackground>
@@ -185,12 +226,12 @@ export const styles = StyleSheet.create({
         marginTop: 200,
         marginHorizontal: 150,
         padding: 75,
-        backgroundColor: Colors.secondary,
+        backgroundColor: Colors.primary,
         alignItems: 'center'
     },
     c1Title: {
         fontSize: 75,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldmedium',
         marginBottom: 25
     },
@@ -199,20 +240,20 @@ export const styles = StyleSheet.create({
         padding: 100,
         marginBottom: 150,
         height: 500,
-        backgroundColor: Colors.secondary,
+        backgroundColor: Colors.primary,
         alignItems: 'center',
         flexDirection: 'row'
     },
     c2title: {
         fontSize: 75,
         marginRight: 250,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
     c3title: {
         fontSize: 75,
         marginLeft: 250,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldsemibold'
     },
     break: {
@@ -228,7 +269,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
         fontFamily: 'oswaldlight',
         textAlign: 'center',
-        color: Colors.primary
+        color: Colors.secondary
     },
     studentImg: {
         height: 250,
@@ -236,7 +277,13 @@ export const styles = StyleSheet.create({
     },
     c2cHeader: {
         fontSize: 40,
-        color: Colors.primary,
+        color: Colors.secondary,
         fontFamily: 'oswaldmedium'
+    },
+    c3chunk: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 75
     }
 })

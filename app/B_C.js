@@ -2,6 +2,7 @@ import { Text, View, StyleSheet, ImageBackground, ScrollView, Image } from "reac
 import Colors from "../components/colors"
 import TopBar from "../components/topBar"
 import { VideoView, useVideoPlayer } from "expo-video";
+import { LinearGradient } from "expo-linear-gradient"
 
 export default function B_C() {
     const player = useVideoPlayer(require('../assets/B_CVideo.mp4'), player => { player.play() });
@@ -16,6 +17,7 @@ export default function B_C() {
                     </View>
                     <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Information</Text>
+                        {/* <LinearGradient style={{ height: 500, width: 700, marginVertical: 100 }} locations={[0, 0.6, 1]} colors={[Colors.secondary, Colors.secondary, Colors.secondary]}> */}
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
@@ -37,6 +39,7 @@ export default function B_C() {
                                     In this class you will learn how to use hammers, screwdrivers, measuring tapes, and various other power tools. Students will also work with materials such as wood and metals.</Text>
                             </View>
                         </ScrollView>
+                        {/* </LinearGradient> */}
                     </View>
                     <View style={styles.chunk2}>
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
@@ -151,7 +154,7 @@ export default function B_C() {
                                 </Text>
                             </View>
                         </ScrollView>
-                        <Text style={styles.c3title}>Classes to Consider</Text>
+                        <Text style={styles.c3title}>Suggested Classes</Text>
                     </View>
                     <View style={styles.videoChunk}>
                         <Text style={styles.c1Title}>Related video</Text>

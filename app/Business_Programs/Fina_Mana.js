@@ -2,6 +2,7 @@ import { ImageBackground, Text, View, StyleSheet, ScrollView } from "react-nativ
 import TopBar from "../../components/topBar";
 import Colors from "../../components/colors";
 import Footer from "../../components/footer";
+import { Image } from "react-native-web";
 
 export default function Entre() {
     return (
@@ -98,7 +99,7 @@ export const styles = StyleSheet.create({
         height: 500,
         backgroundColor: Colors.primary,
         alignItems: 'center',
-        flexDirection: 'column'
+        flexDirection: 'row'
     },
     c2cBody: {
         fontSize: 18,
@@ -113,5 +114,21 @@ export const styles = StyleSheet.create({
     },
     break: {
         margin: 40
+    },
+    studentImg: {
+        height: 250,
+        width: 250
+      },
+      c3title: {
+        fontSize: 75,
+        marginLeft: 250,
+        color: Colors.secondary,
+        fontFamily: 'oswaldsemibold'
+    },
+    c2chunk: {
+        flex: 1,
+        flexDirection: 'column',
+        alignItems: 'center',
+        marginBottom: 75
     },
 })

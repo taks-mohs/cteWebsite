@@ -25,7 +25,7 @@ export default function Entre() {
                                     <Text style={styles.c2cHeader}>Foundations of Business &
                                     Marketing</Text>
                                 <Image
-                                    source={require('../../assets/placeholder.jpg')}
+                                    source={require('../../assets/Business/founds.png')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -37,7 +37,7 @@ export default function Entre() {
                             <View style={styles.c2chunk}>
                                     <Text style={styles.c2cHeader}>Entrepreneurship 1</Text>
                                 <Image
-                                    source={require('../../assets/placeholder.jpg')}
+                                    source={require('../../assets/Business/ent1.webp')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
@@ -49,9 +49,23 @@ export default function Entre() {
                             <View style={styles.c2chunk}>
                                     <Text style={styles.c2cHeader}>Entrepreneurship 2</Text>
                                 <Image
-                                    source={require('../../assets/placeholder.jpg')}
+                                    source={require('../../assets/Business/ent2.jpeg')}
                                     style={styles.studentImg}
                                 />
+                            
+                                <Text style={styles.c2cBody}>
+                                    Moanalua’s DECA Club has been the dominant program in the state for several years. Moanalua
+                                    students have won top places in state competitions and have been the majority representatives to
+                                    the national competitions in such cities as Atlanta, Anaheim and Orlando
+                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                    <Text style={styles.c2cHeader}>Entrepreneurship WBL</Text>
+                                <Image
+                                    source={require('../../assets/Business/ent3.jpeg')}
+                                    style={styles.studentImg}
+                                />
+                            
                                 <Text style={styles.c2cBody}>
                                     Moanalua’s DECA Club has been the dominant program in the state for several years. Moanalua
                                     students have won top places in state competitions and have been the majority representatives to

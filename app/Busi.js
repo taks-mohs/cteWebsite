@@ -31,8 +31,7 @@ export default function Busi() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                Covers the entrepreneurial mindset, business planning, innovation, and practical skills for starting and growing a business.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
@@ -44,8 +43,7 @@ export default function Busi() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                Teaches students about creating and delivering value to customers through various strategies and tactics, including market research, product development, pricing, promotion, and distribution.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
@@ -57,8 +55,7 @@ export default function Busi() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                Teaches individuals and businesses how to effectively manage financial resources, encompassing planning, organizing, directing, and controlling financial activities. 
                                 </Text>
                             </View>
                         </ScrollView>

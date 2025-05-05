@@ -1,7 +1,8 @@
-import { Text, View, StyleSheet, ImageBackground, ScrollView, Image } from "react-native-web"
+import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, Pressable } from "react-native-web"
 import Colors from "../components/colors"
 import TopBar from "../components/topBar"
 import { VideoView, useVideoPlayer } from "expo-video";
+import { Link } from "expo-router";
 
 export default function B_C() {
     const player = useVideoPlayer(require('../assets/B_CVideo.mp4'), player => { player.play() });
@@ -21,18 +22,18 @@ export default function B_C() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Description</Text>
                                 <Text style={styles.c2cBody}>
-                                Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields.</Text>
+                                    Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields.</Text>
                             </View>
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Possible Careers</Text>
                                 <Text style={styles.c2cBody}>
-                                    • Architect • Carpenter • Civil Engineer • Drafter • Electrical Engineer<br />• Electrician • 
+                                    • Architect • Carpenter • Civil Engineer • Drafter • Electrical Engineer<br />• Electrician •
                                     Fuel Cell Technician • Materials Engineer • Mechanical Engineer<br />• Mechatronic Technician
                                     • Painter• Plumber • Roofer • Surveyor• Welder</Text>
                             </View>
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>Inventory</Text>
-                                
+
                                 <Text style={styles.c2cBody}>
                                     In this class you will learn how to use hammers, screwdrivers, measuring tapes, and various other power tools. Students will also work with materials such as wood and metals.</Text>
                             </View>
@@ -117,7 +118,7 @@ export default function B_C() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                Math helps in building and construction by enabling accurate measurements, structural calculations, and material estimations, ensuring safe and efficient designs.
+                                    Math helps in building and construction by enabling accurate measurements, structural calculations, and material estimations, ensuring safe and efficient designs.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
@@ -127,7 +128,7 @@ export default function B_C() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                Science helps in building and construction by providing knowledge of forces, motion, and energy, which are essential for designing and analyzing structures. It ensures safe and efficient construction by applying principles like torque, equilibrium, and material strength.
+                                    Science helps in building and construction by providing knowledge of forces, motion, and energy, which are essential for designing and analyzing structures. It ensures safe and efficient construction by applying principles like torque, equilibrium, and material strength.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
@@ -150,13 +151,30 @@ export default function B_C() {
                                     Weight training/Team Sports is beneficial for construction as it helps build physical strength and endurance, which are essential for handling the demanding physical tasks involved in construction work. It also improves overall fitness and reduces the risk of injuries, enabling workers to perform their duties more effectively and safely.
                                 </Text>
                             </View>
+                            <View style={styles.c2chunk}>
+                            <Text style={styles.c2cHeader}>For More Information</Text>
+                            <Text style={styles.c2cBody}>
+                                Refer to the Moanalua High School Course Catalog:
+                                Page 20 (The Icon Below is Pressable)
+                            </Text>
+                            <Text>
+                                <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=20'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/mohslogo.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                            </Text>
+                            </View>
                         </ScrollView>
                         <Text style={styles.c3title}>Suggested Courses</Text>
                     </View>
                     <View style={styles.videoChunk}>
                         <Text style={styles.c1Title}>Related video</Text>
                         <VideoView style={styles.video} player={player} nativeControls />
-                    </View>   
+                    </View>
                 </ScrollView>
             </ImageBackground>
         </View>
@@ -242,7 +260,7 @@ export const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     video: {
-      marginBottom: 50,
-      width: 640
+        marginBottom: 50,
+        width: 640
     }
 })

@@ -7,7 +7,7 @@ import { LinearGradient } from "expo-linear-gradient"
 
 
 export default function Health() {
-  const player = useVideoPlayer(require('../assets/videoplayback.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
+  const player = useVideoPlayer(require('../assets/Business/BusinessCTE.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
 
 
   return (
@@ -29,8 +29,8 @@ export default function Health() {
                       source={require('../assets/placeholder.jpg')}
                       style={styles.studentImg}
                     />
-                    <Text style={styles.c2cBody}>
-                      Foundations of Health Services is an <Text style={{ fontWeight: "bold" }}>introductory course</Text> designed to inform students about careers in the Health Services field, as
+                    <Text style={styles.c2cBody}> <Text style={{fontWeight: "bold", fontSize: 30}}>{"Open to grades: 9-12\n"}</Text>
+                       Foundations of Health Services is an <Text style={{ fontWeight: "bold" }}>introductory course</Text> designed to inform students about careers in the Health Services field, as
                       well as basic medical skills and terminology.
                     </Text>
                   </View>
@@ -40,7 +40,7 @@ export default function Health() {
                       source={require('../assets/placeholder.jpg')}
                       style={styles.studentImg}
                     />
-                    <Text style={styles.c2cBody}>
+                    <Text style={styles.c2cBody}> <Text style={{fontWeight: "bold", fontSize: 30}}>{"Open to grades: 10-12\n"}</Text>
                     Advanced Health Services is the <Text style={{fontWeight: "bold"}}>second course</Text> for the Human Performance Therapeutic Services, and Nursing Services programs
                     of study
                     </Text>
@@ -51,7 +51,7 @@ export default function Health() {
                       source={require('../assets/placeholder.jpg')}
                       style={styles.studentImg}
                     />
-                    <Text style={styles.c2cBody}>
+                    <Text style={styles.c2cBody}> <Text style={{fontWeight: "bold", fontSize: 30}}>{"Open to grades: 11-12\n"}</Text>
                     Nursing Services 1 is the <Text style={{fontWeight: "bold"}}>third course</Text> in the Nursing Services program of study and is an applied course designed to develop the
                     skills necessary for a career in nursing.
                     </Text>
@@ -62,7 +62,7 @@ export default function Health() {
                       source={require('../assets/placeholder.jpg')}
                       style={styles.studentImg}
                     />
-                    <Text style={styles.c2cBody}>
+                    <Text style={styles.c2cBody}> <Text style={{fontWeight: "bold", fontSize: 30}}>{"Open to grades: 12\n"}</Text>
                     Nursing Services 2 is the <Text style={{fontWeight: "bold"}}>fourth course</Text> in the Nursing Services program of study designed to inform and develop the skills necessary
                     for a career in nursing, including awareness of varying levels of occupations and credentials available in the field.
                     </Text>
@@ -141,19 +141,17 @@ export default function Health() {
                       style={styles.studentImg}
                     />
                     <Text style={styles.c2cBody}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                      Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Teaches X, Y, & Z. Can be found @________. Loves This n' dat.
                     </Text>
                   </View>
                   <View style={styles.c2chunk}>
                     <Text style={styles.c2cHeader}>Mrs. Harada</Text>
                     <Image
-                      source={require('../assets/placeholder.jpg')}
+                      source={require('../assets/Stock_Portrait.png')}
                       style={styles.studentImg}
                     />
                     <Text style={styles.c2cBody}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                      Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Teaches X, Y, & Z. Can be found @________. Loves This n' dat.
                     </Text>
                   </View>
                 </View>

@@ -23,10 +23,10 @@ export default function Culi() {
                                     <View style={styles.c2chunk}>
                                         <Text style={styles.c2cHeader}>Foundations of Culinary (lvl 1)</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/Culinary/easy-dinner-recipes-for-beginners_cat-1.webp')}
                                             style={styles.studentImg}
                                         />
-                                        <Text style={styles.c2cBody}>
+                                        <Text style={styles.c2cBody}> <Text style={{fontWeight: "bold", fontSize: 30}}>{"Open to grades: 9-12\n"}</Text>
                                             Foundations of Culinary Arts is an <Text style={{ fontWeight: "bold" }}>introductory course</Text> designed to inform students about careers in the food prep and service industries or related fields, basic
                                             nutritional and cooking concepts, and the history and influence of culture on food.
                                         </Text>
@@ -35,10 +35,10 @@ export default function Culi() {
                                         <Text style={styles.c2cHeader}>Culinary Arts: Food
                                             Preparation (lvl 2)</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/Culinary/2606852-84d547ec32d142f782e7d9ec104c9635.jpg')}
                                             style={styles.studentImg}
                                         />
-                                        <Text style={styles.c2cBody}>
+                                        <Text style={styles.c2cBody}> <Text style={{fontWeight: "bold", fontSize: 30}}>{"Open to grades: 10-12\n"}</Text>
                                             Culinary Arts: Food Preparation is the <Text style={{ fontWeight: "bold" }}>second course</Text> in the Culinary Arts program of study designed to inform and expose students to various basic food
                                             preparation methods and considerations found in commercial kitchens and restaurants.
                                         </Text>
@@ -46,10 +46,10 @@ export default function Culi() {
                                     <View style={styles.c2chunk}>
                                         <Text style={styles.c2cHeader}>Advanced Culinary Arts: Pastry/Savory (lvl 3)</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/Culinary/Pastry-Chefs-Favorite-Pastries-and-Advice.webp')}
                                             style={styles.studentImg}
                                         />
-                                        <Text style={styles.c2cBody}>
+                                        <Text style={styles.c2cBody}> <Text style={{fontWeight: "bold", fontSize: 30}}>{"Open to grades: 11-12\n"}</Text>
                                             Advanced Culinary Arts: Pastry and Savory is the <Text style={{ fontWeight: "bold" }}>third course</Text> in the Culinary Arts program of study designed to further students’ practice with food preparation in
                                             the culinary industry
                                         </Text>
@@ -57,10 +57,10 @@ export default function Culi() {
                                     <View style={styles.c2chunk}>
                                         <Text style={styles.c2cHeader}>Kitchen Restaurant Operations (lvl 4)</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/Culinary/culinary_skills.jpg')}
                                             style={styles.studentImg}
                                         />
-                                        <Text style={styles.c2cBody}>
+                                        <Text style={styles.c2cBody}> <Text style={{fontWeight: "bold", fontSize: 30}}>{"Open to grades: 11-12\n"}</Text>
                                             Kitchen Restaurant Operations is the <Text style={{ fontWeight: "bold" }}>fourth course</Text> in the Culinary Arts program of study and designed to prepare students for entry
                                             into the field of foodservice and culinary cuisine.
                                         </Text>
@@ -68,10 +68,10 @@ export default function Culi() {
                                     <View style={styles.c2chunk}>
                                         <Text style={styles.c2cHeader}>{"Culinary Arts Work-Based Learning \n(lvl 4)"}</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/Culinary/dine-with-us-at-cia.jpg')}
                                             style={styles.studentImg}
                                         />
-                                        <Text style={styles.c2cBody}>
+                                        <Text style={styles.c2cBody}> <Text style={{fontWeight: "bold", fontSize: 30}}>{"Open to grades: 12\n"}</Text>
                                             Culinary Arts: WBL is the <Text style={{ fontWeight: "bold" }}>capstone course</Text> in the Culinary Arts program of study. It is intended to provide a work-based learning
                                             experience for students to develop further understanding of professional issues, utilize employability skills, and demonstrate mastery
                                             of academic and technical skills learned through the program of study.
@@ -108,8 +108,7 @@ export default function Culi() {
                                             style={styles.studentImg}
                                         />
                                         <Text style={styles.c2cBody}>
-                                            Foundations of Culinary Arts is an <Text style={{ fontWeight: "bold" }}>introductory course</Text> designed to inform students about careers in the food prep and service industries or related fields, basic
-                                            nutritional and cooking concepts, and the history and influence of culture on food.
+                                            Teaches X, Y, & Z. Can be found @________. Loves This n' dat.
                                         </Text>
                                     </View>
                                     <View style={styles.c2chunk}>
@@ -119,19 +118,17 @@ export default function Culi() {
                                             style={styles.studentImg}
                                         />
                                         <Text style={styles.c2cBody}>
-                                            Culinary Arts: Food Preparation is the <Text style={{ fontWeight: "bold" }}>second course</Text> in the Culinary Arts program of study designed to inform and expose students to various basic food
-                                            preparation methods and considerations found in commercial kitchens and restaurants.
+                                            Teaches X, Y, & Z. Can be found @________. Loves This n' dat.
                                         </Text>
                                     </View>
                                     <View style={styles.c2chunk}>
                                         <Text style={styles.c2cHeader}>Mrs. Harada</Text>
                                         <Image
-                                            source={require('../assets/placeholder.jpg')}
+                                            source={require('../assets/Stock_Portrait.png')}
                                             style={styles.studentImg}
                                         />
                                         <Text style={styles.c2cBody}>
-                                            Advanced Culinary Arts: Pastry and Savory is the <Text style={{ fontWeight: "bold" }}>third course</Text> in the Culinary Arts program of study designed to further students’ practice with food preparation in
-                                            the culinary industry
+                                            Teaches X, Y, & Z. Can be found @________. Loves This n' dat.
                                         </Text>
                                     </View>
                                 </View>

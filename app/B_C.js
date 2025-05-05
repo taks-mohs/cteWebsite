@@ -161,7 +161,7 @@ export default function B_C() {
                                 <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=20'}>
                                     <Pressable>
                                         <Image
-                                            source={require('../assets/mohslogo.png')}
+                                            source={require('../assets/download.jpg')}
                                             style={styles.studentImg}
                                         />
                                     </Pressable>

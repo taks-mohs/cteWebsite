@@ -1,28 +1,28 @@
 [
    {
       "title": "Computer Science",
-      "url": "cte/computer-science",
+      "url": "CS",
       "content": "Computer science focuses on programming, algorithms, and software development. Careers include software engineering and cybersecurity."
    },
    {
       "title": "Automotive Technology",
-      "url": "cte/automotive",
+      "url": "automotive",
       "content": "Automotive technology teaches vehicle maintenance, repair, and diagnostics. Careers include auto mechanics and service technicians."
    },
    {
       "title": "Culinary Arts",
-      "url": "cte/culinary",
+      "url": "Culinary",
       "content": "Culinary arts cover cooking techniques, food safety, and restaurant management. Careers include chefs and pastry artists."
    },
    {
-      "title": "Health Science",
-      "url": "cte/health-science",
-      "content": "Health science prepares students for medical careers such as nursing, EMT, and medical assisting. Topics include anatomy and patient care."
+      "title": "Fashion",
+      "url": "Fashion",
+      "content": "Fashion teaches design principles, textile selection, and garment construction. Careers include fashion design, merchandising, and styling."
    },
    {
-      "title": "Welding Technology",
-      "url": "cte/welding",
-      "content": "Welding technology teaches metal fabrication, safety procedures, and blueprint reading. Careers include welding and metalworking."
+      "title": "Business",
+      "url": "/Business",
+      "content": "Business education covers entrepreneurship, financial management, and marketing strategies. Careers include business management and accounting."
    },
    {
       "title": "Digital Media & Graphic Design",
@@ -30,23 +30,23 @@
       "content": "Graphic design includes digital illustration, branding, and video production. Careers include graphic designers and video editors."
    },
    {
-      "title": "Construction & Carpentry",
-      "url": "cte/construction",
+      "title": "Building & Construction",
+      "url": "B_C",
       "content": "Construction teaches blueprint reading, framing, and finishing. Careers include carpentry, plumbing, and electrical work."
    },
    {
-      "title": "Agriculture & Natural Resources",
-      "url": "cte/agriculture",
-      "content": "Agriculture education covers crop production, animal science, and environmental conservation. Careers include farming and forestry."
+      "title": "Health Services",
+      "url": "Health",
+      "content": "Health Services teaches patient care, medical terminology, and health administration. Careers include nursing, medical assisting, and healthcare management."
    },
    {
-      "title": "Law & Public Safety",
-      "url": "cte/law-public-safety",
-      "content": "This program prepares students for careers in law enforcement, firefighting, and emergency management."
+      "title": "Film",
+      "url": "Film",
+      "content": "Film teaches storytelling, cinematography, and video editing. Careers include filmmakers, editors, and production assistants."
    },
    {
-      "title": "Robotics & Engineering",
-      "url": "cte/robotics-engineering",
-      "content": "Engineering and robotics focus on mechanical design, automation, and electronics. Careers include robotics technicians and engineers."
+      "title": "Engineering",
+      "url": "engineering",
+      "content": "Engineering focuses on mechanical design, automation, and electronics. Careers include robotics technicians and engineers."
    }
 ]

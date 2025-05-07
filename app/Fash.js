@@ -30,8 +30,9 @@ export default function Fash() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    Students utilize fabric in order to create these hats. They're taught how to create this piece using 
+                                    a sewing machine. With this skill, they are able to make custom-made hats according to the designs of
+                                    the fabric that they choose.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
@@ -47,8 +48,8 @@ export default function Fash() {
                                     />
                                 </View>
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    These are recycled handbags made from different things. The bag on the right is made by bottle caps which makes 
+                                    it very unique while also reusing scraps instead of throwing it away. 
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
@@ -58,8 +59,8 @@ export default function Fash() {
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    The sneaker construction is also another one of the project that the students do within the school year.
+                                    The studenst are able to embrace their creativity through this project.
                                 </Text>
                             </View>
                         </ScrollView>
@@ -76,20 +77,21 @@ export default function Fash() {
                                     style={{ width: 400, height: 250 }}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    Here are students using the sewing machine for one of their projects. It's a fun way
+                                    to do some hands-on learning and could be a skill that's helpful outside of school.
                                 </Text>
 
                             </View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Window Displays</Text>
+                                <Text style={styles.c2cHeader}>Clothing</Text>
                                 <Image
                                     source={require('../assets/Fashion/vid04 (1).gif')}
                                     style={{ width: 400, height: 250 }}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    This is an example of how students take measurements when making clothing. It's
+                                    an important skill for any student who wants to go into this pathway as a career or 
+                                    maybe even a side hobby.
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
@@ -99,8 +101,9 @@ export default function Fash() {
                                     style={{ width: 400, height: 250 }}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                                    Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                                    It is important to always draw out an idea before fully jumping into it.
+                                    By doing these illustrations, students will have a better way of approaching 
+                                    making clothes for real people.
                                 </Text>
                             </View>
                         </ScrollView>
@@ -111,12 +114,13 @@ export default function Fash() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Na'a Leroy Makekau</Text>
+                                <Text style={styles.c2cHeader}>Na'a LeRoy Makekau</Text>
                                 <Image
                                     source={require('../assets/Fashion/makekau_pic.jpg')}
                                 />
                                 <Text style={styles.c2cBody}>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
+                                    Mr. Makekau is the only Fashion teacher at Moanalua High School. He helps his students by preparing
+                                    them for careers outside of high school and brings out each of his students' creativity.
                                 </Text>
                             </View>
                         </ScrollView>

@@ -1,12 +1,13 @@
-import { Text, View, StyleSheet, ImageBackground, ScrollView, Image } from "react-native-web"
+import { Text, View, StyleSheet, ImageBackground, Pressable, ScrollView, Image } from "react-native-web"
 import Colors from "../components/colors"
 import TopBar from "../components/topBar"
+import { Link } from 'expo-router'
 
 export default function Graph() {
   return (
     <View style={styles.background}>
       <TopBar />
-      <ImageBackground style={styles.bgImg} source={require('../assets/Graphics/computerImage.jpg')}>
+      <ImageBackground style={styles.bgImg} source={require('../assets/Graphics/graphBack.jpg')}>
         <ScrollView>
           <View style={styles.chunk1}>
             <Text style={styles.c1Title}>Graphics</Text>
@@ -25,29 +26,23 @@ export default function Graph() {
                   <Text style={styles.c2cBody}>
                     Foundations of Creative Media is an introductory course designed to inform students about careers in creative media, including
                     digital design and digital film production. This Level 1 course serves as the foundation course for Digital Design program of study.
-                    Upon completion of the course, a proficient student will be able to explain what comprises the creative media industry sector, explain
-                    principles of digital design and its influences, demonstrate basic knowledge of digital camera and video equipment, and create a
-                    digital photo collection using design and equipment knowledge.  </Text>
+                  </Text>
                 </View>
                 <View style={styles.c2chunk}>
                   <Text style={styles.c2cHeader}>Digital Design 1</Text>
                   <View style={styles.imageRow}>
                     <Image
                       source={require('../assets/Graphics/adobePhoto.png')}
-                      style={styles.studentImg}
+                      style={{ height: 200, width: 200, }}
                     />
                     <Image
                       source={require('../assets/Graphics/adobeIllustrator.png')}
-                      style={styles.studentImg}
+                      style={{ height: 200, width: 200, }}
                     />
                   </View>
                   <Text style={styles.c2cBody}>
                     Digital Design 1 is the second course in the Digital Design program of study designed to introduce students to the digital design
-                    process and the creation of basic design work and page layouts reflective of the process. Upon completion of the course, a proficient
-                    student will be able to explain artistic intent and influence, summarize ADA guidance, apply design software techniques,
-                    conceptualize and create photographs and illustrations of increasing complexity, and produce basic single and multipage layouts.
-                    As part of a student’s program of study progression, the student will create a digital program of study portfolio, providing evidence
-                    of mastery of course standards and readiness to advance and complete the program of study.
+                    process and the creation of basic design work and page layouts reflective of the process.
                     Recommended pre-requisite – Successful completion of Foundations of Creative Media.
                   </Text>
                 </View>
@@ -60,13 +55,28 @@ export default function Graph() {
                   <Text style={styles.c2cBody}>
                     Digital Design 2 is the third course in the Digital Design program of study designed to prepare students for advanced design work
                     in the field of digital design. Students will utilize various design software (development and editing) programs and camera/lighting
-                    equipment in varying degrees of complexity to create web and 3-dimensional works. Upon completion of the course, a proficient
-                    student will be able to create a basic web page layout, conceive and create 3-dimensional models, develop an animation storyboard
-                    and apply the principles of animation in the creation of 3-dimensional animation, and produce a digital artwork collection to
-                    showcase. As part of a student’s program of study progression, the student will maintain a digital program of study portfolio,
-                    providing evidence of mastery of course standards and readiness to advance and complete the program of study.
-                    Recommended pre-requisite – Successful completion of Digital Design 1 (TCD2000) and instructor’s recommendation.
-
+                    equipment in varying degrees of complexity to create web and 3-dimensional works.
+                    Recommended pre-requisite – Successful completion of Digital Design 1 and instructor’s recommendation.
+                  </Text>
+                </View>
+                <View>
+                  <Text style={styles.c2cBody}>
+                    Refer to the Moanalua High School Course Catalog:
+                    Page 28 (The Icon Below is Pressable)
+                  </Text>
+                  <Text>
+                    
+                      <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=28'}>
+                        <View style={{paddingLeft: 200}}>
+                        <Pressable>
+                          <Image
+                            source={require('../assets/blueLogo.png')}
+                            style={styles.studentImg}
+                          />
+                        </Pressable>
+                        </View>
+                      </Link>
+                  
                   </Text>
                 </View>
               </View>
@@ -167,7 +177,7 @@ export const styles = StyleSheet.create({
     marginHorizontal: 150,
     padding: 75,
     backgroundColor: Colors.primary,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   c1Title: {
     fontSize: 75,
@@ -216,11 +226,12 @@ export const styles = StyleSheet.create({
   c2cBody: {
     fontSize: 18,
     fontFamily: 'oswaldlight',
-    textAlign: 'center'
+    textAlign: 'center',
+    paddingTop: 25,
   },
   studentImg: {
     height: 250,
-    width: 250
+    width: 250,
   },
   c2cHeader: {
     fontSize: 40,
@@ -230,6 +241,5 @@ export const styles = StyleSheet.create({
 
   imageRow: {
     flexDirection: 'row',
-
   }
 })

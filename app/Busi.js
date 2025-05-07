@@ -5,6 +5,11 @@ import Fina_Mana from "./Business_Programs/Fina_Mana"
 import { Link } from "expo-router"
 import { VideoView, useVideoPlayer } from "expo-video"
 import Footer from "../components/footer"
+import Chunk1 from "../components/Templates/Chunk1"
+import Chunk2 from "../components/Templates/Chunk2Info"
+import Chunk2L from "../components/Templates/Chunk2L"
+import Chunk2R from "../components/Templates/Chunk2R"
+import headerChunk from "../components/Templates/HeaderChunk"
 
 export default function Busi() {
     const player = useVideoPlayer(require('../assets/Business/BusinessCTE.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
@@ -13,7 +18,14 @@ export default function Busi() {
     return (
         <View style={styles.background}>
             <TopBar />
-            <ImageBackground style={styles.bgImg} source={require('../assets/Business/PXL_20230202_191653716.jpg')}>
+            {/* <Chunk1 title={"Business"} /> */}
+            
+
+
+
+
+
+            {/* <ImageBackground style={styles.bgImg} source={require('../assets/Business/PXL_20230202_191653716.jpg')}>
                 <ScrollView>
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Business</Text>
@@ -121,7 +133,7 @@ export default function Busi() {
                     </View>
                     <Footer />
                 </ScrollView>
-            </ImageBackground>
+            </ImageBackground> */}
         </View>
     )
 }

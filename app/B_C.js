@@ -4,7 +4,7 @@ import { VideoView, useVideoPlayer } from "expo-video";
 import { Link } from "expo-router";
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import TopBar from '../components/topBar'
-import Chunk1 from '../components/Templates/Chunk1'
+import HeaderChunk from '../components/Templates/HeaderChunk'
 import Chunk2L from '../components/Templates/Chunk2L'
 import Chunk2Info from '../components/Templates/Chunk2Info'
 import Footer from '../components/footer'
@@ -23,12 +23,13 @@ export default function B_C() {
             <TopBar />
             <ImageBackground style={styles.bgImg} source={require('../assets/B_Cbg.png')}>
                 <ScrollView>
-                    <View style={styles.chunk1}>
-                        <Text style={styles.c1Title}>Building & Construction</Text>
-                    </View>
+                    <View style={{ marginTop: width * 0.2 }}></View>
+                    <HeaderChunk
+                        header="Building & Construction"
+                    />
                     <View style={{ marginTop: width * 0.05 }}></View>
                     <Chunk2L
-                              header="Testimonials"
+                              header="Information"
                               info={[
                                 <Chunk2Info
                                   infoHeader="Description"

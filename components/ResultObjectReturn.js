@@ -1,20 +1,18 @@
 import React from 'react';
 import { Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { router } from 'expo-router';
+import { Link } from 'expo-router';
 
 
 const ResultObjectReturn = ({ url, title, content }) => {
-    const handlePress = () => {
-        if (url) {
-            router.push(url); // Navigate to the URL when pressed
-        }
-    };
 
     return (
-        <TouchableOpacity onPress={handlePress} style={styles.container}>
-            <Text style={styles.title}>{title}</Text>
+        <Link href = {url}>
+        <TouchableOpacity style={styles.container}>
+            <Text href={url} style={styles.title}>{title}</Text>
             <Text style={styles.content}>{content}</Text>
         </TouchableOpacity>
+        </Link>
     );
 };
 

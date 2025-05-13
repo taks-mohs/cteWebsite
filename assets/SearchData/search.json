@@ -6,28 +6,23 @@
    },
    {
       "title": "Automotive Technology",
-      "url": "automotive",
+      "url": "Auto",
       "content": "Automotive technology teaches vehicle maintenance, repair, and diagnostics. Careers include auto mechanics and service technicians."
    },
    {
       "title": "Culinary Arts",
-      "url": "Culinary",
+      "url": "Culi",
       "content": "Culinary arts cover cooking techniques, food safety, and restaurant management. Careers include chefs and pastry artists."
    },
    {
       "title": "Fashion",
-      "url": "Fashion",
+      "url": "Fash",
       "content": "Fashion teaches design principles, textile selection, and garment construction. Careers include fashion design, merchandising, and styling."
    },
    {
       "title": "Business",
-      "url": "/Business",
+      "url": "Busi",
       "content": "Business education covers entrepreneurship, financial management, and marketing strategies. Careers include business management and accounting."
-   },
-   {
-      "title": "Digital Media & Graphic Design",
-      "url": "cte/digital-media",
-      "content": "Graphic design includes digital illustration, branding, and video production. Careers include graphic designers and video editors."
    },
    {
       "title": "Building & Construction",
@@ -46,7 +41,7 @@
    },
    {
       "title": "Engineering",
-      "url": "engineering",
+      "url": "Engi",
       "content": "Engineering focuses on mechanical design, automation, and electronics. Careers include robotics technicians and engineers."
    }
 ]

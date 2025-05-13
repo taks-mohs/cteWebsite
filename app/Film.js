@@ -170,6 +170,22 @@ export default function Film() {
                  />
                  <View style={{marginTop: width* 0.05, alignItems: 'center'}}></View>
                  <Chunk2L 
+                   header="Teachers"
+                   info={[
+                       <Chunk2Info
+                         infoHeader="Mr. Zavala"
+                         image={require('../assets/Film/zavala_image.jpg')}
+                         infoBody=''
+                       />,
+                       <Chunk2Info
+                         infoHeader="Mr. Ikenaga"
+                         image={require('../assets/Film/ikenaga_image.jpg')}
+                         infoBody=''
+                       />,
+                     ]}
+                 />
+                 <View style={{marginTop: width* 0.05, alignItems: 'center'}}></View>
+                 <Chunk2R 
                    header="MeneMac"
                    info={[
                        <Chunk2Info

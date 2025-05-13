@@ -29,10 +29,12 @@ export default function testimonyChunk(props) {
 
   return (
     <View style={styles.mainChunk}>
+      <LinearGradient style={{ width: width * 0.5, height: width * 0.35 }} locations={[0, 0.6, 1]} colors={[props.secondColor, props.primeColor, props.secondColor]}>
       <ScrollView style={{ height: width * 0.35 }} showsVerticalScrollIndicator={false}>
       <View style={{ margin: width * 0.02 }}></View>
         {props.info}
       </ScrollView>
+      </LinearGradient>
       <Text style={styles.title}>{props.header}</Text>
     </View>
   )

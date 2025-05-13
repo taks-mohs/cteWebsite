@@ -1,6 +1,7 @@
 import { StyleSheet, Image, Text, View, ScrollView, useWindowDimensions } from 'react-native'
 import Colors from '../colors'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
+import { LinearGradient } from 'expo-linear-gradient'
 
 export default function testimonyChunk(props) {
   const { width } = useWindowDimensions()
@@ -30,10 +31,12 @@ export default function testimonyChunk(props) {
   return (
     <View style={styles.mainChunk}>
       <Text style={styles.title}>{props.header}</Text>
-      <ScrollView style={{ height: width * 0.35 }} showsVerticalScrollIndicator={false}>
-        <View style={{ margin: width * 0.02 }}></View>
-        {props.info}
-      </ScrollView>
+      <LinearGradient style={{ width: width * 0.5, height: width * 0.35 }} locations={[0, 0.6, 1]} colors={[props.secondColor, props.primeColor, props.secondColor]}>
+        <ScrollView style={{ height: width * 0.35 }} showsVerticalScrollIndicator={false}>
+          <View style={{ margin: width * 0.02 }}></View>
+          {props.info}
+        </ScrollView>
+      </LinearGradient>
     </View>
   )
 }

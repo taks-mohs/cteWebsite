@@ -33,40 +33,35 @@ export default function Culi() {
                             <Chunk2Info
                                 infoHeader={"Culinary Arts: Food Preparation (lvl 2)"}
                                 image={require('../assets/Culinary/2606852-84d547ec32d142f782e7d9ec104c9635.jpg')}
-                                infoBody={"Open to grades: 10-12\n Culinary Arts: Food Preparation is the second course in the Culinary Arts program of study designed to inform and expose students to various basic food preparation methods and considerations found in commercial kitchens and restaurants."}
+                                infoBody={[<Text style={{fontWeight: "bold"}}>Open to grades: 10-12</Text>, <br/>, <Text>Culinary Arts: Food Preparation is the <Text style={{fontWeight: "bold"}}>second course</Text> in the Culinary Arts program of study designed to inform and expose students to various basic food preparation methods and considerations found in commercial kitchens and restaurants.</Text>]}
                             />,
                             <Chunk2Info
-                                infoHeader={"Advanced Culinary Arts: Pastry/Savory (lvl 3)"}
+                                infoHeader={"Advanced Culinary Arts: Pastry/Savory\n(lvl 3)"}
                                 image={require('../assets/Culinary/Pastry-Chefs-Favorite-Pastries-and-Advice.webp')}
-                                infoBody={"Open to grades: 11-12\nAdvanced Culinary Arts: Pastry and Savory is the third course in the Culinary Arts program of study designed to further students’ practice with food preparation in the culinary industry."}
+                                infoBody={[<Text style={{fontWeight: "bold"}}>Open to grades: 11-12</Text>, <br/>, <Text>Advanced Culinary Arts: Pastry and Savory is the <Text style={{fontWeight: "bold"}}>third course</Text> in the Culinary Arts program of study designed to further students’ practice with food preparation in the culinary industry.</Text>]}
                             />,
                             <Chunk2Info
                                 infoHeader={"Kitchen Restaurant Operations (lvl 4)"}
                                 image={require('../assets/Culinary/culinary_skills.jpg')}
-                                infoBody={"Open to grades: 11-12\nKitchen Restaurant Operations is the fourth course in the Culinary Arts program of study and designed to prepare students for entry into the field of food service and culinary cuisine."}
+                                infoBody={[<Text style={{fontWeight: "bold"}}>Open to grades: 11-12</Text>, <br/>, <Text>Kitchen Restaurant Operations is the <Text style={{fontWeight: "bold"}}>fourth course</Text> in the Culinary Arts program of study and designed to prepare students for entry into the field of food service and culinary cuisine.</Text>]}
                             />,
                             <Chunk2Info
-                                infoHeader={"Culinary Arts Work-Based Learning \n(lvl 4)"}
+                                infoHeader={"Culinary Arts Work-Based Learning\n(lvl 4)"}
                                 image={require('../assets/Culinary/dine-with-us-at-cia.jpg')}
-                                infoBody={"Open to grades: 12\nCulinary Arts: WBL is the capstone course in the Culinary Arts program of study. It is intended to provide a work-based learning experience for students to develop further understanding of professional issues, utilize employability skills, and demonstrate mastery of academic and technical skills learned through the program of study."}
+                                infoBody={[<Text style={{fontWeight: "bold"}}>Open to grades: 12</Text>, <br/>, <Text>Culinary Arts: WBL is the <Text style={{fontWeight: "bold"}}>capstone course</Text> in the Culinary Arts program of study. It is intended to provide a work-based learning experience for students to develop further understanding of professional issues, utilize employability skills, and demonstrate mastery of academic and technical skills learned through the program of study.</Text>]}
                             />]
                         } />
-                    <View style={styles.chunk2}>
-                        <LinearGradient style={{ height: 500, width: 700 }} locations={[0, 0.6, 1]} colors={["#C7C7C7", "white", "#C7C7C7"]}>
-                            <View style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-                                <View style={styles.break}></View>
-                                <View style={styles.c2chunk}>
-                                    <Text style={styles.c2cHeader}>{"\u2022 Health Services"}</Text>
-                                    <Text style={styles.c2cHeader}>{"\u2022 Foundations of Business"}</Text>
-                                    <Text style={styles.c2cHeader}>{"\u2022 Any World Language"}</Text>
-                                    <Text style={styles.c2cHeader}>{"\u2022 Peer Education"}</Text>
-                                    <Text style={styles.c2cHeader}>{"\u2022 Psychology/AP Psychology"}</Text>
-                                    <Text style={styles.c2cHeader}>{"\u2022 Sociology"}</Text>
-                                </View>
-                            </View>
-                        </LinearGradient>
-                        <Text style={styles.c3title}>Suggested Classes</Text>
-                    </View>
+                    <View style={{ marginTop: width * 0.05 }} />
+                    <Chunk2R header="Suggested Classes"
+                        primeColor="#FFFFFF"
+                        secondColor="#C7C7C7"
+                        info={<Chunk2Info infoHeader={"\u2022 Health Services\n\u2022 Foundations of Business\n\u2022Any World Language\n\u2022Peer Education\n\u2022Psychology/AP Psychology\n\u2022 Sociology"} />} />
+                    <View style={{ marginTop: width * 0.05 }} />
+                    <Chunk2L
+                        primeColor="#FFFFFF"
+                        secondColor="#C7C7C7"
+                        info={<Chunk2Info/>}
+                    />
                     <View style={styles.chunk2}>
                         <LinearGradient style={{ height: 500, width: 700 }} locations={[0, 0.6, 1]} colors={["#C7C7C7", "white", "#C7C7C7"]}>
                             <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>

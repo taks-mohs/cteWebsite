@@ -45,23 +45,23 @@ export default function Health() {
             info={[
               <Chunk2Info
                 infoHeader="Foundations of Health Services(lvl 1)"
-                image={require('../assets/placeholder.jpg')}
+                image={require('../assets/Health/Foundation 1.png')}
                 infoBody="Foundations of Health Services is an introductory course designed to inform students about careers in the Health Services field, as well as basic 
                       medical skills and terminology." 
               />,
               <Chunk2Info
                 infoHeader="Advanced Health Services (lvl 2)"
-                image={require('../assets/placeholder.jpg')}
+                image={require('../assets/Health/Foundation 2.png')}
                 infoBody="Advanced Health Services is the second course for the Human Performance Therapeutic Services, and Nursing Services programs of study."
               />,
               <Chunk2Info
                 infoHeader="Nursing Services 1 (lvl 3)"
-                image={require('../assets/placeholder.jpg')}
+                image={require('../assets/Health/Nurse 1.png')}
                 infoBody="Nursing Services 1 is the third course in the Nursing Services program of study and is an applied course designed to develop the skills necessary for a career in nursing."
               />,
               <Chunk2Info
                 infoHeader="Nursing Services 2 (lvl 4)"
-                image={require('../assets/placeholder.jpg')}
+                image={require('../assets/Health/Nurse 2.png')}
                 infoBody="Nursing Services 2 is the fourth course in the Nursing Services program of study designed to inform and develop the skills necessary for a career in nursing, including awareness of varying levels of occupations and credentials available in the field."
               />
             ]}

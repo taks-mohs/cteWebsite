@@ -1,5 +1,5 @@
 // React-native Imports
-import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, Pressable } from "react-native-web"
+import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, Pressable, useWindowDimensions } from "react-native-web"
 import { Link } from 'expo-router'
 // Other Component Imports
 import Colors from "../components/colors"
@@ -13,146 +13,139 @@ import Chunk2Info from '../components/Templates/Chunk2Info'
 import Footer from '../components/footer'
 
 export default function CS() {
+    // Template Component
+    const { width } = useWindowDimensions()
+    const styles = StyleSheet.create({
+        background: {
+            flex: 1,
+            backgroundColor: Colors.primary,
+        },
+        bgImg: {
+            height: '100%',
+            width: '100%',
+            resizeMode: 'cover'
+        }
+    })
+
+    // Page
     return (
         <View style={styles.background}>
             <TopBar />
             <ImageBackground style={styles.bgImg} source={require('../assets/CS/MiscImages/CSbackground.jpeg')}>
                 <ScrollView>
                     {/* Header Section */}
-                    <View style={styles.chunk1}>
-                        <Text style={styles.c1Title}>Computer Science</Text>
-                    </View>
+                    <View style={{ marginTop: width * 0.05 }}></View>
+                    <HeaderChunk
+                        header="Computer Science"
+                    />
+                    {/* Related Classes Section */}
+                    <View style={{ marginTop: width * 0.05 }}></View>
+                    <Chunk2L
+                        header="Related Classes"
+                        info={[
+                            <Chunk2Info
+                                infoHeader="Foundations of Computer Systems & Technology"
+                                image={require('../assets/CS/MiscImages/codeOrg.webp')}
+                                infoBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                            />,
+                            <Chunk2Info
+                                infoHeader="AP Computer Science"
+                                image={require('../assets/CS/MiscImages/Java.jpg')}
+                                infoBody="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                            />,
+                            <Chunk2Info
+                                infoHeader="Programming 2: Mobile App Development"
+                                image={require('../assets/CS/MiscImages/Javascript.png')}
+                                infoBody="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                            />
+                        ]}
+                    />
+                    <View style={{ marginTop: width * 0.05 }}></View>
+
                     <View style={styles.chunk2}>
-                        {/* Related Classes Section */}
-                        <Text style={styles.c2title}>Related Classes</Text>
+                        {/* Clubs Section */}
+                        <Chunk2L
+                            header="Clubs"
+                            info={[
+                                <Chunk2Info
+                                    infoHeader="MeneDevs (Coding Club)"
+                                    image={require('../assets/CS/MiscImages/GameDevelopment.png')}
+                                    infoBody="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                />
+                            ]}
+                        />
+                        {/* End of Clubs Section */}
+                        <View style={{ marginTop: width * 0.05 }}></View>
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-                            <View style={{ backgroundColor: '#ededed' }}>
-                                <View style={styles.break}></View>
-                                {/* Related Class: Foundations of Computer Systems and Technology */}
-                                <View style={styles.c2chunk}>
-                                    <Text style={styles.c2cHeader}>Foundations of Computer Systems & Technology</Text>
-                                    <Image
-                                        source={require('../assets/CS/MiscImages/codeOrg.webp')}
-                                        style={styles.studentImg}
-                                    />
-                                    <Text style={styles.c2cBody}>
-                                        Computer science concepts covered will include an exploration
-                                        of computer programming in different applications such as web development, game development and robotics. This course is a recommended pre-cursor to the AP Computer Science A course.
-                                        Recommended for students who are considering a major in computer science or who will want to be informed citizens in today’s technological
-                                        society.
-                                    </Text>
-                                </View>
-                                {/* Related Class: AP Computer Science */}
-                                <View style={styles.c2chunk}>
-                                    <Text style={styles.c2cHeader}>AP Computer Science</Text>
-                                    <Image
-                                        source={require('../assets/CS/MiscImages/Java.jpg')}
-                                        style={styles.studentImg}
-                                    />
-                                    <Text style={styles.c2cBody}>
-                                        Students are introduced to computer science with
-                                        fundamental topics that include problem solving, design strategies and methodologies, organization of data (data structures), approaches to
-                                        processing data (algorithms), analysis of potential solutions, and the ethical and social implications of computing. The course emphasizes
-                                        both object-oriented and imperative problem solving and design using Java language. These techniques represent proven approaches for
-                                        developing solutions that can scale up from small, simple problems to large, complex problems.
-                                        In May, students will be required to take the AP Computer Science A examination given by the College Board. On the basis of this
-                                        examination, the student’s college will determine how much advanced placement and/or credit the student will receive. There is a required
-                                        fee for the AP exam
-                                    </Text>
-                                </View>
-                                {/* Related Class: Programing 2: Mobile App Development */}
-                                <View style={styles.c2chunk}>
-                                    <Text style={styles.c2cHeader}>Programming 2: Mobile App Development</Text>
-                                    <Image
-                                        source={require('../assets/CS/MiscImages/Javascript.png')}
-                                        style={styles.studentImg}
-                                    />
-                                    <Text style={styles.c2cBody}>
-                                        Programming 2: Mobile Applications Development is the third course in the Programming program of study designed to inform students on
-                                        the role of mobile applications technologies in society, what comprises a mobile application and the process used for designing one, as well
-                                        as to prepare students for mobile applications development through the use of a programming language
-                                    </Text>
-                                </View>
-                                {/* End of Related Classes Section */}
-                            </View>
+                            <Chunk1
+                                header="Chunk 1"
+                                link='https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'
+                            />
+                            <Chunk1
+                                link='https://studio.code.org/projects/gamelab/kjZSLL7eHi-LWqZh4--K74fxlet4QjHh5wmMjPcKCow/embed?nosource'
+                            />
+                            <Chunk1
+                                link='https://studio.code.org/projects/gamelab/g4xP-ldq_iOm6VtjaeZ3bqMVgP7psoCysakpxR2c9-w/embed?nosource'
+                            />
+                            <Chunk1
+                                link='https://studio.code.org/projects/gamelab/M5ZmmjLWTLaBkXfrp3JXzvHmnGg88yp3SI05Ks4tDJR/embed?nosource'
+                            />
+                            <Chunk1
+                                link='https://studio.code.org/projects/gamelab/g4xP-ldq_iOm6VtjaeZ3bqMVgP7psoCysakpxR2c9-w/embed?nosource'
+                            />
                         </ScrollView>
-                    </View>
-                    <View style={styles.chunk2}>
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-                            <View style={{ backgroundColor: '#ededed' }}>
-                                <View style={styles.break}></View>
-                                {/* Clubs Section */}
-                                <View style={styles.c2chunk}>
-                                    <Text style={styles.c2cHeader}>Menedevs (Computer Science Club)</Text>
-                                    <Image
-                                        source={require('../assets/CS/MiscImages/GameDevelopment.png')}
-                                        style={styles.studentImg}
-                                    />
-                                    <Text style={styles.c2cBody}>
-                                        Menedevs juggles between Website Development, Game Development, and Machine Learning. This year saw the club focus on Game Development, working within Game Engine, Unity.
-                                        However, next year, Menedevs might switch over to Website Development.
-                                    </Text>
-                                </View>
-                                {/* End of Clubs Section */}
-                            </View>
-                        </ScrollView>
-                        <Text style={styles.c3title}>Clubs</Text>
-                    </View>
-                    <View style={styles.chunk2}>
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false} horizontal={true}>
-                            <View style={{ backgroundColor: '#ededed' }}>
-                                {/* Highlighted Games Section */}
-                                <View style={styles.break}></View>
-                                <View style={styles.c3chunk}>
-                                    {/* Highlighted Games 1 */}
-                                    <Link href={'https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'}>
-                                        <Pressable>
-                                            <Image
-                                                source={require('../assets/CS/ICTSGames/game1.png')}
-                                                style={styles.studentImg}
-                                            />
-                                        </Pressable>
-                                    </Link>
-                                    {/* Highlighted Games 2 */}
-                                    <Link href={'https://studio.code.org/projects/gamelab/kjZSLL7eHi-LWqZh4--K74fxlet4QjHh5wmMjPcKCow/embed?nosource'}>
-                                        <Pressable>
-                                            <Image
-                                                source={require('../assets/CS/ICTSGames/game2.png')}
-                                                style={styles.studentImg}
-                                            />
-                                        </Pressable>
-                                    </Link>
-                                    {/* Highlighted Games 3 */}
-                                    <Link href={'https://studio.code.org/projects/gamelab/g4xP-ldq_iOm6VtjaeZ3bqMVgP7psoCysakpxR2c9-w/embed?nosource'}>
-                                        <Pressable>
-                                            <Image
-                                                source={require('../assets/CS/ICTSGames/game3.png')}
-                                                style={styles.studentImg}
-                                            />
-                                        </Pressable>
-                                    </Link>
-                                    {/* Highlighted Games 4 */}
-                                    <Link href={'https://studio.code.org/projects/gamelab/M5ZmmjLWTLaBkXfrp3JXzvHmnGg88yp3SI05Ks4tDJR/embed?nosource'}>
-                                        <Pressable>
-                                            <Image
-                                                source={require('../assets/CS/ICTSGames/game4.png')}
-                                                style={styles.studentImg}
-                                            />
-                                        </Pressable>
-                                    </Link>
-                                    {/* Highlighted Games 5 */}
-                                    <Link href={'https://studio.code.org/projects/gamelab/dAcGneC5y2WhTM7gQdvJjOZwnb_TNA6jFVvaDmAO1E9/embed?nosource'}>
-                                        <Pressable>
-                                            <Image
-                                                source={require('../assets/CS/ICTSGames/game5.png')}
-                                                style={styles.studentImg}
-                                            />
-                                        </Pressable>
-                                    </Link>
-                                    {/* End of Highlighted Games Section */}
-                                    <Text style={styles.c2cBody}>
-                                    </Text>
-                                </View>
+
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false} >
+                            {/* Highlighted Games Section */}
+                            <View style={styles.c3chunk}>
+                                {/* Highlighted Games 1 */}
+                                <Link href={'https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/CS/ICTSGames/game1.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                {/* Highlighted Games 2 */}
+                                <Link href={'https://studio.code.org/projects/gamelab/kjZSLL7eHi-LWqZh4--K74fxlet4QjHh5wmMjPcKCow/embed?nosource'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/CS/ICTSGames/game2.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                {/* Highlighted Games 3 */}
+                                <Link href={'https://studio.code.org/projects/gamelab/g4xP-ldq_iOm6VtjaeZ3bqMVgP7psoCysakpxR2c9-w/embed?nosource'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/CS/ICTSGames/game3.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                {/* Highlighted Games 4 */}
+                                <Link href={'https://studio.code.org/projects/gamelab/M5ZmmjLWTLaBkXfrp3JXzvHmnGg88yp3SI05Ks4tDJR/embed?nosource'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/CS/ICTSGames/game4.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                {/* Highlighted Games 5 */}
+                                <Link href={'https://studio.code.org/projects/gamelab/dAcGneC5y2WhTM7gQdvJjOZwnb_TNA6jFVvaDmAO1E9/embed?nosource'}>
+                                    <Pressable>
+                                        <Image
+                                            source={require('../assets/CS/ICTSGames/game5.png')}
+                                            style={styles.studentImg}
+                                        />
+                                    </Pressable>
+                                </Link>
+                                {/* End of Highlighted Games Section */}
+                                <Text style={styles.c2cBody}>
+                                </Text>
                             </View>
                         </ScrollView>
                         {/* The Title of the Section */}
@@ -257,7 +250,7 @@ export default function CS() {
                     {/* End of Suggested Courses Section  */}
                 </ScrollView>
             </ImageBackground>
-        </View>
+        </View >
     )
 }
 

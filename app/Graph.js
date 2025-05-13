@@ -60,6 +60,8 @@ export default function Graph() {
           <View style={{ marginTop: width * 0.05 }}></View>
           <Chunk2L
             header="Related Classes"
+            primeColor="white"
+            secondColor="#C7C7C7"
             info={[
               <Chunk2Info
                 infoHeader="Foundations of Creative Media"
@@ -111,6 +113,8 @@ export default function Graph() {
           <View style={{ marginTop: width * 0.05 }}></View>
           <Chunk2R
             header="Assessments"
+            primeColor="white"
+            secondColor="#C7C7C7"
             info={[
               <Chunk2Info
                 infoHeader="Info 1"
@@ -133,6 +137,8 @@ export default function Graph() {
           <View style={{ marginTop: width * 0.05 }}></View>
           <Chunk2L
             header="Teachers"
+            primeColor="white"
+            secondColor="#C7C7C7"
             info={[
               <Chunk2Info
                 infoHeader="Sean Nishimura"

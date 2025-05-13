@@ -25,6 +25,8 @@ export default function Fash() {
                     <View style={{ marginTop: width * 0.05 }}></View>
                     <Chunk2L
                         header="Projects"
+                        primeColor="white"
+                        secondColor="#C7C7C7"
                         info={[
                             <Chunk2Info
                                 infoHeader="Bucket Hat"
@@ -75,6 +77,8 @@ export default function Fash() {
                     <View style={{ marginTop: width * 0.05 }}></View>
                     <Chunk2R
                         header="Active"
+                        primeColor="white"
+                        secondColor="#C7C7C7"
                         info={[
                             <Chunk2Info
                                 infoHeader="Sewing"
@@ -101,6 +105,8 @@ export default function Fash() {
                     <View style={{ marginTop: width * 0.05 }}></View>
                     <Chunk2L
                         header="Teachers"
+                        primeColor="white"
+                        secondColor="#C7C7C7"
                         info={[
                             <Chunk2Info
                                 infoHeader="Na'a LeRoy Makekau"

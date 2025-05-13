@@ -1,6 +1,7 @@
 import { StyleSheet, Image, Text, View, ScrollView, useWindowDimensions } from 'react-native'
 import Colors from '../colors'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
+import { LinearGradient } from 'expo-linear-gradient'
 
 export default function testimonyChunk(props) {
   const { width } = useWindowDimensions()
@@ -23,7 +24,8 @@ export default function testimonyChunk(props) {
       marginRight: width * 0.1,
       marginLeft: width * 0.1,
       color: props.textColor || Colors.secondary,
-      fontFamily: 'oswaldsemibold'
+      fontFamily: 'oswaldsemibold',
+      textAlign: "center"
     }
   })
 

@@ -1,11 +1,22 @@
-import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, Pressable } from "react-native-web"
+import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, Pressable, useWindowDimensions } from "react-native-web"
 import Colors from "../components/colors"
-import TopBar from "../components/topBar"
 import { VideoView, useVideoPlayer } from "expo-video";
 import { Link } from "expo-router";
+import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
+import TopBar from '../components/topBar'
+import Chunk1 from '../components/Templates/Chunk1'
+import Chunk2L from '../components/Templates/Chunk2L'
+import Chunk2Info from '../components/Templates/Chunk2Info'
+import Footer from '../components/footer'
 
 export default function B_C() {
     const player = useVideoPlayer(require('../assets/B_CVideo.mp4'), player => { player.play() });
+    const { width } = useWindowDimensions()
+      useFonts({
+        'oswaldlight': Oswald_300Light,
+        'oswaldmedium': Oswald_500Medium,
+        'oswaldsemibold': Oswald_600SemiBold
+      })
 
     return (
         <View style={styles.background}>
@@ -15,6 +26,25 @@ export default function B_C() {
                     <View style={styles.chunk1}>
                         <Text style={styles.c1Title}>Building & Construction</Text>
                     </View>
+                    <View style={{ marginTop: width * 0.05 }}></View>
+                    <Chunk2L
+                              header="Testimonials"
+                              info={[
+                                <Chunk2Info
+                                  infoHeader="Description"
+                                  infoBody="Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields."
+                                />,
+                                <Chunk2Info
+                                  infoHeader="Possible Careers"
+                                  infoBody="• Architect • Carpenter • Civil Engineer • Drafter • Electrical Engineer • Electrician • Fuel Cell Technician • Materials Engineer • Mechanical Engineer • Mechatronic Technician • Painter• Plumber • Roofer • Surveyor• Welder"
+                                />,
+                                <Chunk2Info
+                                  infoHeader="Inventory"
+                                  infoBody="Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields."
+                                />
+                              ]}
+                              />
+                    
                     <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Information</Text>
                         {/* <LinearGradient style={{ height: 500, width: 700, marginVertical: 100 }} locations={[0, 0.6, 1]} colors={[Colors.secondary, Colors.secondary, Colors.secondary]}> */}
@@ -39,7 +69,6 @@ export default function B_C() {
                                     In this class you will learn how to use hammers, screwdrivers, measuring tapes, and various other power tools. Students will also work with materials such as wood and metals.</Text>
                             </View>
                         </ScrollView>
-                        {/* </LinearGradient> */}
                     </View>
                     <View style={styles.chunk2}>
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
@@ -154,21 +183,21 @@ export default function B_C() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                            <Text style={styles.c2cHeader}>For More Information</Text>
-                            <Text style={styles.c2cBody}>
-                                Refer to the Moanalua High School Course Catalog:
-                                Page 20 (The Icon Below is Pressable)
-                            </Text>
-                            <Text>
-                                <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=20'}>
-                                    <Pressable>
-                                        <Image
-                                            source={require('../assets/download.jpg')}
-                                            style={styles.studentImg}
-                                        />
-                                    </Pressable>
-                                </Link>
-                            </Text>
+                                <Text style={styles.c2cHeader}>For More Information</Text>
+                                <Text style={styles.c2cBody}>
+                                    Refer to the Moanalua High School Course Catalog:
+                                    Page 20 (The Icon Below is Pressable)
+                                </Text>
+                                <Text>
+                                    <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=20'}>
+                                        <Pressable>
+                                            <Image
+                                                source={require('../assets/download.jpg')}
+                                                style={styles.studentImg}
+                                            />
+                                        </Pressable>
+                                    </Link>
+                                </Text>
                             </View>
                         </ScrollView>
                         <Text style={styles.c3title}>Suggested Courses</Text>

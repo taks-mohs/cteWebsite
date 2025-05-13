@@ -12,11 +12,11 @@ import Footer from '../components/footer'
 export default function B_C() {
     const player = useVideoPlayer(require('../assets/B_CVideo.mp4'), player => { player.play() });
     const { width } = useWindowDimensions()
-      useFonts({
+    useFonts({
         'oswaldlight': Oswald_300Light,
         'oswaldmedium': Oswald_500Medium,
         'oswaldsemibold': Oswald_600SemiBold
-      })
+    })
 
     return (
         <View style={styles.background}>
@@ -29,23 +29,56 @@ export default function B_C() {
                     />
                     <View style={{ marginTop: width * 0.05 }}></View>
                     <Chunk2L
-                              header="Information"
-                              info={[
-                                <Chunk2Info
-                                  infoHeader="Description"
-                                  infoBody="Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields."
-                                />,
-                                <Chunk2Info
-                                  infoHeader="Possible Careers"
-                                  infoBody="• Architect • Carpenter • Civil Engineer • Drafter • Electrical Engineer • Electrician • Fuel Cell Technician • Materials Engineer • Mechanical Engineer • Mechatronic Technician • Painter• Plumber • Roofer • Surveyor• Welder"
-                                />,
-                                <Chunk2Info
-                                  infoHeader="Inventory"
-                                  infoBody="Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields."
-                                />
-                              ]}
-                              />
-                    
+                        backgroundColor={Colors.secondary}
+                        textColor={Colors.primary}
+                        header="Information"
+                        info={[
+                            <Chunk2Info
+                                backgroundColor={Colors.secondary}
+                                textColor={Colors.primary}
+                                infoHeader="Description"
+                                infoBody="Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields."
+                            />,
+                            <Chunk2Info
+                                backgroundColor={Colors.secondary}
+                                textColor={Colors.primary}
+                                infoHeader="Possible Careers"
+                                infoBody="• Architect • Carpenter • Civil Engineer • Drafter • Electrical Engineer • Electrician • Fuel Cell Technician • Materials Engineer • Mechanical Engineer • Mechatronic Technician • Painter• Plumber • Roofer • Surveyor• Welder"
+                            />,
+                            <Chunk2Info
+                                backgroundColor={Colors.secondary}
+                                textColor={Colors.primary}
+                                infoHeader="Inventory"
+                                infoBody="Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields."
+                            />
+                        ]}
+                    />
+                    <Chunk2L
+                        backgroundColor={Colors.secondary}
+                        textColor={Colors.primary}
+                        header="Information"
+                        info={[
+                            <Chunk2Info
+                                backgroundColor={Colors.secondary}
+                                textColor={Colors.primary}
+                                infoHeader="Description"
+                                infoBody="Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields."
+                            />,
+                            <Chunk2Info
+                                backgroundColor={Colors.secondary}
+                                textColor={Colors.primary}
+                                infoHeader="Possible Careers"
+                                infoBody="• Architect • Carpenter • Civil Engineer • Drafter • Electrical Engineer • Electrician • Fuel Cell Technician • Materials Engineer • Mechanical Engineer • Mechatronic Technician • Painter• Plumber • Roofer • Surveyor• Welder"
+                            />,
+                            <Chunk2Info
+                                backgroundColor={Colors.secondary}
+                                textColor={Colors.primary}
+                                infoHeader="Inventory"
+                                infoBody="Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields."
+                            />
+                        ]}
+                    />
+
                     <View style={styles.chunk2}>
                         <Text style={styles.c2title}>Information</Text>
                         {/* <LinearGradient style={{ height: 500, width: 700, marginVertical: 100 }} locations={[0, 0.6, 1]} colors={[Colors.secondary, Colors.secondary, Colors.secondary]}> */}

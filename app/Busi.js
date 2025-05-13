@@ -64,17 +64,17 @@ export default function Busi() {
                         info={[
                             <Chunk2Info
                               infoHeader="Foundations of Business & Marketing"
-                              image={require('../assets/placeholder.jpg')}
-                              infoBody=""
+                              image={require('../assets/business-stock.jpg')}
+                              infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
                             />,
                             <Chunk2Info
                               infoHeader="Entrepreneurship 1"
-                              image={require('../assets/placeholder.jpg')}
+                              image={require('../assets/business-stock.jpg')}
                               infoBody=""
                             />,
                             <Chunk2Info
                               infoHeader="Entrepreneurship 2"
-                              image={require('../assets/placeholder.jpg')}
+                              image={require('../assets/business-stock.jpg')}
                               infoBody=""
                             />
 
@@ -87,17 +87,17 @@ export default function Busi() {
                         info={[
                             <Chunk2Info
                               infoHeader="Foundations of Business & Marketing"
-                              image={require('../assets/placeholder.jpg')}
-                              infoBody=""
+                              image={require('../assets/business-stock.jpg')}
+                              infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
                             />,
                             <Chunk2Info
                               infoHeader="Principles of Finance & Economics"
-                              image={require('../assets/placeholder.jpg')}
+                              image={require('../assets/business-stock.jpg')}
                               infoBody=""
                             />,
                             <Chunk2Info
                               infoHeader="Accounting"
-                              image={require('../assets/placeholder.jpg')}
+                              image={require('../assets/business-stock.jpg')}
                               infoBody=""
                             />
                           ]}
@@ -109,22 +109,33 @@ export default function Busi() {
                         info={[
                             <Chunk2Info
                               infoHeader="Foundations of Business & Marketing"
-                              image={require('../assets/placeholder.jpg')}
-                              infoBody=""
+                              image={require('../assets/business-stock.jpg')}
+                              infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
                             />,
                             <Chunk2Info
                               infoHeader="Advertising & Public Relations"
-                              image={require('../assets/placeholder.jpg')}
+                              image={require('../assets/business-stock.jpg')}
                               infoBody=""
                             />,
                             <Chunk2Info
                               infoHeader="Digital Marketing & Market Analytics"
-                              image={require('../assets/placeholder.jpg')}
+                              image={require('../assets/business-stock.jpg')}
                               infoBody=""
                             />
                           ]}
                       />
-                      <View style={{marginTop: width * 0.1}}></View>
+
+                      <View style={{marginTop: width * 0.05}}></View>
+                      <Chunk2R
+                        header = "Related Club"
+                        info = {[
+                            <Chunk2Info
+                              infoHeader="DECA"
+                              image={require('../assets/DECA.jpg')}
+                              infoBody="DECA, or Distributive Education Clubs of America, is an international organization that prepares high school and college students for careers in business. Founded in 1946, DECA focuses on developing emerging leaders and entrepreneurs in fields such as marketing, finance, hospitality, and management. The organization provides educational programs and resources to enhance classroom instruction and enrich the learning experience for over 230,000 high school members and 15,000 collegiate members worldwide. "
+                            />
+                        ]}
+                      />
                       <Footer/>
                     </ScrollView>
                     </ImageBackground>

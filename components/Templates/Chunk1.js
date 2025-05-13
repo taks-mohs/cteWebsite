@@ -1,10 +1,10 @@
 import { StyleSheet, Text, Pressable, View, useWindowDimensions } from 'react-native'
 import { Link } from 'expo-router'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
-import Colors from './colors'
+import Colors from '../colors'
 
-export default function searchingToolChunk() {
-  const { width, height } = useWindowDimensions()
+export default function searchingToolChunk(props) {
+  const { width } = useWindowDimensions()
   useFonts({
     'oswaldlight': Oswald_300Light,
     'oswaldmedium': Oswald_500Medium,
@@ -12,34 +12,33 @@ export default function searchingToolChunk() {
   })
 
   const styles = StyleSheet.create({
-    chunk1: {
-      marginTop: width * 0.25,
+    container: {
       marginHorizontal: width * 0.1,
       padding: width * 0.05,
-      backgroundColor: Colors.primary,
+      backgroundColor: props.backgroundColor || Colors.primary,
       alignItems: 'center'
     },
-    c1Title: {
+    header: {
       fontSize: width * 0.05,
-      color: Colors.secondary,
+      color: props.textColor || Colors.secondary,
       fontFamily: 'oswaldmedium',
       marginBottom: width * 0.02
     },
-    c1Button: {
+    button: {
       fontSize: width * 0.025,
       padding: width * 0.01,
-      color: Colors.primary,
-      backgroundColor: Colors.secondary,
+      color: props.backgroundColor || Colors.primary,
+      backgroundColor: props.textColor || Colors.secondary,
       fontFamily: 'oswaldsemibold'
     }
   })
 
   return (
-    <View style={styles.chunk1}>
-      <Text style={styles.c1Title}>Find Your Pathway</Text>
-      <Link href={'/searchingtool'}>
+    <View style={styles.container}>
+      <Text style={styles.header}>{props.header}</Text>
+      <Link href={props.link}>
         <Pressable>
-          <Text style={styles.c1Button}>Searching Tool</Text>
+          <Text style={styles.button}>{props.buttonlabel}</Text>
         </Pressable>
       </Link>
     </View>

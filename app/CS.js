@@ -48,17 +48,17 @@ export default function CS() {
                             <Chunk2Info
                                 infoHeader="Foundations of Computer Systems & Technology"
                                 image={require('../assets/CS/MiscImages/codeOrg.webp')}
-                                infoBody="Foundations of Computer Systems & Technology ."
+                                infoBody="This course is hands-on introduction to computer science concepts and skills. Computer science concepts covered will include an exploration of computer programming in different applications such as web development, game development and robotics."
                             />,
                             <Chunk2Info
                                 infoHeader="AP Computer Science"
                                 image={require('../assets/CS/MiscImages/Java.jpg')}
-                                infoBody="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                                infoBody=" Students are introduced to computer science with fundamental topics that include problem solving, design strategies and methodologies, organization of data (data structures), approaches to processing data (algorithms), analysis of potential solutions, and the ethical and social implications of computing."
                             />,
                             <Chunk2Info
                                 infoHeader="Programming 2: Mobile App Development"
                                 image={require('../assets/CS/MiscImages/Javascript.png')}
-                                infoBody="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                                infoBody="Programming 2: Mobile Applications Development is the third course in the Programming program of study designed to inform students onthe role of mobile applications technologies in society, what comprises a mobile application and the process used for designing one, as well as to prepare students for mobile applications development through the use of a programming language."
                             />
                         ]}
                     />
@@ -71,7 +71,7 @@ export default function CS() {
                                 <Chunk2Info
                                     infoHeader="MeneDevs (Coding Club)"
                                     image={require('../assets/CS/MiscImages/GameDevelopment.png')}
-                                    infoBody="Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                    infoBody="Unfortunately, MeneDevs is finding it hard to find members. If you are interested in coding, please join the MeneDevs, Coding Club. The Coding Club focuses on a new topic every year ranging fromm website development, to game development."
                                 />
                             ]}
                         />
@@ -100,7 +100,6 @@ export default function CS() {
                             />
                         </ScrollView>
                         {/* The Title of the Section */}
-                        <Text style={styles.c3title}>Intro to CS Games</Text>
                     </View>
                     <View style={styles.chunk2}>
                         {/* Teachers Section */}
@@ -111,17 +110,17 @@ export default function CS() {
                                 <Chunk2Info
                                     infoHeader="S. Takahashi"
                                     image={require('../assets/CS/TeacherIMGS/GOAT.jpg')}
-                                    infoBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                    infoBody="Mr.Takahashi is your Computer Science teacher for Foundations of Computer Systems & Technology, AP Computer Science, and Programming 2: Mobile App Development. He is also the adviser for MeneDevs (Coding Club)."
                                 />,
                                 <Chunk2Info
                                     infoHeader="B. Park"
                                     image={require('../assets/CS/TeacherIMGS/Park.jpg')}
-                                    infoBody="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                                    infoBody="Mr.Park is your Computer Science teacher for Foundations of Computer Systems."
                                 />,
                                 <Chunk2Info
-                                    infoHeader="H. Ishikawa"
+                                    infoHeader="H Ishikawa"
                                     image={require('../assets/CS/TeacherIMGS/Ishikawa.jpg')}
-                                    infoBody="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                                    infoBody="Mr.Ishikawa is your Computer Science teacher for Foundations of Computer Systems."
                                 />
                             ]}
                         />
@@ -160,12 +159,14 @@ export default function CS() {
                     </View>
                     <View style={{ marginTop: width * 0.05 }}>
                         <Chunk1Picture
+                            header="Course Catalog (Press the Image)"
                             link='https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=25'
                             image={require('../assets/mohsLogov2.png')}
                         />
                     </View>
-                    
+                    <View style={{ marginTop: width * 0.05 }}></View>
                 </ScrollView>
+                <View style={{ marginTop: width * 0.05 }}></View>
             </ImageBackground>
         </View >
     )

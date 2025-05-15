@@ -79,22 +79,27 @@ export default function CS() {
                         <View style={{ marginTop: width * 0.05 }}></View>
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false} horizontal={true}>
                             <Chunk1Picture
+                                header='Platformer Game'
                                 link='https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'
                                 image={require('../assets/CS/ICTSGames/game1.png')}
                             />
                             <Chunk1Picture
-                                link='https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'
+                                header='Frogger Game'
+                                link='https://studio.code.org/projects/gamelab/kjZSLL7eHi-LWqZh4--K74fxlet4QjHh5wmMjPcKCow/embed?nosource'
                                 image={require('../assets/CS/ICTSGames/game2.png')}
                             />
                             <Chunk1Picture
+                                header='Undermon Game'
                                 link='https://studio.code.org/projects/gamelab/g4xP-ldq_iOm6VtjaeZ3bqMVgP7psoCysakpxR2c9-w/embed?nosource'
                                 image={require('../assets/CS/ICTSGames/game3.png')}
                             />
                             <Chunk1Picture
+                                header='Lucia & Sable'
                                 link='https://studio.code.org/projects/gamelab/M5ZmmjLWTLaBkXfrp3JXzvHmnGg88yp3SI05Ks4tDJR/embed?nosource'
                                 image={require('../assets/CS/ICTSGames/game4.png')}
                             />
                             <Chunk1Picture
+                                header='Space Race'
                                 link='https://studio.code.org/projects/gamelab/dAcGneC5y2WhTM7gQdvJjOZwnb_TNA6jFVvaDmAO1E9/embed?nosource'
                                 image={require('../assets/CS/ICTSGames/game5.png')}
                             />

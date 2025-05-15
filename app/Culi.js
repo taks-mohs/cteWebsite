@@ -9,10 +9,43 @@ import Chunk1 from '../components/Templates/Chunk1'
 import Chunk2L from '../components/Templates/Chunk2L'
 import Chunk2R from '../components/Templates/Chunk2R'
 import Chunk2Info from '../components/Templates/Chunk2Info'
-
+const { width } = useWindowDimensions()
 export default function Culi() {
     const player = useVideoPlayer(require('../assets/Business/BusinessCTE.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
-    const { width } = useWindowDimensions()
+     const styles = StyleSheet.create({
+    background: {
+        flex: 1,
+        backgroundColor: Colors.primary,
+    },
+    bgImg: {
+        height: '100%',
+        width: '100%',
+        resizeMode: 'cover'
+    },
+    videoChunk: {
+        marginTop: 100,
+        marginBottom: 150,
+        height: 600,
+        backgroundColor: "#FFFFFF",
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    video: {
+        marginHorizontal: 100
+    },
+    c1Title: {
+        fontSize: 75,
+        color: Colors.secondary,
+        fontFamily: 'oswaldmedium',
+        marginBottom: 25
+    },
+    c2title: {
+        fontSize: width * 0.03,
+        alignContent: 'center',
+        color: Colors.secondary,
+        fontFamily: 'oswaldsemibold'
+    },
+})
     return (
         <View style={styles.background}>
             <TopBar />
@@ -55,9 +88,7 @@ export default function Culi() {
                     <Chunk2R header="Suggested Classes"
                         primeColor="#FFFFFF"
                         secondColor="#C7C7C7"
-                        info={<Chunk2Info
-                            infoHeader={"\u2022 Health Services\n\u2022 Foundations of Business\n\u2022Any World Language\n\u2022Peer Education\n\u2022Psychology/AP Psychology\n\u2022 Sociology"}
-                        />}
+                        info={<Text style={styles.c2title}>{"\u2022 Health Services\n\u2022 Foundations of Business\n\u2022Any World Language\n\u2022Peer Education\n\u2022Psychology/AP Psychology\n\u2022 Sociology"}</Text>}
                     />
                     <View style={{ marginTop: width * 0.05 }} />
                     <Chunk2L header="Teachers"
@@ -91,27 +122,7 @@ export default function Culi() {
             </ImageBackground >
         </View >
     )
-}
 
-export const styles = StyleSheet.create({
-    background: {
-        flex: 1,
-        backgroundColor: Colors.primary,
-    },
-    bgImg: {
-        height: '100%',
-        width: '100%',
-        resizeMode: 'cover'
-    },
-    videoChunk: {
-        marginTop: 100,
-        marginBottom: 150,
-        height: 600,
-        backgroundColor: "#C7C7C7",
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    video: {
-        marginHorizontal: 100
-    }
-})
+
+
+}

@@ -20,6 +20,7 @@ export default function infoChunk(props) {
     infoHeader: {
       fontSize: width * 0.03,
       fontFamily: 'oswaldmedium',
+      textAlign: 'center',
       color: props.textColor || Colors.secondary
     },
     infoBody: {

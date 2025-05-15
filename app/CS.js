@@ -12,6 +12,7 @@ import Chunk2L from '../components/Templates/Chunk2L'
 import Chunk2R from '../components/Templates/Chunk2R'
 import Chunk2Info from '../components/Templates/Chunk2Info'
 import Footer from '../components/footer'
+import ImagelessInfoChunk from "../components/Templates/ImagelessInfoChunk"
 
 export default function CS() {
     // Template Component
@@ -132,82 +133,38 @@ export default function CS() {
                         <Chunk2L
                             header="Suggested Courses"
                             info={[
-                                <Chunk2Info
+                                <ImagelessInfoChunk
                                     infoHeader="Four Years of Math"
                                     infoBody=
                                     "Depending on what core classes you receive, your fourth year of math might be Trigonometry or Precalculus Calculus AP Calculus AB and AP Calculus B/C. It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics."
                                 />,
-                                <Chunk2Info
+                                <ImagelessInfoChunk
                                     infoHeader="Four Years of Science"
                                     image={require('../assets/CS/MiscImages/Java.jpg')}
                                     infoBody=
                                     "Your fourth year of science might be AP Physics. It's recommended to move onto AP Physics rather than AP Chemistry, AP Biology, or AP Environmental Science"
                                 />,
-                                <Chunk2Info
+                                <ImagelessInfoChunk
                                     infoHeader="Engineering Technology"
                                     image={require('../assets/CS/MiscImages/Javascript.png')}
                                     infoBody="Refer to the Engineering page for more information."
                                 />,
-                                <Chunk2Info
+                                <ImagelessInfoChunk
                                     infoHeader="Creative Media"
                                     image={require('../assets/CS/MiscImages/Javascript.png')}
                                     infoBody="Refer to the Creative Media page for more information."
                                 />
                             ]}
                         />
-                        {/* End of Related Courses Section */}
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-                            <View style={{ backgroundColor: '#ededed' }}>
-                                {/* Start of Suggested Courses */}
-                                <View style={styles.break}></View>
-                                <View style={styles.c2chunk}>
-                                    {/* Suggested Course 1 */}
-                                    <Text style={styles.c2cHeader}>4 Years of Math</Text>
-                                    <Text style={styles.c2cBody}>
-                                        Depending on what core classes you receive, your fourth year of math might be
-                                        Trigonometry/Precalculus, Calculus, AP Calculus A/B and AP Calculus B/C.
-                                        It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics
-                                    </Text>
-                                    {/* Suggested Course 2 */}
-                                    <Text style={styles.c2cHeader}>4 Years of Science</Text>
-                                    <Text style={styles.c2cBody}>
-                                        Your fourth year of science might be AP Physics.
-                                        It's recommended to move onto AP Physics rather than AP Chemistry, AP Biology, or AP Environmental Science
-                                    </Text>
-                                    {/* Suggested Course 3 */}
-                                    <Text style={styles.c2cHeader}>Engineering Technology</Text>
-                                    <Text style={styles.c2cBody}>
-                                        Refer to the Engineering page for more information on the classes.
-                                    </Text>
-                                    {/* Suggested Course 4 */}
-                                    <Text style={styles.c2cHeader}>Creative Media</Text>
-                                    <Text style={styles.c2cBody}>
-                                        Refer to the Creative Media: Graphics Page
-                                    </Text>
-                                    {/* Suggested Course 5 */}
-                                    <Text style={styles.c2cHeader}>For More Information</Text>
-                                    <Text style={styles.c2cBody}>
-                                        Refer to the Moanalua High School Course Catalog:
-                                        Page 25 (The Icon Below is Pressable)
-                                    </Text>
-                                    {/* To the MoHS Course Catalog */}
-                                    <Text>
-                                        <Link href={'https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=25'}>
-                                            <Pressable>
-                                                <Image
-                                                    source={require('../assets/mohslogo.png')}
-                                                    style={styles.studentImg}
-                                                />
-                                            </Pressable>
-                                        </Link>
-                                    </Text>
-                                    {/* End of MoHS Course Catalog */}
-                                </View>
-                            </View>
-                        </ScrollView>
-                        <Text style={styles.c3title}>Suggested Courses</Text>
+                        {/* End of Suggested Courses Section  */}
                     </View>
-                    {/* End of Suggested Courses Section  */}
+                    <View style={{ marginTop: width * 0.05 }}>
+                        <Chunk1Picture
+                            link='https://www.moanaluahs.org/ourpages/auto/2022/3/15/40772712/2025-27%20Registration%20Course%20Catalog.pdf?rnd=1736024882726#page=25'
+                            image={require('../assets/mohsLogov2.png')}
+                        />
+                    </View>
+                    
                 </ScrollView>
             </ImageBackground>
         </View >

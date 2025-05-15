@@ -115,6 +115,36 @@ export default function Busi() {
                             </View>
                         </ScrollView>
                     </View>
+                    <View style={styles.chunk2}>
+                        <Text style={styles.c2title}>Career Pathways</Text>
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
+                            <View style={styles.break}></View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Business Management</Text>
+                                <Text style={styles.c2cBody}>
+                                    Prepare for roles such as Business Analyst, Office Manager, or Operations Supervisor. Develop leadership, organizational, and decision-making skills.
+                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Marketing & Sales</Text>
+                                <Text style={styles.c2cBody}>
+                                    Explore careers in advertising, digital marketing, sales, and public relations. Learn about branding, market research, and customer engagement.
+                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Finance & Accounting</Text>
+                                <Text style={styles.c2cBody}>
+                                    Pursue opportunities as an Accountant, Financial Planner, or Banking Professional. Gain skills in budgeting, investing, and financial analysis.
+                                </Text>
+                            </View>
+                            <View style={styles.c2chunk}>
+                                <Text style={styles.c2cHeader}>Entrepreneurship</Text>
+                                <Text style={styles.c2cBody}>
+                                    Start your own business or work in a startup environment. Learn about innovation, business planning, and risk management.
+                                </Text>
+                            </View>
+                        </ScrollView>
+                    </View>
                     <View style={styles.videoChunk}>
                         <Text style={styles.c1Title}>Informational Video</Text>
                         <VideoView style={styles.video} player={player} nativeControls />

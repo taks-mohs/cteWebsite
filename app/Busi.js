@@ -1,14 +1,30 @@
-import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, FlatList } from "react-native-web"
+import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, FlatList, useWindowDimensions } from "react-native-web"
 import Colors from "../components/colors"
 import TopBar from "../components/topBar"
 import Fina_Mana from "./Business_Programs/Fina_Mana"
 import { Link } from "expo-router"
 import { VideoView, useVideoPlayer } from "expo-video"
 import Footer from "../components/footer"
+import Chunk1 from "../components/Templates/Chunk1"
+import Chunk2Info from "../components/Templates/Chunk2Info"
+import Chunk2L from "../components/Templates/Chunk2L"
+import Chunk2R from "../components/Templates/Chunk2R"
+import HeaderChunk from "../components/Templates/HeaderChunk"
 
 export default function Busi() {
     const player = useVideoPlayer(require('../assets/Business/BusinessCTE.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
-
+    const { width } = useWindowDimensions();
+    const styles = StyleSheet.create({
+    background: {
+      flex: 1,
+      backgroundColor: Colors.primary,
+    },
+    bgImg: {
+      height: '100%',
+      width: '100%',
+      resizeMode: 'cover'
+    }
+  });
 
     return (
         <View style={styles.background}>
@@ -111,36 +127,6 @@ export default function Busi() {
                                 />
                                 <Text style={styles.c2cBody}>
                                     Teaches the Entrepreneurship Classes.
-                                </Text>
-                            </View>
-                        </ScrollView>
-                    </View>
-                    <View style={styles.chunk2}>
-                        <Text style={styles.c2title}>Career Pathways</Text>
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-                            <View style={styles.break}></View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Business Management</Text>
-                                <Text style={styles.c2cBody}>
-                                    Prepare for roles such as Business Analyst, Office Manager, or Operations Supervisor. Develop leadership, organizational, and decision-making skills.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Marketing & Sales</Text>
-                                <Text style={styles.c2cBody}>
-                                    Explore careers in advertising, digital marketing, sales, and public relations. Learn about branding, market research, and customer engagement.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Finance & Accounting</Text>
-                                <Text style={styles.c2cBody}>
-                                    Pursue opportunities as an Accountant, Financial Planner, or Banking Professional. Gain skills in budgeting, investing, and financial analysis.
-                                </Text>
-                            </View>
-                            <View style={styles.c2chunk}>
-                                <Text style={styles.c2cHeader}>Entrepreneurship</Text>
-                                <Text style={styles.c2cBody}>
-                                    Start your own business or work in a startup environment. Learn about innovation, business planning, and risk management.
                                 </Text>
                             </View>
                         </ScrollView>

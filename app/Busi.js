@@ -65,19 +65,19 @@ export default function Busi() {
                         info={[
                             <Chunk2Info
                               infoHeader="Foundations of Business & Marketing"
-                              image={require('../assets/business-stock.jpg')}
+                              image={require('../assets/business-1.jpg')}
                               infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
                             />,
                             <Chunk2Info
                               infoHeader="Entrepreneurship 1"
-                              image={require('../assets/business-stock.jpg')}
+                              image={require('../assets/business-1.jpg')}
                               infoBody="Entrepreneurship 1 is the second course in the Entrepreneurship program of study designed to inform students about careers related 
 to starting and running a business. Students prepare for the business world by examining basic principles in management, finance, 
 and marketing as they apply to entrepreneurship."
                             />,
                             <Chunk2Info
                               infoHeader="Entrepreneurship 2"
-                              image={require('../assets/business-stock.jpg')}
+                              image={require('../assets/business-1.jpg')}
                               infoBody="Entrepreneurship 2 is the third course in the Entrepreneurship program of study designed to prepare students for the world of small 
 business by combining principles in operations, finance and accounting, marketing, and ethical practices. "
                             />
@@ -116,19 +116,19 @@ and apply the full accounting cycle, analyze financial data, and explain ethical
                         info={[
                             <Chunk2Info
                               infoHeader="Foundations of Business & Marketing"
-                              image={require('../assets/business-stock.jpg')}
+                              image={require('../assets/business-2.jpg')}
                               infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
                             />,
                             <Chunk2Info
                               infoHeader="Advertising & Public Relations"
-                              image={require('../assets/business-stock.jpg')}
+                              image={require('../assets/business-2.jpg')}
                               infoBody="Advertising & Public Relations is the second course in the Marketing Management program of study designed to prepare students 
 for the marketing world by examining basic principles in advertising, such as market segmentation, research, and building 
 promotional campaigns."
                             />,
                             <Chunk2Info
                               infoHeader="Digital Marketing & Market Analytics"
-                              image={require('../assets/business-stock.jpg')}
+                              image={require('../assets/business-2.jpg')}
                               infoBody="Digital Marketing & Market Analytics is the third course in the Marketing Management program of study designed to in social media 
 marketing. Upon completion of the course, a proficient student will be able to describe and apply the process of building a 
 promotional campaign through digital means and the applied use of data contained in these methods to drive market research."

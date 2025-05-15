@@ -7,6 +7,7 @@ import TopBar from "../components/topBar"
 // Template Component Imports
 import HeaderChunk from '../components/Templates/HeaderChunk.js'
 import Chunk1 from '../components/Templates/Chunk1'
+import Chunk1Picture from '../components/Templates/Chunk1Picture'
 import Chunk2L from '../components/Templates/Chunk2L'
 import Chunk2R from '../components/Templates/Chunk2R'
 import Chunk2Info from '../components/Templates/Chunk2Info'
@@ -46,7 +47,7 @@ export default function CS() {
                             <Chunk2Info
                                 infoHeader="Foundations of Computer Systems & Technology"
                                 image={require('../assets/CS/MiscImages/codeOrg.webp')}
-                                infoBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                infoBody="Foundations of Computer Systems & Technology ."
                             />,
                             <Chunk2Info
                                 infoHeader="AP Computer Science"
@@ -61,7 +62,6 @@ export default function CS() {
                         ]}
                     />
                     <View style={{ marginTop: width * 0.05 }}></View>
-
                     <View style={styles.chunk2}>
                         {/* Clubs Section */}
                         <Chunk2L
@@ -76,126 +76,87 @@ export default function CS() {
                         />
                         {/* End of Clubs Section */}
                         <View style={{ marginTop: width * 0.05 }}></View>
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-                            <Chunk1
-                                header="Chunk 1"
+                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false} horizontal={true}>
+                            <Chunk1Picture
                                 link='https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'
+                                image={require('../assets/CS/ICTSGames/game1.png')}
                             />
-                            <Chunk1
-                                link='https://studio.code.org/projects/gamelab/kjZSLL7eHi-LWqZh4--K74fxlet4QjHh5wmMjPcKCow/embed?nosource'
+                            <Chunk1Picture
+                                link='https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'
+                                image={require('../assets/CS/ICTSGames/game2.png')}
                             />
-                            <Chunk1
+                            <Chunk1Picture
                                 link='https://studio.code.org/projects/gamelab/g4xP-ldq_iOm6VtjaeZ3bqMVgP7psoCysakpxR2c9-w/embed?nosource'
+                                image={require('../assets/CS/ICTSGames/game3.png')}
                             />
-                            <Chunk1
+                            <Chunk1Picture
                                 link='https://studio.code.org/projects/gamelab/M5ZmmjLWTLaBkXfrp3JXzvHmnGg88yp3SI05Ks4tDJR/embed?nosource'
+                                image={require('../assets/CS/ICTSGames/game4.png')}
                             />
-                            <Chunk1
-                                link='https://studio.code.org/projects/gamelab/g4xP-ldq_iOm6VtjaeZ3bqMVgP7psoCysakpxR2c9-w/embed?nosource'
+                            <Chunk1Picture
+                                link='https://studio.code.org/projects/gamelab/dAcGneC5y2WhTM7gQdvJjOZwnb_TNA6jFVvaDmAO1E9/embed?nosource'
+                                image={require('../assets/CS/ICTSGames/game5.png')}
                             />
-                        </ScrollView>
-
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false} >
-                            {/* Highlighted Games Section */}
-                            <View style={styles.c3chunk}>
-                                {/* Highlighted Games 1 */}
-                                <Link href={'https://studio.code.org/projects/gamelab/2oX9EMdEsQF3vts52xHug7fY03Lv-cpPy5CWxyGDa7R/embed?nosource'}>
-                                    <Pressable>
-                                        <Image
-                                            source={require('../assets/CS/ICTSGames/game1.png')}
-                                            style={styles.studentImg}
-                                        />
-                                    </Pressable>
-                                </Link>
-                                {/* Highlighted Games 2 */}
-                                <Link href={'https://studio.code.org/projects/gamelab/kjZSLL7eHi-LWqZh4--K74fxlet4QjHh5wmMjPcKCow/embed?nosource'}>
-                                    <Pressable>
-                                        <Image
-                                            source={require('../assets/CS/ICTSGames/game2.png')}
-                                            style={styles.studentImg}
-                                        />
-                                    </Pressable>
-                                </Link>
-                                {/* Highlighted Games 3 */}
-                                <Link href={'https://studio.code.org/projects/gamelab/g4xP-ldq_iOm6VtjaeZ3bqMVgP7psoCysakpxR2c9-w/embed?nosource'}>
-                                    <Pressable>
-                                        <Image
-                                            source={require('../assets/CS/ICTSGames/game3.png')}
-                                            style={styles.studentImg}
-                                        />
-                                    </Pressable>
-                                </Link>
-                                {/* Highlighted Games 4 */}
-                                <Link href={'https://studio.code.org/projects/gamelab/M5ZmmjLWTLaBkXfrp3JXzvHmnGg88yp3SI05Ks4tDJR/embed?nosource'}>
-                                    <Pressable>
-                                        <Image
-                                            source={require('../assets/CS/ICTSGames/game4.png')}
-                                            style={styles.studentImg}
-                                        />
-                                    </Pressable>
-                                </Link>
-                                {/* Highlighted Games 5 */}
-                                <Link href={'https://studio.code.org/projects/gamelab/dAcGneC5y2WhTM7gQdvJjOZwnb_TNA6jFVvaDmAO1E9/embed?nosource'}>
-                                    <Pressable>
-                                        <Image
-                                            source={require('../assets/CS/ICTSGames/game5.png')}
-                                            style={styles.studentImg}
-                                        />
-                                    </Pressable>
-                                </Link>
-                                {/* End of Highlighted Games Section */}
-                                <Text style={styles.c2cBody}>
-                                </Text>
-                            </View>
                         </ScrollView>
                         {/* The Title of the Section */}
                         <Text style={styles.c3title}>Intro to CS Games</Text>
                     </View>
                     <View style={styles.chunk2}>
                         {/* Teachers Section */}
-                        <Text style={styles.c2title}>Teachers</Text>
-                        <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-                            <View style={{ backgroundColor: '#ededed' }}>
-                                <View style={styles.break}></View>
-                                {/* Teacher 1 */}
-                                <View style={styles.c2chunk}>
-                                    <Text style={styles.c2cHeader}>Sean Takahashi</Text>
-                                    <Image
-                                        source={require('../assets/CS/TeacherIMGS/GOAT.jpg')}
-                                        style={styles.studentImg}
-                                    />
-                                    <Text style={styles.c2cBody}>
-                                        Both a math teacher and computer science teacher. Mr.Takashi teaches Introduction to Computer Science, AP Computer Science A, and Programming 2: Mobile Apps Development
-                                        He might also teach other computer science classes in the future, like Game development.
-                                    </Text>
-                                </View>
-                                {/* Teacher 2 */}
-                                <View style={styles.c2chunk}>
-                                    <Text style={styles.c2cHeader}>Brian Park</Text>
-                                    <Image
-                                        source={require('../assets/CS/TeacherIMGS/Park.jpg')}
-                                        style={styles.studentImg}
-                                    />
-                                    <Text style={styles.c2cBody}>
-                                        Both a math teacher and computer science teacher. One of the other Introduction to Computer Science teachers
-                                    </Text>
-                                </View>
-                                {/* Teacher 3 */}
-                                <View style={styles.c2chunk}>
-                                    <Text style={styles.c2cHeader}>H. Ishikawa</Text>
-                                    <Image
-                                        source={require('../assets/CS/TeacherIMGS/Ishikawa.jpg')}
-                                        style={styles.studentImg}
-                                    />
-                                    <Text style={styles.c2cBody}>
-                                        Both a math teacher and computer science teacher. One of the other Introduction to Computer Science teachers.
-                                    </Text>
-                                </View>
-                            </View>
-                        </ScrollView>
+                        <View style={{ marginTop: width * 0.05 }}></View>
+                        <Chunk2L
+                            header="Teachers"
+                            info={[
+                                <Chunk2Info
+                                    infoHeader="S. Takahashi"
+                                    image={require('../assets/CS/TeacherIMGS/GOAT.jpg')}
+                                    infoBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                                />,
+                                <Chunk2Info
+                                    infoHeader="B. Park"
+                                    image={require('../assets/CS/TeacherIMGS/Park.jpg')}
+                                    infoBody="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                                />,
+                                <Chunk2Info
+                                    infoHeader="H. Ishikawa"
+                                    image={require('../assets/CS/TeacherIMGS/Ishikawa.jpg')}
+                                    infoBody="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                                />
+                            ]}
+                        />
                     </View>
                     {/* End of Teachers Section */}
                     <View style={styles.chunk2}>
+                        {/* Related Classes Section */}
+                        <View style={{ marginTop: width * 0.05 }}></View>
+                        <Chunk2L
+                            header="Related Classes"
+                            info={[
+                                <Chunk2Info
+                                    infoHeader="Four Years of Math"
+                                    image={require('../assets/CS/MiscImages/codeOrg.webp')}
+                                    infoBody=
+                                    "Depending on what core classes you receive, your fourth year of math might be Trigonometry or Precalculus Calculus AP Calculus AB and AP Calculus B/C. It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics."
+                                />,
+                                <Chunk2Info
+                                    infoHeader="Four Years of Science"
+                                    image={require('../assets/CS/MiscImages/Java.jpg')}
+                                    infoBody=
+                                    "Your fourth year of science might be AP Physics. It's recommended to move onto AP Physics rather than AP Chemistry, AP Biology, or AP Environmental Science"
+                                />,
+                                <Chunk2Info
+                                    infoHeader="Engineering Technology"
+                                    image={require('../assets/CS/MiscImages/Javascript.png')}
+                                    infoBody="Refer to the Engineering page for more information."
+                                />,
+                                <Chunk2Info
+                                    infoHeader="Creative Media"
+                                    image={require('../assets/CS/MiscImages/Javascript.png')}
+                                    infoBody="Refer to the Creative Media page for more information."
+                                />
+                            ]}
+                        />
+                        {/* End of Related Courses Section */}
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={{ backgroundColor: '#ededed' }}>
                                 {/* Start of Suggested Courses */}

@@ -8,6 +8,7 @@ import Chunk2L from '../components/Templates/Chunk2L'
 import Chunk2R from '../components/Templates/Chunk2R'
 import Chunk2Info from '../components/Templates/Chunk2Info'
 import Footer from '../components/footer'
+import ImagelessInfoChunk from '../components/Templates/ImagelessInfoChunk'
 
 export default function Health() {
   // const player = useVideoPlayer(require('../assets/Business/BusinessCTE.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
@@ -34,12 +35,41 @@ export default function Health() {
             header="Health Services"
           />
           <View style={{ marginTop: width * 0.05 }}></View>
-          {/* <Chunk1
-                header="Chunk 1"
-                buttonlabel="Button"
-                link="/"
-              /> */}
+
+          <Chunk2R
+            header="Information"
+            info={[
+              <ImagelessInfoChunk
+                infoHeader="Description"
+                infoBody="The Health Services Career and Technical Education (CTE) branch in high school offers students a pathway to explore various healthcare careers. Through specialized courses and often hands-on experiences, students can learn foundational medical knowledge, develop essential skills like patient care and medical terminology, and even gain industry certifications. This branch aims to prepare students for further education in healthcare or entry-level positions in the medical field."
+              />,
+              <ImagelessInfoChunk
+              infoHeader="Potetntial Careers"
+              infoBody='• Athletic Trainer
+• Cardiovascular Technologist
+• Dental Hygienist
+• Emergency Medical Technician (EMT)
+• Home Health Aide
+• Licensed Practical Nurse (LPN)
+• Medical Assistant
+• Nursing Assistant (CNA)
+• Occupational Therapist
+• Paramedic
+• Pharmacist
+• Physical Therapist
+• Physician
+• Registered Nurse (RN)
+• Respiratory Therapist
+• Surgical Technician'
+              
+              />
+              
+
+            ]}
+          />
+
           <View style={{ marginTop: width * 0.05 }}></View>
+
           <Chunk2L
             header="Related Classes"
             info={[
@@ -47,7 +77,7 @@ export default function Health() {
                 infoHeader="Foundations of Health Services(lvl 1)"
                 image={require('../assets/Health/Foundation 1.png')}
                 infoBody="Foundations of Health Services is an introductory course designed to inform students about careers in the Health Services field, as well as basic 
-                      medical skills and terminology." 
+                      medical skills and terminology."
               />,
               <Chunk2Info
                 infoHeader="Advanced Health Services (lvl 2)"
@@ -77,7 +107,7 @@ export default function Health() {
               />,
               <Chunk2Info
                 infoHeader="Ms. Harada"
-                image={require('../assets/placeholder.jpg')}
+                image={require('../assets/smile.png')}
                 infoBody="Nursing Services Teacher."
               />,
 
@@ -87,14 +117,14 @@ export default function Health() {
           <View style={{ marginTop: width * 0.05 }}></View>
 
           <Chunk2L
-            header = "RELATED CLUB"
+            header="RELATED CLUB"
             info={[
-              <Chunk2Info 
+              <Chunk2Info
                 infoHeader="HOSA"
                 image={require('../assets/Health/HOSA picture.png')}
                 infoBody="Moanalua High School offers HOSA (Health Occupations Students of America) as a club for students interested in pursuing careers in the health field. HOSA is a national organization that promotes career opportunities in the health care industry and enhances the delivery of quality health care to all people. The mission of HOSA is to promote career opportunities in the health care industry and to enhance the delivery of quality health care to all people."
-              
-              
+
+
               />
             ]}
 
@@ -105,7 +135,7 @@ export default function Health() {
       </ImageBackground>
     </View>
 
-    
+
   )
 }
 

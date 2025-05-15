@@ -108,33 +108,33 @@ export default function topBar() {
           labelField="label" valueField="value"
           data={
             [
-              { label: "Automotive", value: "Auto", href: "/Auto" },
-              { label: "Building & Construction", value: "B&C", href: "/B_C" },
-              { label: 'Business', value: "Bus", href: "/Busi" },
-              { label: "Computer Science", value: "CS", href: "/CS" },
-              { label: "Culinary", value: "Culi", href: "/Culi" },
-              { label: "Engineering", value: "Engi", href: "/Engi" },
-              { label: "Fashion", value: "Fash", href: "/Fash" },
+              { label: "Automotive", value: "Automotive", href: "/Automotive" },
+              { label: "Building & Construction", value: "B&C", href: "/Building&Construction" },
+              { label: 'Business', value: "Bus", href: "/Business" },
+              { label: "Computer Science", value: "CS", href: "/ComputerScience" },
+              { label: "Culinary", value: "Culi", href: "/Culinary" },
+              { label: "Engineering", value: "Engi", href: "/Engineering" },
+              { label: "Fashion", value: "Fash", href: "/Fashion" },
               { label: "Film", value: "Film", href: "/Film" },
-              { label: "Graphics", value: "Graph", href: "/Graph" },
+              { label: "Graphics", value: "Graph", href: "/Graphics" },
               { label: "Health Services", value: "Health", href: "/Health" }
             ]
           } />
       </Pressable>
 
-      <Link href={'/staff'}>
+      <Link href={'/Staff'}>
         <Pressable>
           <Text style={styles.topButtonStyle}>Staff</Text>
         </Pressable>
       </Link>
 
-      <Link href={'/contactus'}>
+      <Link href={'/ContactUs'}>
         <Pressable>
           <Text style={styles.topButtonStyle}>Contact Us</Text>
         </Pressable>
       </Link>
 
-      <Link href={'/about'}>
+      <Link href={'/About'}>
         <Pressable>
           <Text style={styles.topButtonStyle}>About</Text>
         </Pressable>

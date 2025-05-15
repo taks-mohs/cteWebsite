@@ -1,7 +1,6 @@
 import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, FlatList } from "react-native-web"
 import Colors from "../components/colors"
 import TopBar from "../components/topBar"
-import Fina_Mana from "./Business_Programs/Fina_Mana"
 import { Link } from "expo-router"
 import { VideoView, useVideoPlayer } from "expo-video"
 import Footer from "../components/footer"
@@ -23,7 +22,7 @@ export default function Busi() {
                         <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Link href={"../Business_Programs/Entre"}>
+                                <Link href={"/BusinessPrograms/Entrepreneurship"}>
                                     <Text style={styles.c2cHeader}>Entrepreneurship</Text>
                                 </Link>
                                 <Image
@@ -35,7 +34,7 @@ export default function Busi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Link href={"../Business_Programs/Mark"}>
+                                <Link href={"../BusinessPrograms/Marketing"}>
                                     <Text style={styles.c2cHeader}>Marketing</Text>
                                 </Link>
                                 <Image
@@ -47,7 +46,7 @@ export default function Busi() {
                                 </Text>
                             </View>
                             <View style={styles.c2chunk}>
-                                <Link href={"/Business_Programs/Fina_Mana"}>
+                                <Link href={"../BusinessPrograms/FinancialManagement"}>
                                     <Text style={styles.c2cHeader}>Financial Management</Text>
                                 </Link>
                                 <Image
@@ -64,7 +63,7 @@ export default function Busi() {
                         <ScrollView showsVerticalScrollIndicator={false}>
                             <View style={styles.break}></View>
                             <View style={styles.c2chunk}>
-                                <Link href={"../Business_Programs/DECA"}>
+                                <Link href={"../BusinessPrograms/DECA"}>
                                     <Image
                                     source={require('../assets/Business/IMG_7028.jpg')}
                                     style={styles.studentImg}

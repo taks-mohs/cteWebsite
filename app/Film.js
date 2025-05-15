@@ -190,7 +190,7 @@ export default function Film() {
                    info={[
                        <Chunk2Info
                          infoHeader=""
-                         image={require('../assets/placeholder.jpg')}
+                         image={require('../assets/Film/camera_temp.jpg')} 
                          infoBody='The motto for MeneMac is "We Create to Inspire". The program is focused on learning how to create unique media, and proving those skills through projects and competitions. The MeneMac students work on a variety of topics, ranging from documentaries to promotionional features. To learn more about MeneMac and Film at Moanalua, visit the MeneMac website which is listed below.'
                        />,
                      ]}

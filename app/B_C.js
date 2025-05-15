@@ -8,6 +8,7 @@ import HeaderChunk from '../components/Templates/HeaderChunk'
 import Chunk2L from '../components/Templates/Chunk2L'
 import Chunk2Info from '../components/Templates/Chunk2Info'
 import Footer from '../components/footer'
+import ImagelessInfoChunk from "../components/Templates/ImagelessInfoChunk";
 
 export default function B_C() {
     const player = useVideoPlayer(require('../assets/B_CVideo.mp4'), player => { player.play() });
@@ -23,8 +24,10 @@ export default function B_C() {
             <TopBar />
             <ImageBackground style={styles.bgImg} source={require('../assets/B_Cbg.png')}>
                 <ScrollView>
-                    <View style={{ marginTop: width * 0.2 }}></View>
+                    <View style={{ marginTop: width * 0.25 }}></View>
                     <HeaderChunk
+                        backgroundColor={Colors.secondary}
+                        textColor={Colors.primary}
                         header="Building & Construction"
                     />
                     <View style={{ marginTop: width * 0.05 }}></View>
@@ -33,19 +36,19 @@ export default function B_C() {
                         textColor={Colors.primary}
                         header="Information"
                         info={[
-                            <Chunk2Info
+                            <ImagelessInfoChunk
                                 backgroundColor={Colors.secondary}
                                 textColor={Colors.primary}
                                 infoHeader="Description"
                                 infoBody="Building and Construction introduces students to the fundamentals of the construction industry, including blueprint reading, site preparation, and tool usage. Students gain hands-on experience in the workforce while also learning safety protocols and industry standards, preparing them for careers in construction and related fields."
                             />,
-                            <Chunk2Info
+                            <ImagelessInfoChunk
                                 backgroundColor={Colors.secondary}
                                 textColor={Colors.primary}
                                 infoHeader="Possible Careers"
                                 infoBody="• Architect • Carpenter • Civil Engineer • Drafter • Electrical Engineer • Electrician • Fuel Cell Technician • Materials Engineer • Mechanical Engineer • Mechatronic Technician • Painter• Plumber • Roofer • Surveyor• Welder"
                             />,
-                            <Chunk2Info
+                            <ImagelessInfoChunk
                                 backgroundColor={Colors.secondary}
                                 textColor={Colors.primary}
                                 infoHeader="Inventory"

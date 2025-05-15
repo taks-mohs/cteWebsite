@@ -10,6 +10,7 @@ import footer from "../components/footer"
 import Chunk1 from "../components/Templates/Chunk1"
 import ImagelessInfoChunk from "../components/Templates/ImagelessInfoChunk"
 
+
 export default function Engi() {
     const { width } = useWindowDimensions()
     return (
@@ -32,8 +33,8 @@ export default function Engi() {
                             />
                             <InfoChunk
                                 infoHeader={"Engineering Tech 1"}
-                                infoBody={"Engineering Technology I" +
-                                    " course the second course in the Engineering program of study and is designed to provide students an in-depth study of a variety" +
+                                infoBody={"Engineering Technology 1" +
+                                    " is the second course in the Engineering program of study and is designed to provide students an in-depth study of a variety" +
                                     " of engineering fields via real world engineering design challenges. Students will apply their understanding of physics, chemistry," +
                                     " biology, along with computer-integrated manufacturing technology to develop/design, test, and improve their design solutions." +
                                     " Technical reading/writing/presentation and related mathematics and science knowledge and skills will be integrated and applied" +
@@ -64,16 +65,18 @@ export default function Engi() {
                             />
                         </>
                     } />
+                    <View style={{ marginTop: width * 0.05 }}></View>
                     <Chunk2L header={"Clubs"} info={
                         <InfoChunk
                             infoHeader={"Robotics Club"}
                             infoBody={
-                                "The robotics club teaches it's club memebers how to use assemble and program to robots. The robotics club participates in the" +
-                                " VEX Robotics Tournament and FIRST Robotics Competition within a year."
+                                "The robotics club teaches it's club memebers how to use, assemble and program to robots. The robotics club participates in the" +
+                                " VEX Robotics Tournament and FIRST Robotics Competition every year."
                             }
                             image={require('../assets/ENGRG//MiscImages/Mechahunes.png')}
                         />
                     } />
+                    <View style={{ marginTop: width * 0.05 }}></View>
                     <Chunk2L header={"Teacher"} info={
                         <>
                             <InfoChunk
@@ -86,7 +89,7 @@ export default function Engi() {
                             <InfoChunk
                                 infoHeader={"Mr. Komar"}
                                 infoBody={
-                                    "Teaches Engineering Tech I. He is also your teacher for AP Seminar and AP Research."
+                                    "Teaches Engineering Tech I. He also teaches AP Seminar and AP Research."
                                 }
                                 image={require('../assets/ENGRG/TeacherIMGS/Komar.jpg')}
                             />
@@ -99,6 +102,7 @@ export default function Engi() {
                             />
                         </>
                     } />
+                    <View style={{ marginTop: width * 0.05 }}></View>
                     <Chunk2L header={"Suggested Courses"} info={
                         <>
                             <ImagelessInfoChunk
@@ -118,15 +122,13 @@ export default function Engi() {
                             <ImagelessInfoChunk
                                 infoHeader={"Foundations of Business"}
                                 infoBody={
-                                    "Depending on what core classes you receive, your fourth year of math might be Trigonometry/Precalculus, Calculus, AP Calculus A/B and AP Calculus B/C." +
-                                    " It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics"
+                                    "Refer to the Business page for more information on the class."
                                 }
                             />
                             <ImagelessInfoChunk
                                 infoHeader={"Weight Training or Team Sports"}
                                 infoBody={
-                                    "Depending on what core classes you receive, your fourth year of math might be Trigonometry/Precalculus, Calculus, AP Calculus A/B and AP Calculus B/C." +
-                                    " It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics"
+                                    "You might want to take Weight Training or Team Sports as a second elective as to build the strength typically found within the field. Of course, not all engineering roles involve heavy lifting, making it optional based on what branch of engineering you're going into"                                
                                 }
                             />
                             <Chunk1
@@ -144,6 +146,7 @@ export default function Engi() {
         </View >
     )
 }
+
 
 export const styles = StyleSheet.create({
     background: {

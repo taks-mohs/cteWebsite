@@ -1,7 +1,6 @@
 import { Text, View, StyleSheet, ImageBackground, ScrollView, Image, FlatList, useWindowDimensions } from "react-native-web"
 import Colors from "../components/colors"
 import TopBar from "../components/topBar"
-import Fina_Mana from "./Business_Programs/Fina_Mana"
 import { Link } from "expo-router"
 import { VideoView, useVideoPlayer } from "expo-video"
 import Footer from "../components/footer"

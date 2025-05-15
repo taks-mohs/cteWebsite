@@ -60,7 +60,8 @@ export default function Busi() {
                       
                       <View style={{marginTop: width* 0.05}}></View>
                       <Chunk2L 
-                        header="Entrepreneurship Courses"
+                        header="Entrepre
+                        neurship Courses "
                         info={[
                             <Chunk2Info
                               infoHeader="Foundations of Business & Marketing"
@@ -70,12 +71,15 @@ export default function Busi() {
                             <Chunk2Info
                               infoHeader="Entrepreneurship 1"
                               image={require('../assets/business-stock.jpg')}
-                              infoBody=""
+                              infoBody="Entrepreneurship 1 is the second course in the Entrepreneurship program of study designed to inform students about careers related 
+to starting and running a business. Students prepare for the business world by examining basic principles in management, finance, 
+and marketing as they apply to entrepreneurship."
                             />,
                             <Chunk2Info
                               infoHeader="Entrepreneurship 2"
                               image={require('../assets/business-stock.jpg')}
-                              infoBody=""
+                              infoBody="Entrepreneurship 2 is the third course in the Entrepreneurship program of study designed to prepare students for the world of small 
+business by combining principles in operations, finance and accounting, marketing, and ethical practices. "
                             />
 
                             
@@ -93,12 +97,15 @@ export default function Busi() {
                             <Chunk2Info
                               infoHeader="Principles of Finance & Economics"
                               image={require('../assets/business-stock.jpg')}
-                              infoBody=""
+                              infoBody="Principles of Finance & Economics is the second course for Financial Management program of study designed to inform students 
+about the basics of economics, finance, and accounting."
                             />,
                             <Chunk2Info
                               infoHeader="Accounting"
                               image={require('../assets/business-stock.jpg')}
-                              infoBody=""
+                              infoBody="Accounting is the third course for Financial Management program of study designed to inform students about basic procedures of 
+accounting. Upon completion of the course, a proficient student will demonstrate various accounting and basic business transactions, 
+and apply the full accounting cycle, analyze financial data, and explain ethical behavior in the accounting field."
                             />
                           ]}
                       />
@@ -115,12 +122,16 @@ export default function Busi() {
                             <Chunk2Info
                               infoHeader="Advertising & Public Relations"
                               image={require('../assets/business-stock.jpg')}
-                              infoBody=""
+                              infoBody="Advertising & Public Relations is the second course in the Marketing Management program of study designed to prepare students 
+for the marketing world by examining basic principles in advertising, such as market segmentation, research, and building 
+promotional campaigns."
                             />,
                             <Chunk2Info
                               infoHeader="Digital Marketing & Market Analytics"
                               image={require('../assets/business-stock.jpg')}
-                              infoBody=""
+                              infoBody="Digital Marketing & Market Analytics is the third course in the Marketing Management program of study designed to in social media 
+marketing. Upon completion of the course, a proficient student will be able to describe and apply the process of building a 
+promotional campaign through digital means and the applied use of data contained in these methods to drive market research."
                             />
                           ]}
                       />

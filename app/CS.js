@@ -130,11 +130,10 @@ export default function CS() {
                         {/* Related Classes Section */}
                         <View style={{ marginTop: width * 0.05 }}></View>
                         <Chunk2L
-                            header="Related Classes"
+                            header="Suggested Courses"
                             info={[
                                 <Chunk2Info
                                     infoHeader="Four Years of Math"
-                                    image={require('../assets/CS/MiscImages/codeOrg.webp')}
                                     infoBody=
                                     "Depending on what core classes you receive, your fourth year of math might be Trigonometry or Precalculus Calculus AP Calculus AB and AP Calculus B/C. It's recommmended to move onto Trigonometry/Precalculus and Calculus courses rather than Statistics or AP Statistics."
                                 />,

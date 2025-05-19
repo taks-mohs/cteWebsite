@@ -122,19 +122,19 @@ export default function topBar() {
           } />
       </Pressable>
 
-      <Link href={'/Staff'}>
+      <Link href={'/staff'}>
         <Pressable>
           <Text style={styles.topButtonStyle}>Staff</Text>
         </Pressable>
       </Link>
 
-      <Link href={'/ContactUs'}>
+      <Link href={'/contactus'}>
         <Pressable>
           <Text style={styles.topButtonStyle}>Contact Us</Text>
         </Pressable>
       </Link>
 
-      <Link href={'/About'}>
+      <Link href={'/about'}>
         <Pressable>
           <Text style={styles.topButtonStyle}>About</Text>
         </Pressable>

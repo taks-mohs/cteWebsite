@@ -7,7 +7,7 @@ export default function Graph() {
   return (
     <View style={styles.background}>
       <TopBar />
-      <ImageBackground style={styles.bgImg} source={require('../assets/Graphics/graphBack.jpg')}>
+      <ImageBackground style={styles.bgImg} source={require('../assets/Graphics/Graphics background.png')}>
         <ScrollView>
           <View style={styles.chunk1}>
             <Text style={styles.c1Title}>Graphics</Text>

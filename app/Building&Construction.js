@@ -99,7 +99,7 @@ export default function B_C() {
                             <View style={styles.c2chunk}>
                                 <Text style={styles.c2cHeader}>J. Murray</Text>
                                 <Image
-                                    source={require('../assets/TeacherHeadshots/Murray.jpg')}
+                                    source={require('../assets/murray.jpg')}
                                     style={styles.studentImg}
                                 />
                                 <Text style={styles.c2cBody}>

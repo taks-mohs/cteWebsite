@@ -1,3 +1,4 @@
+
 import { Platform, View, ViewStyle } from "react-native";
 
 export type YouTubePlayerProps = {
@@ -40,9 +41,8 @@ export function YouTubePlayer({
 
    if (start !== undefined) queryParams.set("start", String(start));
    if (end !== undefined) queryParams.set("end", String(end));
-
+   style = style ? style : { width: "100%", height: "100%" }
    const url = `https://www.youtube.com/embed/${videoId}?${queryParams.toString()}`;
-
    return (
       <View style={style}>
          <iframe
@@ -60,4 +60,5 @@ export function YouTubePlayer({
       </View>
    );
 }
+
 

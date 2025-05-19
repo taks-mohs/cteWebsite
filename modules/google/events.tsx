@@ -1,6 +1,6 @@
 const CALENDAR_ID = '218f832d2e3e4ce48daca30cd709bcdd2c1b0594225a2eb6c39e88ebbad18718@group.calendar.google.com';
 const API_KEY = 'AIzaSyDRvg5A42eGtX5dWItPR4R6EV2Jin45TE0';
-
+const twoWeeksInMs = 14 * 24 * 60 * 60 * 1000; // 14 days in milliseconds
 export default class Event {
    private event: object
    private constructor(event: object) {
@@ -39,6 +39,14 @@ export default class Event {
    }
    public location(): string | undefined {
       return this.event.location;
+   }
+   public isOld(): boolean {
+      const now = Date.now()
+      if (Math.abs(this.startTime().getTime() - now) > twoWeeksInMs) {
+         return true;
+      } else {
+         return false;
+      }
    }
    //Add methods as needed
 }

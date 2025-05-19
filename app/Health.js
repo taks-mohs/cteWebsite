@@ -102,7 +102,7 @@ export default function Health() {
             info={[
               <Chunk2Info
                 infoHeader="Mrs. Hashizume"
-                image={require('../assets/Health/l_hashizume.jpg')}
+                image={require('../assets/TeacherHeadshots/Hashizume-L.jpg')}
                 infoBody=" Foundation of Health Services Teacher."
               />,
               <Chunk2Info

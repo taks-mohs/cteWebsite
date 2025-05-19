@@ -9,6 +9,7 @@ import Chunk2R from '../components/Templates/Chunk2R'
 import Chunk2Info from '../components/Templates/Chunk2Info'
 import Footer from '../components/footer'
 import ImagelessInfoChunk from '../components/Templates/ImagelessInfoChunk'
+import { YouTubePlayer } from "../components/Youtube"
 
 export default function Health() {
   // const player = useVideoPlayer(require('../assets/Business/BusinessCTE.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
@@ -44,8 +45,8 @@ export default function Health() {
                 infoBody="The Health Services Career and Technical Education (CTE) branch in high school offers students a pathway to explore various healthcare careers. Through specialized courses and often hands-on experiences, students can learn foundational medical knowledge, develop essential skills like patient care and medical terminology, and even gain industry certifications. This branch aims to prepare students for further education in healthcare or entry-level positions in the medical field."
               />,
               <ImagelessInfoChunk
-              infoHeader="Potetntial Careers"
-              infoBody='• Athletic Trainer
+                infoHeader="Potetntial Careers"
+                infoBody='• Athletic Trainer
 • Cardiovascular Technologist
 • Dental Hygienist
 • Emergency Medical Technician (EMT)
@@ -61,9 +62,9 @@ export default function Health() {
 • Registered Nurse (RN)
 • Respiratory Therapist
 • Surgical Technician'
-              
+
               />
-              
+
 
             ]}
           />
@@ -130,6 +131,16 @@ export default function Health() {
 
           />
           <View style={{ marginTop: width * 0.1 }}></View>
+
+          <View style={{alignItems: 'center',}}>
+            <YouTubePlayer style={{ height: 500, width: 500, }}
+              videoId='Di_M-7WFFuA'
+            />
+
+          </View>
+
+            <View style={{ marginTop: width * 0.1 }}></View>
+
           <Footer />
         </ScrollView>
       </ImageBackground>

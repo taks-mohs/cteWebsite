@@ -114,17 +114,17 @@ export default function CS() {
                             info={[
                                 <Chunk2Info
                                     infoHeader="S. Takahashi"
-                                    image={require('../assets/CS/TeacherIMGS/GOAT.jpg')}
+                                    image={require('../assets/TeacherHeadshots/GOAT.jpg')}
                                     infoBody="Mr.Takahashi is your Computer Science teacher for Foundations of Computer Systems & Technology, AP Computer Science, and Programming 2: Mobile App Development. He is also the adviser for MeneDevs (Coding Club)."
                                 />,
                                 <Chunk2Info
                                     infoHeader="B. Park"
-                                    image={require('../assets/CS/TeacherIMGS/Park.jpg')}
+                                    image={require('../assets/TeacherHeadshots/Park.jpg')}
                                     infoBody="Mr.Park is your Computer Science teacher for Foundations of Computer Systems."
                                 />,
                                 <Chunk2Info
                                     infoHeader="H Ishikawa"
-                                    image={require('../assets/CS/TeacherIMGS/Ishikawa.jpg')}
+                                    image={require('../assets/TeacherHeadshots/Ishikawa.jpg')}
                                     infoBody="Mr.Ishikawa is your Computer Science teacher for Foundations of Computer Systems."
                                 />
                             ]}

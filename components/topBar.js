@@ -1,4 +1,4 @@
-import { View, Text, Image, Pressable, TextInput, StyleSheet, useWindowDimensions } from 'react-native'
+import { View, Text, Image, Pressable, TextInput, StyleSheet, useWindowDimensions, TouchableOpacity } from 'react-native'
 import { Link } from 'expo-router'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from './colors'
@@ -16,6 +16,21 @@ export default function topBar() {
     'oswaldsemibold': Oswald_600SemiBold
   })
   const [query, setQuery] = useState('');
+
+
+  const HoverableText = ({ children }) => {
+    const [isHovering, setIsHovering] = useState(false);
+    return (
+      <TouchableOpacity
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <Text style={[styles.topButtonStyle, { color: isHovering ? 'gray' : Colors.primary }]}>
+          {children}
+        </Text>
+      </TouchableOpacity>
+    );
+  };
 
   function searchHandle() {
     if (query.trim() !== '') {
@@ -102,10 +117,15 @@ export default function topBar() {
       <Pressable>
         <Dropdown
           confirmSelectItem showsVerticalScrollIndicator={false}
-          placeholder={"Departments"} placeholderStyle={{ color: Colors.primary, fontSize: width * 0.0175, fontFamily: 'oswaldmedium' }}
-          itemTextStyle={styles.dropdownButtonStyle} containerStyle={styles.dropdownContainer}
-          iconStyle={{ height: width * 0.015, width: width * 0.015, marginRight: width * 0.01 }} onChange={(item) => { setValue(item.value); }} onConfirmSelectItem={(item) => (router.navigate(item.href))}
-          labelField="label" valueField="value"
+          placeholder= <HoverableText> Departments </HoverableText>
+          placeholderStyle={{ color: Colors.primary, fontSize: width * 0.0175, fontFamily: 'oswaldmedium' }}
+          itemTextStyle={styles.dropdownButtonStyle} 
+          containerStyle={styles.dropdownContainer}
+          iconStyle={{ height: width * 0.015, width: width * 0.015, marginRight: width * 0.01 }} 
+          onChange={(item) => { setValue(item.value); }} 
+          onConfirmSelectItem={(item) => (router.navigate(item.href))}
+          labelField="label" 
+          valueField="value"
           data={
             [
               { label: "Automotive", value: "Automotive", href: "/Automotive" },
@@ -124,19 +144,19 @@ export default function topBar() {
 
       <Link href={'/Staff'}>
         <Pressable>
-          <Text style={styles.topButtonStyle}>Staff</Text>
+          <HoverableText>Staff</HoverableText>
         </Pressable>
       </Link>
 
       <Link href={'/ContactUs'}>
         <Pressable>
-          <Text style={styles.topButtonStyle}>Contact Us</Text>
+          <HoverableText>Contact Us</HoverableText>
         </Pressable>
       </Link>
 
       <Link href={'/About'}>
         <Pressable>
-          <Text style={styles.topButtonStyle}>About</Text>
+          <HoverableText>About</HoverableText>
         </Pressable>
       </Link>
 

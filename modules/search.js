@@ -6,16 +6,27 @@ const PAGES = require("../assets/SearchData/search.json");
  * @param {string} keyword - The keyword or phrase to search for
  * @returns {number} - The number of matches
  */
-function countMatches(text, keyword) {
+function countMatches(text, keyword, partial = true) {
    if (!keyword) return 0;
-   // Use non-word-boundaries if keyword has spaces (i.e., it's a phrase)
-   const pattern = keyword.includes(" ")
-      ? keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') // escape regex chars
-      : `\\b${keyword}\\b`; // whole word for single word
-   const regex = new RegExp(pattern, "gi");
-   const matches = text.match(regex);
-   return matches ? matches.length : 0;
+
+   const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+   // Full phrase or whole word
+   const pattern = keyword.includes(" ") ? escaped : `\\b${escaped}\\b`;
+   const fullRegex = new RegExp(pattern, "gi");
+
+   // Partial match regex (just the escaped string)
+   const partialRegex = new RegExp(escaped, "gi");
+
+   const fullMatches = text.match(fullRegex) || [];
+   const partialMatches = partial ? text.match(partialRegex) || [] : [];
+
+   // Remove overlapping counts (so partials don’t double count fulls)
+   const partialOnly = partialMatches.length - fullMatches.length;
+
+   return fullMatches.length + Math.max(0, partialOnly);
 }
+
 
 /**
  * Search function that ranks pages based on keyword and phrase matches
@@ -31,12 +42,10 @@ export default function search(query) {
    return PAGES.map((page) => {
       let rawScore = 0;
 
-      // Prioritize full phrase matches (higher weight)
       rawScore += countMatches(page.title, phrase) * 5;
       rawScore += countMatches(page.url, phrase) * 3;
       rawScore += countMatches(page.content, phrase) * 3;
 
-      // Then add scores from individual words
       keywords.forEach((word) => {
          rawScore += countMatches(page.title, word) * 2;
          rawScore += countMatches(page.url, word);

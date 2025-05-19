@@ -16,7 +16,7 @@ export default function Graph() {
   return (
     <View style={styles.background}>
       <TopBar />
-      <ImageBackground style={styles.bgImg} source={require('../assets/Graphics/graphBack.jpg')}>
+      <ImageBackground style={styles.bgImg} source={require('../assets/Graphics/Graphics background.png')}>
         <ScrollView>
           <View style={{ marginTop: width * 0.05 }}></View>
           <HeaderChunk

@@ -24,7 +24,8 @@ export default function testimonyChunk(props) {
       marginRight: width * 0.1,
       marginLeft: width * 0.1,
       color: props.textColor || Colors.secondary,
-      fontFamily: 'oswaldsemibold'
+      fontFamily: 'oswaldsemibold',
+      textAlign: "center"
     }
   })
 

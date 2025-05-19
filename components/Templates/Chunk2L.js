@@ -22,9 +22,10 @@ export default function testimonyChunk(props) {
     title: {
       fontSize: width * 0.05,
       marginRight: width * 0.1,
-      marginLeft: width * 0.1,
+      marginLeft: width * 0.04,
       color: props.textColor || Colors.secondary,
-      fontFamily: 'oswaldsemibold'
+      fontFamily: 'oswaldsemibold',
+      textAlign: "center"
     }
   })
 

@@ -9,6 +9,7 @@ import Chunk2Info from "../components/Templates/Chunk2Info"
 import Chunk2L from "../components/Templates/Chunk2L"
 import Chunk2R from "../components/Templates/Chunk2R"
 import HeaderChunk from "../components/Templates/HeaderChunk"
+import { YouTubePlayer } from "../components/Youtube"
 
 export default function Busi() {
    const player = useVideoPlayer(require('../assets/Business/BusinessCTE.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
@@ -24,6 +25,7 @@ export default function Busi() {
          resizeMode: 'cover'
       }
    });
+   
 
    return (
       <View style={styles.background}>
@@ -134,6 +136,8 @@ promotional campaign through digital means and the applied use of data contained
                             />
                           ]}
                       />
+
+                      <View style={{marginTop: width* 0.05}}></View>
               
 
                <View style={{ marginTop: width * 0.05 }}></View>
@@ -147,6 +151,13 @@ promotional campaign through digital means and the applied use of data contained
                      />
                   ]}
                />
+
+               <View style={{ marginTop: width * 0.05 }}></View>
+               <YouTubePlayer
+               videoId ='Fj7Azxn9Xkk'
+               style = {{height: 500, width: 500}}
+               />
+
                <Footer />
             </ScrollView>
          </ImageBackground>

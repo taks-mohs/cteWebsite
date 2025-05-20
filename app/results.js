@@ -24,7 +24,7 @@ export default function results() {
                         renderItem={({ item }) => {
                             console.log("I am rendering")
                             return (
-                                <ResultObjectReturn title={item.title} content={item.content} URL={item.url} />
+                                <ResultObjectReturn title={item.title} content={item.content} url={item.url} />
                             );
                         }}
                         keyExtractor={(item, index) => index.toString()}

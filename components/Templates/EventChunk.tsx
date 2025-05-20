@@ -40,6 +40,10 @@ export default function EventChunk() {
          color: Colors.primary,
          backgroundColor: Colors.secondary,
          fontFamily: 'oswaldsemibold'
+      },
+      scroll: {
+         overflow: 'hidden',
+         width: "100%"
       }
    })
 
@@ -47,7 +51,7 @@ export default function EventChunk() {
    return (
       <View style={styles.container}>
          <Text style={styles.header}>Events</Text>
-         <ScrollView horizontal={true}>
+         <ScrollView style={styles.scroll} horizontal={true}>
             {events.map((event) => {
                if (event.isOld()) {
                   return;

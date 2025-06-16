@@ -37,7 +37,7 @@ export default function HomePage() {
                <EventChunk />
                <View style={{ marginTop: width * 0.05 }}></View>
                <Chunk2L
-                  header="Testimonials MAKING A DIFFERENT CHANGE"
+                  header="Testimonials"
                   info={[
                      <Chunk2Info
                         infoHeader="Student"

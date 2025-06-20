@@ -1,0 +1,47 @@
+[
+   {
+      "title": "Computer Science",
+      "url": "CS",
+      "content": "Computer science focuses on programming, algorithms, and software development. Careers include software engineering and cybersecurity."
+   },
+   {
+      "title": "Automotive Technology",
+      "url": "Auto",
+      "content": "Automotive technology teaches vehicle maintenance, repair, and diagnostics. Careers include auto mechanics and service technicians."
+   },
+   {
+      "title": "Culinary Arts",
+      "url": "Culi",
+      "content": "Culinary arts cover cooking techniques, food safety, and restaurant management. Careers include chefs and pastry artists."
+   },
+   {
+      "title": "Fashion",
+      "url": "Fash",
+      "content": "Fashion teaches design principles, textile selection, and garment construction. Careers include fashion design, merchandising, and styling."
+   },
+   {
+      "title": "Business",
+      "url": "Busi",
+      "content": "Business education covers entrepreneurship, financial management, and marketing strategies. Careers include business management and accounting."
+   },
+   {
+      "title": "Building & Construction",
+      "url": "B_C",
+      "content": "Construction teaches blueprint reading, framing, and finishing. Careers include carpentry, plumbing, and electrical work."
+   },
+   {
+      "title": "Health Services",
+      "url": "Health",
+      "content": "Health Services teaches patient care, medical terminology, and health administration. Careers include nursing, medical assisting, and healthcare management."
+   },
+   {
+      "title": "Film",
+      "url": "Film",
+      "content": "Film teaches storytelling, cinematography, and video editing. Careers include filmmakers, editors, and production assistants."
+   },
+   {
+      "title": "Engineering",
+      "url": "Engi",
+      "content": "Engineering focuses on mechanical design, automation, and electronics. Careers include robotics technicians and engineers."
+   }
+]

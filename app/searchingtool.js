@@ -1,13 +1,12 @@
-import { Text, View, StyleSheet, ImageBackground } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import TopBar from '../components/topBar'
 import Colors from '../components/colors'
 
-export default function deptpage() {
+export default function searchingTool() {
   return (
     <View>
       <TopBar />
       <View style={styles.container}>
-
       </View>
     </View>
   )

@@ -1,213 +1,65 @@
-import { StyleSheet, Image, Text, TextInput, Pressable, View, ImageBackground, ScrollView } from 'react-native'
-import TopBar from '../components/topBar'
-import Colors from '../components/colors'
-import { Link } from 'expo-router'
+import { StyleSheet, View, ImageBackground, ScrollView, useWindowDimensions } from 'react-native'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
+import Colors from '../components/colors'
+import TopBar from '../components/topBar'
+import Chunk1 from '../components/Templates/Chunk1'
+import Chunk2L from '../components/Templates/Chunk2L'
+import Chunk2Info from '../components/Templates/Chunk2Info'
+import Footer from '../components/footer'
+import EventChunk from '../components/Templates/EventChunk'
 
-function HomePage() {
-  useFonts({
-    'oswaldlight': Oswald_300Light,
-    'oswaldmedium': Oswald_500Medium,
-    'oswaldsemibold': Oswald_600SemiBold
-  })
+export default function HomePage() {
+   const { width } = useWindowDimensions()
+   useFonts({
+      'oswaldlight': Oswald_300Light,
+      'oswaldmedium': Oswald_500Medium,
+      'oswaldsemibold': Oswald_600SemiBold
+   })
 
-  return (
-    <View style={styles.background}>
-      <TopBar />
-      <ImageBackground style={styles.bgImg} source={require('../assets/engineer.png')}>
-        <ScrollView>
+   const styles = StyleSheet.create({
+      background: {
+         flex: 1,
+         backgroundColor: Colors.primary,
+      },
+      bgImg: {
+         height: '100%',
+         width: '100%',
+         resizeMode: 'cover'
+      }
+   })
 
-          <View style={styles.chunk1}>
-            <Text style={styles.c1Title}>Find Your Pathway</Text>
-            <Link href={'/searchingtool'}>
-              <Pressable>
-                <Text style={styles.c1Button}>Searching Tool</Text>
-              </Pressable>
-            </Link>
-          </View>
-
-          <View style={styles.chunk2}>
-            <Text style={styles.c2title}>Testimonies</Text>
-            <ScrollView style={{ height: 500 }} showsVerticalScrollIndicator={false}>
-              <View style={styles.break}></View>
-              <View style={styles.c2chunk}>
-                <Text style={styles.c2cHeader}>Student Name</Text>
-                <Image
-                  source={require('../assets/placeholder.jpg')}
-                  style={styles.studentImg}
-                />
-                <Text style={styles.c2cBody}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                  Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </Text>
-              </View>
-
-              <View style={styles.c2chunk}>
-                <Text style={styles.c2cHeader}>Student Name</Text>
-                <Image
-                  source={require('../assets/placeholder.jpg')}
-                  style={styles.studentImg}
-                />
-                <Text style={styles.c2cBody}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                  Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </Text>
-              </View>
-
-              <View style={styles.c2chunk}>
-                <Text style={styles.c2cHeader}>Student Name</Text>
-                <Image
-                  source={require('../assets/placeholder.jpg')}
-                  style={styles.studentImg}
-                />
-                <Text style={styles.c2cBody}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                  Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </Text>
-              </View>
-
-              <View style={styles.c2chunk}>
-                <Text style={styles.c2cHeader}>Student Name</Text>
-                <Image
-                  source={require('../assets/placeholder.jpg')}
-                  style={styles.studentImg}
-                />
-                <Text style={styles.c2cBody}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                  Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </Text>
-              </View>
-
-              <View style={styles.c2chunk}>
-                <Text style={styles.c2cHeader}>Student Name</Text>
-                <Image
-                  source={require('../assets/placeholder.jpg')}
-                  style={styles.studentImg}
-                />
-                <Text style={styles.c2cBody}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at vulputate enim, in dictum neque.
-                  Aliquam iaculis pharetra maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </Text>
-              </View>
+   return (
+      <View style={styles.background}>
+         <TopBar />
+         <ImageBackground style={styles.bgImg} source={require('../assets/engineer.png')}>
+            <ScrollView>
+               <View style={{ marginTop: width * 0.25 }}></View>
+               <EventChunk />
+               <View style={{ marginTop: width * 0.05 }}></View>
+               <Chunk2L
+                  header="Testimonials change in vscode"
+                  info={[
+                     <Chunk2Info
+                        infoHeader="Student"
+                        image={require('../assets/placeholder.jpg')}
+                        infoBody="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                     />,
+                     <Chunk2Info
+                        infoHeader="Student"
+                        image={require('../assets/placeholder.jpg')}
+                        infoBody="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                     />,
+                     <Chunk2Info
+                        infoHeader="Student"
+                        image={require('../assets/placeholder.jpg')}
+                        infoBody="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+                     />
+                  ]}
+               />
+               <View style={{ marginTop: width * 0.1 }}></View>
+               <Footer />
             </ScrollView>
-          </View>
-        </ScrollView>
-      </ImageBackground>
-    </View>
-  )
+         </ImageBackground>
+      </View>
+   )
 }
-
-export default HomePage
-
-export const styles = StyleSheet.create({
-  background: {
-    flex: 1,
-    backgroundColor: Colors.primary,
-  },
-  bgImg: {
-    height: '100%',
-    width: '100%',
-    resizeMode: 'cover'
-  },
-  topBar: {
-    padding: 10,
-    alignItems: 'center',
-    backgroundColor: Colors.secondary,
-    flexDirection: 'row'
-  },
-  topImageStyle: {
-    marginLeft: 15,
-    height: 75,
-    width: 75
-  },
-  titleStyle: {
-    color: Colors.primary,
-    fontWeight: 'bold',
-    fontSize: 40,
-    marginLeft: 15,
-    marginRight: 250,
-    fontFamily: 'oswaldsemibold'
-  },
-  topButtonStyle: {
-    color: Colors.primary,
-    fontSize: 25,
-    marginRight: 25,
-    fontFamily: 'oswaldmedium'
-  },
-  searchContainer: {
-    borderWidth: 1,
-    borderColor: Colors.primary,
-    alignItems: 'center',
-    flexDirection: 'row'
-  },
-  searchStyle: {
-    color: Colors.primary,
-    fontSize: 25,
-    fontFamily: 'oswaldmedium',
-    opacity: 0.5,
-    marginLeft: 10
-  },
-  placeholder: {
-    color: Colors.primary,
-    fontSize: 25,
-    marginLeft: 10
-  },
-  chunk1: {
-    marginTop: 500,
-    marginHorizontal: 150,
-    padding: 75,
-    backgroundColor: Colors.primary,
-    alignItems: 'center'
-  },
-  c1Title: {
-    fontSize: 75,
-    color: Colors.secondary,
-    fontFamily: 'oswaldmedium',
-    marginBottom: 25
-  },
-  c1Button: {
-    fontSize: 25,
-    padding: 10,
-    color: Colors.primary,
-    backgroundColor: Colors.secondary,
-    fontFamily: 'oswaldsemibold'
-  },
-  chunk2: {
-    marginTop: 100,
-    padding: 100,
-    marginBottom: 150,
-    height: 500,
-    backgroundColor: Colors.primary,
-    alignItems: 'center',
-    flexDirection: 'row'
-  },
-  c2title: {
-    fontSize: 75,
-    marginRight: 250,
-    color: Colors.secondary,
-    fontFamily: 'oswaldsemibold'
-  },
-  c2chunk: {
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
-    marginBottom: 75
-  },
-  c2cHeader: {
-    fontSize: 40,
-    color: Colors.secondary,
-    fontFamily: 'oswaldmedium'
-  },
-  c2cBody: {
-    fontSize: 18,
-    fontFamily: 'oswaldlight',
-    textAlign: 'center'
-  },
-  studentImg: {
-    height: 250,
-    width: 250
-  },
-  break: {
-    margin: 40
-  }
-})

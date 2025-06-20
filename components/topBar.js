@@ -2,13 +2,10 @@ import { View, Text, Image, Pressable, TextInput, StyleSheet, useWindowDimension
 import { Link } from 'expo-router'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from './colors'
-import React, { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Dropdown } from 'react-native-element-dropdown'
 import { router } from 'expo-router'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
-
-
-import React, { useRef, useState } from 'react';
 
 export default function topBar() {
 

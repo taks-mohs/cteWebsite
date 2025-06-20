@@ -1,14 +1,44 @@
-import { View, Text, Image, Pressable, TextInput, StyleSheet, useWindowDimensions, TouchableOpacity } from 'react-native'
+import { View, Text, Image, Pressable, TextInput, StyleSheet, useWindowDimensions, TouchableOpacity, Animated } from 'react-native'
 import { Link } from 'expo-router'
 import { useFonts, Oswald_300Light, Oswald_600SemiBold, Oswald_500Medium } from '@expo-google-fonts/oswald'
 import Colors from './colors'
-import React, { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Dropdown } from 'react-native-element-dropdown'
 import { router } from 'expo-router'
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 
-
 export default function topBar() {
+
+  const spinValue = useRef(new Animated.Value(0)).current;
+  const [hovered, setHovered] = useState(false);
+
+  const [value, setValue] = useState(null);
+  const [isFocus, setIsFocus] = useState(false);
+
+  const handleMouseEnter = () => {
+    setHovered(true);
+    Animated.timing(spinValue,
+      {
+        toValue: 1,
+        duration: 1000,
+        useNativeDriver: true,
+      }).start();
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+    Animated.timing(spinValue, {
+      toValue: 0,
+      duration: 1000,
+      useNativeDriver: true,
+    }).start();
+  };
+
+  const spin = spinValue.interpolate({
+    inputRange: [0, 1],
+    outputRange: ['0deg', '360deg'],
+  });
+
   const { width } = useWindowDimensions()
   useFonts({
     'oswaldlight': Oswald_300Light,
@@ -98,16 +128,19 @@ export default function topBar() {
 
   return (
     <View style={styles.topBar}>
-      <Link href={'/'}>
-        <Pressable>
-          <Image
-            style={styles.topImageStyle}
-            source={require('../assets/download.jpg')}
-          />
-        </Pressable>
-      </Link>
+      <View
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <Link href={'/'}>
+          <Pressable>
+            <Animated.Image
+              source={require('../assets/download.jpg')}
+              style={[styles.topImageStyle, { transform: [{ rotate: spin }] }]} />
+          </Pressable>
+        </Link>
 
-
+</View>
       <Link href={'/'}>
         <Pressable>
           <Text style={styles.titleStyle}>Career & Technical Education</Text>

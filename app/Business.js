@@ -25,122 +25,150 @@ export default function Busi() {
          resizeMode: 'cover'
       }
    });
-   
 
    return (
       <View style={styles.background}>
          <TopBar />
          <ImageBackground style={styles.bgImg} source={require('../assets/business-background.jpg')}>
             <ScrollView>
-               <View style={{ marginTop: width * 0.05 }}></View>
+               <View style={{ marginTop: width * 0.10 }}></View>
                <HeaderChunk
                   header="Business"
                />
 
-                      <View style={{marginTop: width * 0.05}}></View>
-                      <Chunk2R
-                        header="Business Teachers"
-                        info={[
-                            <Chunk2Info
-                              infoHeader="Mrs. Kramer"
-                              image={require('../assets/TeacherHeadshots/Kramer.jpg')}
-                              infoBody=""
-                            />,
-                            <Chunk2Info
-                              infoHeader="Mrs. Yonamine"
-                              image={require('../assets/placeholder.jpg')}
-                              infoBody=""
-                            />,
-                            <Chunk2Info
-                              infoHeader="Mrs. Pate"
-                              image={require('../assets/placeholder.jpg')}
-                              infoBody=""
-                            />
-                          ]}
-                        />
-                      
-                      <View style={{marginTop: width* 0.05}}></View>
-                      <Chunk2L 
-                        header="Entrepre
+               <YouTubePlayer style={{ width: width * 3.5 * 0.16, height: width * 3.5 * 0.09, alignSelf: "center", paddingTop: 24 }}
+                  modestBranding={true} autoplay={false} mute={false} videoId="QOJT0XNee_o"
+               />
+
+               <View style={{ marginTop: width * 0.10 }}></View>
+               <Chunk2R
+                  header="Business Teachers"
+                  info={[
+                     <Chunk2Info
+                        infoHeader="Mrs. Kramer"
+                        image={require('../assets/TeacherHeadshots/Kramer.jpg')}
+                        infoBody=""
+                     />,
+                     <Chunk2Info
+                        infoHeader="Mrs. Yonamine"
+                        image={require('../assets/placeholder.jpg')}
+                        infoBody=""
+                     />,
+                     <Chunk2Info
+                        infoHeader="Mrs. Pate"
+                        image={require('../assets/placeholder.jpg')}
+                        infoBody=""
+                     />
+                  ]}
+               />
+
+               <View style={{ marginTop: width * 0.10 }}></View>
+               <Chunk2L
+                  header="Entrepre
                         neurship Courses "
-                        info={[
-                            <Chunk2Info
-                              infoHeader="Foundations of Business & Marketing"
-                              image={require('../assets/business-1.jpg')}
-                              infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
-                            />,
-                            <Chunk2Info
-                              infoHeader="Entrepreneurship 1"
-                              image={require('../assets/business-1.jpg')}
-                              infoBody="Entrepreneurship 1 is the second course in the Entrepreneurship program of study designed to inform students about careers related 
+                  info={[
+                     <Chunk2Info
+                        infoHeader="Foundations of Business & Marketing"
+                        image={require('../assets/business-1.jpg')}
+                        infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
+                     />,
+                     <Chunk2Info
+                        infoHeader="Entrepreneurship 1"
+                        image={require('../assets/business-1.jpg')}
+                        infoBody="Entrepreneurship 1 is the second course in the Entrepreneurship program of study designed to inform students about careers related 
 to starting and running a business. Students prepare for the business world by examining basic principles in management, finance, 
 and marketing as they apply to entrepreneurship."
-                            />,
-                            <Chunk2Info
-                              infoHeader="Entrepreneurship 2"
-                              image={require('../assets/business-1.jpg')}
-                              infoBody="Entrepreneurship 2 is the third course in the Entrepreneurship program of study designed to prepare students for the world of small 
+                     />,
+                     <Chunk2Info
+                        infoHeader="Entrepreneurship 2"
+                        image={require('../assets/business-1.jpg')}
+                        infoBody="Entrepreneurship 2 is the third course in the Entrepreneurship program of study designed to prepare students for the world of small 
 business by combining principles in operations, finance and accounting, marketing, and ethical practices. "
-                            />
+                     />
 
-                            
-                          ]}
-                      />
-                      <View style={{marginTop: width* 0.05}}></View>
-                      <Chunk2R
-                        header="Financial Management Courses"
-                        info={[
-                            <Chunk2Info
-                              infoHeader="Foundations of Business & Marketing"
-                              image={require('../assets/business-stock.jpg')}
-                              infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
-                            />,
-                            <Chunk2Info
-                              infoHeader="Principles of Finance & Economics"
-                              image={require('../assets/business-stock.jpg')}
-                              infoBody="Principles of Finance & Economics is the second course for Financial Management program of study designed to inform students 
+
+                  ]}
+               />
+               <View style={{ marginTop: width * 0.10 }}></View>
+               <Chunk2R
+                  header="Financial Management Courses"
+                  info={[
+                     <Chunk2Info
+                        infoHeader="Foundations of Business & Marketing"
+                        image={require('../assets/business-stock.jpg')}
+                        infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
+                     />,
+                     <Chunk2Info
+                        infoHeader="Principles of Finance & Economics"
+                        image={require('../assets/business-stock.jpg')}
+                        infoBody="Principles of Finance & Economics is the second course for Financial Management program of study designed to inform students 
 about the basics of economics, finance, and accounting."
-                            />,
-                            <Chunk2Info
-                              infoHeader="Accounting"
-                              image={require('../assets/business-stock.jpg')}
-                              infoBody="Accounting is the third course for Financial Management program of study designed to inform students about basic procedures of 
+                     />,
+                     <Chunk2Info
+                        infoHeader="Accounting"
+                        image={require('../assets/business-stock.jpg')}
+                        infoBody="Accounting is the third course for Financial Management program of study designed to inform students about basic procedures of 
 accounting. Upon completion of the course, a proficient student will demonstrate various accounting and basic business transactions, 
 and apply the full accounting cycle, analyze financial data, and explain ethical behavior in the accounting field."
-                            />
-                          ]}
-                      />
+                     />
+                  ]}
+               />
 
-                      <View style={{marginTop: width* 0.05}}></View>
-                      <Chunk2L
-                        header="Marketing Course"
-                        info={[
-                            <Chunk2Info
-                              infoHeader="Foundations of Business & Marketing"
-                              image={require('../assets/business-2.jpg')}
-                              infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
-                            />,
-                            <Chunk2Info
-                              infoHeader="Advertising & Public Relations"
-                              image={require('../assets/business-2.jpg')}
-                              infoBody="Advertising & Public Relations is the second course in the Marketing Management program of study designed to prepare students 
+               <View style={{ marginTop: width * 0.10 }}></View>
+               <Chunk2L
+                  header="Marketing Course"
+                  info={[
+                     <Chunk2Info
+                        infoHeader="Foundations of Business & Marketing"
+                        image={require('../assets/business-2.jpg')}
+                        infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
+                     />,
+                     <Chunk2Info
+                        infoHeader="Advertising & Public Relations"
+                        image={require('../assets/business-2.jpg')}
+                        infoBody="Advertising & Public Relations is the second course in the Marketing Management program of study designed to prepare students 
 for the marketing world by examining basic principles in advertising, such as market segmentation, research, and building 
 promotional campaigns."
-                            />,
-                            <Chunk2Info
-                              infoHeader="Digital Marketing & Market Analytics"
-                              image={require('../assets/business-2.jpg')}
-                              infoBody="Digital Marketing & Market Analytics is the third course in the Marketing Management program of study designed to in social media 
+                     />,
+                     <Chunk2Info
+                        infoHeader="Digital Marketing & Market Analytics"
+                        image={require('../assets/business-2.jpg')}
+                        infoBody="Digital Marketing & Market Analytics is the third course in the Marketing Management program of study designed to in social media 
 marketing. Upon completion of the course, a proficient student will be able to describe and apply the process of building a 
 promotional campaign through digital means and the applied use of data contained in these methods to drive market research."
-                            />
-                          ]}
-                      />
+                     />
+                  ]}
+               />
 
-                      <View style={{marginTop: width* 0.05}}></View>
-              
+               <View style={{ marginTop: width * 0.10 }}></View>
+               <Chunk2L
+                  header="Career Pathways"
+                  info={[
+                     <Chunk2Info
+                        infoHeader="Business Management"
+                        image={require('../assets/business-stock.jpg')}
+                        infoBody="Prepare for roles such as Business Analyst, Office Manager, or Operations Supervisor. Develop leadership, organizational, and decision-making skills."
+                     />,
+                     <Chunk2Info
+                        infoHeader="Marketing & Sales"
+                        image={require('../assets/business-stock.jpg')}
+                        infoBody="Explore careers in advertising, digital marketing, sales, and public relations. Learn about branding, market research, and customer engagement."
+                     />,
+                     <Chunk2Info
+                        infoHeader="Finance & Accounting"
+                        image={require('../assets/business-stock.jpg')}
+                        infoBody="Pursue opportunities as an Accountant, Financial Planner, or Banking Professional. Gain skills in budgeting, investing, and financial analysis."
+                     />,
+                     <Chunk2Info
+                        infoHeader="Entrepreneurship"
+                        image={require('../assets/business-stock.jpg')}
+                        infoBody="Start your own business or work in a startup environment. Learn about innovation, business planning, and risk management.
+"
 
-               <View style={{ marginTop: width * 0.05 }}></View>
+                     />
+                  ]}
+               />
+               <View style={{ marginTop: width * 0.10 }}></View>
                <Chunk2R
                   header="Related Club"
                   info={[
@@ -152,15 +180,13 @@ promotional campaign through digital means and the applied use of data contained
                   ]}
                />
 
+
                <View style={{ marginTop: width * 0.05 }}></View>
-               <YouTubePlayer
-               videoId ='Fj7Azxn9Xkk'
-               style = {{height: 500, width: 500}}
-               />
 
                <Footer />
             </ScrollView>
          </ImageBackground>
+
       </View>
    )
 }
@@ -233,6 +259,9 @@ export const styles = StyleSheet.create({
       fontSize: 40,
       color: Colors.secondary,
       fontFamily: 'oswaldmedium'
+   },
+   margin: {
+      marginTop: 20
    },
    videoChunk: {
       marginTop: 100,

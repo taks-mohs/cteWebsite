@@ -1,6 +1,7 @@
-const CALENDAR_ID = '218f832d2e3e4ce48daca30cd709bcdd2c1b0594225a2eb6c39e88ebbad18718@group.calendar.google.com';
-const API_KEY = 'AIzaSyDRvg5A42eGtX5dWItPR4R6EV2Jin45TE0';
-
+const CALENDAR_ID = 'ffa25ea10931fae9b892cee1b73d3b6108b2dd97f4da80e95630965feee2a052@group.calendar.google.com';
+const API_KEY = 'AIzaSyDv-gvOybUMHDMDKtkNgivf7rL8dfgYCCU';
+const twoWeeksInMs = 14 * 24 * 60 * 60 * 1000; // 14 days in milliseconds
+const lineLength = 50;
 export default class Event {
    private event: object
    private constructor(event: object) {
@@ -13,6 +14,12 @@ export default class Event {
       for (const event of googleEvents.items) {
          events.push(new Event(event));
       }
+      events.sort((a, b) => {
+         if (a.startTime().getTime() < b.startTime().getTime()) {
+            return -1;
+         }
+         return 1;
+      });
       return events;
    }
    public toString(): string {
@@ -25,7 +32,28 @@ export default class Event {
       return this.event.summary;
    }
    public description(): string | undefined {
-      return this.event.description || undefined;
+      let formattedDescription = "";
+      let hold = this.event.description;
+      const MAX_LINES = 3;
+      if (hold) {
+         if (hold.length < lineLength) {
+            let diff = lineLength - hold.length;
+            formattedDescription = hold;
+            while (diff > 0) {
+               formattedDescription += " ";
+               diff--;
+            }
+         } else {
+            let lines = 1;
+            while (hold.length > 0) {
+               formattedDescription += hold.substring(0, lineLength) + '\n';
+               hold = hold.substring(lineLength).trim();
+               lines++;
+               if(lines > MAX_LINES) break;
+            }
+         }
+      }
+      return formattedDescription || undefined;
    }
    public startTime(): Date {
       return new Date(this.event.start.dateTime);
@@ -38,7 +66,20 @@ export default class Event {
       }
    }
    public location(): string | undefined {
+      if(this.event.location) {
+         if(this.event.location.length > lineLength - 15) {
+            return this.event.location.substring(0,lineLength - 15);
+         }
+      }
       return this.event.location;
+   }
+   public isOld(): boolean {
+      const now = Date.now()
+      if (Math.abs(this.startTime().getTime() - now) > twoWeeksInMs) {
+         return true;
+      } else {
+         return false;
+      }
    }
    //Add methods as needed
 }

@@ -9,6 +9,7 @@ import Chunk2Info from "../components/Templates/Chunk2Info"
 import Chunk2L from "../components/Templates/Chunk2L"
 import Chunk2R from "../components/Templates/Chunk2R"
 import HeaderChunk from "../components/Templates/HeaderChunk"
+import { YouTubePlayer } from "../components/Youtube"
 
 export default function Busi() {
    const player = useVideoPlayer(require('../assets/Business/BusinessCTE.mp4'), player => { player.play(); player.loop = true; player.muted = true; });
@@ -24,6 +25,7 @@ export default function Busi() {
          resizeMode: 'cover'
       }
    });
+   
 
    return (
       <View style={styles.background}>
@@ -32,7 +34,7 @@ export default function Busi() {
             <ScrollView>
                <View style={{ marginTop: width * 0.05 }}></View>
                <HeaderChunk
-                  header="Businesi"
+                  header="Business"
                />
 
                       <View style={{marginTop: width * 0.05}}></View>
@@ -41,7 +43,7 @@ export default function Busi() {
                         info={[
                             <Chunk2Info
                               infoHeader="Mrs. Kramer"
-                              image={require('../assets/Kramer-Photo.jpg')}
+                              image={require('../assets/TeacherHeadshots/Kramer.jpg')}
                               infoBody=""
                             />,
                             <Chunk2Info
@@ -134,49 +136,9 @@ promotional campaign through digital means and the applied use of data contained
                             />
                           ]}
                       />
-               <View style={{ marginTop: width * 0.05 }}></View>
-               <Chunk2R
-                  header="Financial Management Courses"
-                  info={[
-                     <Chunk2Info
-                        infoHeader="Foundations of Business & Marketing"
-                        image={require('../assets/business-stock.jpg')}
-                        infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
-                     />,
-                     <Chunk2Info
-                        infoHeader="Principles of Finance & Economics"
-                        image={require('../assets/business-stock.jpg')}
-                        infoBody=""
-                     />,
-                     <Chunk2Info
-                        infoHeader="Accounting"
-                        image={require('../assets/business-stock.jpg')}
-                        infoBody=""
-                     />
-                  ]}
-               />
 
-               <View style={{ marginTop: width * 0.05 }}></View>
-               <Chunk2L
-                  header="Marketing Course"
-                  info={[
-                     <Chunk2Info
-                        infoHeader="Foundations of Business & Marketing"
-                        image={require('../assets/business-stock.jpg')}
-                        infoBody="Foundations of Business & Marketing is an introductory course designed to inform students about careers in various sectors of business, as well as basic business concepts."
-                     />,
-                     <Chunk2Info
-                        infoHeader="Advertising & Public Relations"
-                        image={require('../assets/business-stock.jpg')}
-                        infoBody=""
-                     />,
-                     <Chunk2Info
-                        infoHeader="Digital Marketing & Market Analytics"
-                        image={require('../assets/business-stock.jpg')}
-                        infoBody=""
-                     />
-                  ]}
-               />
+                      <View style={{marginTop: width* 0.05}}></View>
+              
 
                <View style={{ marginTop: width * 0.05 }}></View>
                <Chunk2R
@@ -189,6 +151,13 @@ promotional campaign through digital means and the applied use of data contained
                      />
                   ]}
                />
+
+               <View style={{ marginTop: width * 0.05 }}></View>
+               <YouTubePlayer
+               videoId ='Fj7Azxn9Xkk'
+               style = {{height: 500, width: 500}}
+               />
+
                <Footer />
             </ScrollView>
          </ImageBackground>

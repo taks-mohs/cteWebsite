@@ -142,19 +142,19 @@ export default function topBar() {
           } />
       </Pressable>
 
-      <Link href={'/Staff'}>
+      <Link href={'/staff'}>
         <Pressable>
           <HoverableText>Staff</HoverableText>
         </Pressable>
       </Link>
 
-      <Link href={'/ContactUs'}>
+      <Link href={'/contactus'}>
         <Pressable>
           <HoverableText>Contact Us</HoverableText>
         </Pressable>
       </Link>
 
-      <Link href={'/About'}>
+      <Link href={'/about'}>
         <Pressable>
           <HoverableText>About</HoverableText>
         </Pressable>

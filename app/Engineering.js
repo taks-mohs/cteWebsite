@@ -9,6 +9,7 @@ import Chunk2R from "../components/Templates/Chunk2R"
 import footer from "../components/footer"
 import Chunk1 from "../components/Templates/Chunk1"
 import ImagelessInfoChunk from "../components/Templates/ImagelessInfoChunk"
+import { YouTubePlayer } from "../components/Youtube"
 
 
 export default function Engi() {
@@ -20,6 +21,10 @@ export default function Engi() {
                 <ScrollView>
                     <View style={{ marginTop: width * 0.05 }}></View>
                     <HeaderChunk header={"Engineering"} />
+                    <View style={{ marginTop: width * 0.05 }}></View>
+                    <View style={{ alignItems: "center", justifyContent: "center", }}>
+                        <YouTubePlayer rel={false} loop={false} videoId="rjP92bgib88" style={{ width: 0.5 * width, height: 0.25 * width, alignItems: "center", }} />
+                    </View>
                     <View style={{ marginTop: width * 0.05 }}></View>
                     <Chunk2L header={"Related Classes"} info={
                         <>
@@ -66,18 +71,220 @@ export default function Engi() {
                         </>
                     } />
                     <View style={{ marginTop: width * 0.05 }}></View>
+                    <Chunk2L
+                        header={"Foundations Curriculum"}
+                        info={
+                            <>
+                                <InfoChunk
+                                    infoHeader={"Engineering Design Process"}
+                                    infoBody={
+                                        "Students will explore civil engineering and use the Engineering Design Process to design, build, and iterate a popsicle stick bridge using limited materials to hold up as much weight as possible."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Bridge Project"}
+                                    infoBody={
+                                        "Students are tasked with creating a bridge that can hold the most weight. Students are given a set amount of materials to use and must use their engineering skills to create the best bridge possible."
+                                    }
+                                    image={require('../assets/ENGRG/MiscImages/bridge.png')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Catapult Project"}
+                                    infoBody={
+                                        "Students will explore mechanical engineering and use the engineering design process to design, build, and iterate on a small scale then larger scale catapult type of machine to launch an egg the farthest. Also design and build a vehicle to protect the egg from breaking in the launch."
+                                    }
+                                    image={require('../assets/ENGRG/MiscImages/Catapult.png')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Snap Circuits"}
+                                    infoBody={
+                                        "Students are tasked with creating a circuit that can light up a lightbulb. Students are given a set amount of materials to use and must use their engineering skills to create the best circuit possible."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Airplane/Rocket Project"}
+                                    infoBody={
+                                        "Students will explore aeronautical engineering and use the Engineering Design Process to design, build, and iterate paper airplanes, plastic model airplanes, and model rockets to be able to improve their flight time, distance, and stability of the plane."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                            </>
+                        }
+                    />
+                    <View style={{ marginTop: width * 0.05 }}></View>
+                    <Chunk2L
+                        header={"Engineering Tech 1 Curriculum"}
+                        info={
+                            <>
+                                <InfoChunk
+                                    infoHeader={"Basic Modeling and Design"}
+                                    infoBody={
+                                        "Students will explore Basic Modeling and Design to create a 3D model of a simple object using CAD software. Students will learn the basics of CAD software and how to use it to create 3D models."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Toy Project"}
+                                    infoBody={
+                                        "Students will explore mechanical engineering and use the engineering design process to design, build, and iterate on a toy that can be used by children. Students will learn how to use CAD software to create 3D models of their toys and how to use 3D printers to create their toys."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"3D Modeling"}
+                                    infoBody={
+                                        "Students will learn how to use CAD software to create 3D models "
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Real Life Problem Solving"}
+                                    infoBody={
+                                        "Students will be tasked with solving a real life problem using the engineering design process. Students will learn how to identify a problem, brainstorm solutions, and create a prototype of their solution."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Puzzle Cube"}
+                                    infoBody={
+                                        "Students will explore mechanical engineering and use the engineering design process to design, build, and iterate on a puzzle cube. Students will learn how to use CAD software to create 3D models of their puzzle cubes and how to use 3D printers to create their puzzle cubes."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"House Project"}
+                                    infoBody={
+                                        "Students will explore civil engineering to design and create a house."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                            </>
+                        }
+                    />
+                    <View style={{ marginTop: width * 0.05 }}></View>
+                    <Chunk2L
+                        header={"Engineering Tech 2 Curriculum"}
+                        info={
+                            <>
+                                <InfoChunk
+                                    infoHeader={"Physics"}
+                                    infoBody={
+                                        "Kinematics, Free Body Diagrams, and Mechanical Advantage"
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Community Problem Solving"}
+                                    infoBody={
+                                        "Students will use the Engineering Design Process to design, build, and iterate on a community problem they have identified within their community. The goal of this is to have students try to improve their community around them and to practice identifying and designing solutions in the real world."
+                                    }
+                                    image={require('../assets/ENGRG/MiscImages/communityPrj2.png')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Ethics"}
+                                    infoBody={
+                                        "Students will learn about the ethics of engineering and how to apply it to their designs."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Reverse Engineering"}
+                                    infoBody={
+                                        "Students will learn how to reverse engineer a product and how to use the engineering design process to improve upon it. Students will learn how to take apart a product, identify its components, and create a new design based on their findings."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Material Properties"}
+                                    infoBody={
+                                        "Students will learn about the properties of different materials and how to choose the right material for their designs."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Hydraulic Arm Project"}
+                                    infoBody={
+                                        "Students will use the Engineering Design Process to design, build, and iterate on creating a hydraulic claw/arm to move items with accuracy using hydraulics"
+                                    }
+                                    image={require('../assets/ENGRG/MiscImages/arm.png')}
+                                />
+                            </>
+                        }
+                    />
+                    <View style={{ marginTop: width * 0.05 }}></View>
+                    <Chunk2L
+                        header={"Engineering Tech 3 Curriculum"}
+                        info={
+                            <>
+                                <InfoChunk
+                                    infoHeader={"College Prep Application"}
+                                    infoBody={
+                                        "Students will learn how to apply to colleges and what to expect when applying to colleges. Students will learn how to write a college essay and how to fill out a college application."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Local Design Challenge"}
+                                    infoBody={
+                                        "Students will use the Engineering Design Process to design, build, and iterate again on a community problem they have identified within their community. The goal of this is to have students try to improve their community around them and to practice identifying and designing solutions in the real world."
+                                    }
+                                    image={require('../assets/ENGRG/MiscImages/communityPrj.png')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Communication"}
+                                    infoBody={
+                                        "Students will learn how to communicate their designs and ideas to others. Students will learn how to create a presentation and how to present there ideas."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"Quality Management"}
+                                    infoBody={
+                                        "Students will learn and practice quality management. Students will learn how to identify and manage quality in their designs and how to improve the quality of their designs."
+                                    }
+                                    image={require('../assets/placeholder.jpg')}
+                                />
+                            </>
+                        }
+                    />
+                    <View style={{ marginTop: width * 0.05 }}></View>
+                    <Chunk2L
+                        header={"3D Modeling & Printing"}
+                        info={
+                            <>
+                                <InfoChunk
+                                    infoHeader={"6 LulzBot 3D Printers"}
+                                    image={require('../assets/ENGRG/MiscImages/lulzbot.png')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"5 Bambu XICarbon 3D Printers"}
+                                    image={require('../assets/ENGRG/MiscImages/creatorPro.jpg')}
+                                />
+                                <InfoChunk
+                                    infoHeader={"1 Flashforge Creator Pro 3D Printer"}
+                                    image={require('../assets/ENGRG/MiscImages/bambu.webp')}
+                                />
+                                <ImagelessInfoChunk
+                                    infoBody={"For our engineering programs we have many 3D printers for students to use for design and prototyping practice."}
+                                />
+                            </>
+                        }
+                    />
+                    <View style={{ marginTop: width * 0.05, }}></View>
                     <Chunk2L header={"Clubs"} info={
                         <InfoChunk
                             infoHeader={"Robotics Club"}
                             infoBody={
-                                "The robotics club teaches it's club memebers how to use, assemble and program to robots. The robotics club participates in the" +
-                                " VEX Robotics Tournament and FIRST Robotics Competition every year."
+                                "The robotics club teaches it's club memebers how to use, assemble and program robots. The robotics club participates in the" +
+                                " VEX Robotics Tournament and FIRST Robotics Competition every year as the Mechahunes of Team #2348."
                             }
-                            image={require('../assets/ENGRG//MiscImages/Mechahunes.png')}
+                            image={require('../assets/ENGRG/MiscImages/Mechahunes.png')}
                         />
                     } />
                     <View style={{ marginTop: width * 0.05 }}></View>
-                    <Chunk2L header={"Teacher"} info={
+                    <Chunk2L header={"Teachers"} info={
                         <>
                             <InfoChunk
                                 infoHeader={"Mr. Hashizume"}
@@ -102,6 +309,15 @@ export default function Engi() {
                             />
                         </>
                     } />
+                    <View style={{ marginTop: width * 0.05 }}></View>
+                    <Chunk2L
+                        header={"Industry Certification"}
+                        info={
+                            <InfoChunk
+                                image={require('../assets/Stock_Portrait.png')}
+                            />
+                        }
+                    />
                     <View style={{ marginTop: width * 0.05 }}></View>
                     <Chunk2L header={"Suggested Courses"} info={
                         <>
@@ -128,7 +344,7 @@ export default function Engi() {
                             <ImagelessInfoChunk
                                 infoHeader={"Weight Training or Team Sports"}
                                 infoBody={
-                                    "You might want to take Weight Training or Team Sports as a second elective as to build the strength typically found within the field. Of course, not all engineering roles involve heavy lifting, making it optional based on what branch of engineering you're going into"                                
+                                    "You might want to take Weight Training or Team Sports as a second elective as to build the strength typically found within the field. Of course, not all engineering roles involve heavy lifting, making it optional based on what branch of engineering you're going into"
                                 }
                             />
                             <Chunk1
@@ -158,69 +374,4 @@ export const styles = StyleSheet.create({
         width: '100%',
         resizeMode: 'cover'
     },
-    chunk1: {
-        marginTop: 200,
-        marginHorizontal: 150,
-        padding: 75,
-        backgroundColor: Colors.primary,
-        alignItems: 'center'
-    },
-    c1Title: {
-        fontSize: 75,
-        color: Colors.secondary,
-        fontFamily: 'oswaldmedium',
-        marginBottom: 25
-    },
-    c1Button: {
-        fontSize: 25,
-        padding: 10,
-        color: Colors.primary,
-        backgroundColor: Colors.secondary,
-        fontFamily: 'oswaldsemibold'
-    },
-    chunk2: {
-        marginTop: 100,
-        padding: 100,
-        marginBottom: 150,
-        height: 500,
-        backgroundColor: Colors.primary,
-        alignItems: 'center',
-        flexDirection: 'row'
-    },
-    c2title: {
-        fontSize: 75,
-        marginRight: 250,
-        color: Colors.secondary,
-        fontFamily: 'oswaldsemibold'
-    },
-    c3title: {
-        fontSize: 75,
-        marginLeft: 250,
-        color: Colors.secondary,
-        fontFamily: 'oswaldsemibold'
-    },
-    break: {
-        margin: 40
-    },
-    c2chunk: {
-        flex: 1,
-        flexDirection: 'column',
-        alignItems: 'center',
-        marginBottom: 75
-    },
-    c2cBody: {
-        fontSize: 18,
-        fontFamily: 'oswaldlight',
-        textAlign: 'center',
-        color: Colors.secondary
-    },
-    studentImg: {
-        height: 250,
-        width: 250
-    },
-    c2cHeader: {
-        fontSize: 40,
-        color: Colors.secondary,
-        fontFamily: 'oswaldmedium'
-    }
 })
